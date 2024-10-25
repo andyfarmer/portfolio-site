@@ -1,6 +1,7 @@
+const browserSync = require('browser-sync').create();
 const gulp = require('gulp');
 const nunjucksRender = require('gulp-nunjucks-render');
-const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass')(require('sass'));
 
 gulp.task('html', function(){
 
@@ -13,7 +14,14 @@ gulp.task('html', function(){
 
 });
 
-gulp.task('serve', gulp.series('html', function(){
+gulp.task('sass', function() {
+  return gulp.src('./sass/**/*.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest('./dist/css'))
+      .pipe(browserSync.stream());
+});
+
+gulp.task('serve', gulp.series(['html', 'sass'], function(){
 
   browserSync.init({
     server: {
@@ -21,6 +29,7 @@ gulp.task('serve', gulp.series('html', function(){
     }
   });
 
+  gulp.watch('./sass/**/*.scss', gulp.series('sass'));
   gulp.watch('./views/**/*.njk', gulp.series('html'));
   gulp.watch('./dist/*.html').on('change', browserSync.reload);
   
