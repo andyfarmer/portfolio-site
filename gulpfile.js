@@ -32,7 +32,7 @@ gulp.task('serve', gulp.series(['html', 'sass'], function(){
   gulp.watch('./sass/**/*.scss', gulp.series('sass'));
   gulp.watch('./views/**/*.njk', gulp.series('html'));
   gulp.watch('./dist/*.html').on('change', browserSync.reload);
-  
+
 }));
 
 gulp.task('default', gulp.series('serve'));

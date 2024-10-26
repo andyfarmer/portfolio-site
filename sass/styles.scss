@@ -1,3 +1,6 @@
-h1 {
-    font-family: 'Courier New', Courier, monospace;
-}
+@use 'base/reset';
+@use 'base/typography';
+
+@use 'elements/e-heading';
+
+@use 'layouts/l-content-container';

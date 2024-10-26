@@ -1,0 +1,29 @@
+@use './tools/functions/rem';
+
+.e-heading{
+  font-weight: 600;
+
+  &--xl{
+		font-size: rem.rem(48);
+		line-height: rem.rem(56);
+		letter-spacing: -0.04em;
+	}
+
+	&--l{
+		font-size: rem.rem(36);
+		line-height: rem.rem(40);
+		letter-spacing: -0.04em;
+	}
+
+	&--m{
+		font-size: rem.rem(24);
+		line-height: rem.rem(32);
+		letter-spacing: -0.02em;
+	}
+
+	&--s{
+		font-size: rem.rem(20);
+		line-height: rem.rem(24);
+		letter-spacing: -0.02em;
+	}
+}

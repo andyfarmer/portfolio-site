@@ -1,3 +1,63 @@
-h1 {
-  font-family: "Courier New", Courier, monospace;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400,600&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+body {
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  color: #191825;
+}
+
+.e-heading {
+  font-weight: 600;
+}
+.e-heading--xl {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  letter-spacing: -0.04em;
+}
+.e-heading--l {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.04em;
+}
+.e-heading--m {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: -0.02em;
+}
+.e-heading--s {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.l-content-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  max-width: 1296px;
+}
+.l-content-container--8-col {
+  max-width: 1060px;
 }

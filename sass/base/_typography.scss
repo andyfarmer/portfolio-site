@@ -1,0 +1,10 @@
+@use 'tools/variables/colours';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400,600&display=swap');
+
+body{
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  color: colours.$text-primary;
+}
