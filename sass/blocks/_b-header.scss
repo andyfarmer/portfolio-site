@@ -1,0 +1,23 @@
+@use 'tools/functions/rem';
+@use 'tools/variables/colours';
+
+.b-header{
+	background: colours.$background-cream;
+	padding: {
+		top: 32px;
+		bottom: 160px;
+	}
+	&__heading{
+		padding: {
+			top: 48px;
+			bottom: 32px;
+		}
+	}
+	&__intro{
+		color: colours.$text-secondary;
+		font-size: rem.rem(36);
+		line-height: rem.rem(48);
+		letter-spacing: -0.03em;
+		max-width: 57%;
+	}
+}

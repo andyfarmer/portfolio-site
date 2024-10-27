@@ -1,0 +1,23 @@
+@use 'tools/variables/colours';
+
+.b-navigation{
+	&__list{
+		display: flex;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	&__item{
+		margin: 0;
+		padding: 0 24px 0 0;
+		list-style: none;
+	}
+	&__link{
+		color: colours.$text-secondary;
+		text-decoration: none;
+		&--active{
+			color: colours.$text-primary;
+			text-decoration: underline;
+		}
+	}
+}

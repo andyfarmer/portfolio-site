@@ -1,0 +1,27 @@
+{% set navigationItems = [
+	{
+		href: '',
+		label: 'Home'
+	},
+	{
+		href: '/portfolio.html',
+		label: 'Portfolio'
+	},
+	{
+		href: '/case-studies.html',
+		label: 'Case studies'
+	}
+] %}
+
+{% macro navigation(active) %}
+	{% set active = active or 'Home' %}
+	<nav class="b-navigation">
+		<ul class="b-navigation__list">
+			{% for item in navigationItems %}
+				<li class="b-navigation__item">
+					<a href="{{item.href}}" class="b-navigation__link{% if active == item.label %} b-navigation__link--active{% endif %}">{{item.label}}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+{% endmacro %}

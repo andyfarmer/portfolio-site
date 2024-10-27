@@ -1,7 +1,13 @@
-@use './tools/functions/rem';
+@use 'tools/functions/rem';
 
 .e-heading{
   font-weight: 600;
+
+	&--jumbo{
+		font-size: rem.rem(72);
+		line-height: rem.rem(80);
+		letter-spacing: -0.05em;
+	}
 
   &--xl{
 		font-size: rem.rem(48);

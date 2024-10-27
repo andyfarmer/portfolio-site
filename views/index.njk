@@ -1,6 +1,15 @@
 {% extends './templates/base.njk' %}
 
+{% from 'components/b-navigation.njk' import navigation %}
+
 {% block content %}
-	<h1>Hello World</h1>
+
+	<header class="b-header">
+		<div class="l-content-container">
+			{{ navigation('Home')}}
+			<h1 class="b-header__heading e-heading e-heading--jumbo">Hi, I'm Andy</h1>
+			<p class="b-header__intro">A T-shaped designer and strategist with over 12 years experience in crafting digital products and services.</p>
+		</div>
+	</header>
 
 {% endblock %}
