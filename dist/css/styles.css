@@ -57,6 +57,46 @@ body {
   letter-spacing: -0.02em;
 }
 
+.b-experience {
+  position: relative;
+  padding-top: 160px;
+  padding-bottom: 184px;
+}
+.b-experience__copy {
+  text-align: center;
+  color: #42404F;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 610px;
+}
+.b-experience__img {
+  position: absolute;
+}
+.b-experience__img--itv {
+  top: 44px;
+  right: 26%;
+}
+.b-experience__img--home-office {
+  bottom: 34px;
+  right: 19%;
+}
+.b-experience__img--wagg {
+  top: 161px;
+  right: 12%;
+}
+.b-experience__img--playstation {
+  top: 36px;
+  left: 16%;
+}
+.b-experience__img--nhs {
+  bottom: 64px;
+  left: 30%;
+}
+.b-experience__img--luhv {
+  top: 176px;
+  left: 9%;
+}
+
 .b-header {
   background: #F8F3EC;
   padding-top: 32px;

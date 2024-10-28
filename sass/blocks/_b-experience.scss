@@ -1,0 +1,46 @@
+@use 'tools/variables/colours';
+
+.b-experience{
+	position: relative;
+	padding: {
+		top: 160px;
+		bottom: 184px;
+	}
+	&__copy{
+		text-align: center;
+		color: colours.$text-secondary;
+		margin: {
+			right: auto;
+			left: auto;
+		}
+		max-width: 610px;
+	}
+	&__img{
+		position: absolute;
+		&--itv{
+			top: 44px;
+			right: 26%;
+		}
+		&--home-office{
+			bottom: 34px;
+			right: 19%;
+		}
+		&--wagg{
+			top: 161px;
+			right: 12%;
+		}
+		&--playstation{
+			top: 36px;
+			left: 16%;
+		}
+		&--nhs{
+			bottom: 64px;
+			left: 30%
+		}
+		&--luhv{
+			top: 176px;
+			left: 9%;
+		}
+	}
+
+}
