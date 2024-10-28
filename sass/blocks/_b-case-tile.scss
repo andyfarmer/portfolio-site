@@ -2,6 +2,11 @@
 
 .b-case-tile{
 	display: flex;
+	max-width: 1680px;
+	margin: {
+		left: auto;
+		right: auto;
+	}
 	&__details{
 		width: 50%;
 		padding: 72px 24px 72px 7vw;
