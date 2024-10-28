@@ -1,0 +1,24 @@
+{#
+	{
+		heading: 'Heading',
+		copy: 'Lorem ipsum',
+		img: 'images/url',
+		href: '#',
+		dark: false,
+		reversed: false
+	}
+#}
+
+{% macro caseTile(params) %}
+	<section class="b-case-tile{% if params.dark == true %} b-case-tile--dark{% endif %} {% if params.reversed == true %} b-case-tile--reversed{% endif %}">
+		<div class="b-case-tile__details">
+			<h2 class="b-case-tile__heading e-heading e-heading--xl">
+				<span class="b-case-tile__eyebrow e-eyebrow u-small-caps">Case study<span class="u-visually-hidden">:&nbsp;</span></span>
+				{{params.heading}}
+			</h2>
+			<p class="b-case-tile__copy e-text--large">{{params.copy}}</p>
+			<a href="{{params.href}}" class="e-button">View case study</a>
+		</div>
+		<img src="{{params.img}}" role="presentation" class="b-case-tile__img">
+	</section>
+{% endmacro %}

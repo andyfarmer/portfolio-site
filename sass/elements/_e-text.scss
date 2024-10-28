@@ -1,6 +1,7 @@
 @use 'tools/functions/rem';
 
 .e-text{
+	line-height: rem.rem(32);
 	&--large{
 		font-size: rem.rem(20);
 		line-height: rem.rem(32);

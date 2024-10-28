@@ -76,6 +76,9 @@ body {
   letter-spacing: -0.02em;
 }
 
+.e-text {
+  line-height: 2rem;
+}
 .e-text--large {
   font-size: 1.25rem;
   line-height: 2rem;
@@ -87,7 +90,10 @@ body {
 }
 .b-portfolio-preview__heading {
   max-width: 612px;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 48px;
+  text-align: center;
 }
 .b-portfolio-preview__grid {
   display: grid;
@@ -121,9 +127,6 @@ body {
 
 .b-case-tile {
   display: flex;
-  max-width: 1680px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .b-case-tile__details {
   width: 50%;
@@ -157,6 +160,19 @@ body {
 .b-case-tile--reversed .b-case-tile__details {
   order: 2;
   padding-left: 5vw;
+}
+
+.b-contact {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  text-align: center;
+  background: #F0EFF5;
+}
+.b-contact__heading {
+  padding-bottom: 16px;
+}
+.b-contact__copy {
+  padding-bottom: 32px;
 }
 
 .b-experience {
@@ -245,6 +261,9 @@ body {
 }
 .l-content-container--10-col {
   max-width: 1060px;
+}
+.l-content-container--4-col {
+  max-width: 448px;
 }
 
 .u-small-caps {

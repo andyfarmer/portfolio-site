@@ -5,7 +5,12 @@
 	}
 	&__heading{
 		max-width: 612px;
+		margin: {
+			left: auto;
+			right: auto;
+		}
 		padding-bottom: 48px;
+		text-align: center;
 	}
 	&__grid{
 		display: grid;

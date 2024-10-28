@@ -1,0 +1,16 @@
+@use 'tools/variables/colours';
+
+.b-contact{
+	padding: {
+		top: 56px;
+		bottom: 56px;
+	}
+	text-align: center;
+	background: colours.$background-off-white;
+	&__heading{
+		padding-bottom: 16px;
+	}
+	&__copy{
+		padding-bottom: 32px;
+	}
+}
