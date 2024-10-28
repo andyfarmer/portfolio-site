@@ -1,0 +1,16 @@
+@use 'tools/functions/rem';
+@use 'tools/variables/colours';
+
+.e-button{
+	display: inline-block;
+	line-height: rem.rem(32);
+	text-decoration: none;
+	padding: 8px 24px;
+	border-radius: 24px;
+	background: linear-gradient(to right, #554BBE, #6359C0);
+	color: #fff;
+	font-weight: 600;
+	&:hover{
+		background: colours.$brand;
+	}
+}

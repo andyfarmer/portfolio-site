@@ -28,6 +28,25 @@ body {
   font-size: 1.125rem;
 }
 
+.e-button {
+  display: inline-block;
+  line-height: 2rem;
+  text-decoration: none;
+  padding: 8px 24px;
+  border-radius: 24px;
+  background: linear-gradient(to right, #554BBE, #6359C0);
+  color: #fff;
+  font-weight: 600;
+}
+.e-button:hover {
+  background: #3E3691;
+}
+
+.e-eyebrow {
+  display: block;
+  padding-bottom: 8px;
+}
+
 .e-heading {
   font-weight: 600;
 }
@@ -57,10 +76,52 @@ body {
   letter-spacing: -0.02em;
 }
 
+.e-text--large {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.b-case-tile {
+  display: flex;
+}
+.b-case-tile__details {
+  width: 50%;
+  padding: 72px 24px 72px 7vw;
+  background: #F8F3EC;
+}
+.b-case-tile__img {
+  width: 50%;
+}
+.b-case-tile__eyebrow {
+  color: #42404F;
+}
+.b-case-tile__heading {
+  padding-bottom: 24px;
+}
+.b-case-tile__copy {
+  color: #42404F;
+  max-width: 470px;
+  padding-bottom: 40px;
+}
+.b-case-tile--dark .b-case-tile__details {
+  background: #2B2938;
+  color: #fff;
+}
+.b-case-tile--dark .b-case-tile__copy, .b-case-tile--dark .b-case-tile__eyebrow {
+  color: #fff;
+}
+.b-case-tile--reversed .b-case-tile__img {
+  order: 1;
+}
+.b-case-tile--reversed .b-case-tile__details {
+  order: 2;
+  padding-left: 5vw;
+}
+
 .b-experience {
   position: relative;
   padding-top: 160px;
-  padding-bottom: 184px;
+  padding-bottom: 192px;
 }
 .b-experience__copy {
   text-align: center;
@@ -77,7 +138,7 @@ body {
   right: 26%;
 }
 .b-experience__img--home-office {
-  bottom: 34px;
+  bottom: 42px;
   right: 19%;
 }
 .b-experience__img--wagg {
@@ -89,7 +150,7 @@ body {
   left: 16%;
 }
 .b-experience__img--nhs {
-  bottom: 64px;
+  bottom: 72px;
   left: 30%;
 }
 .b-experience__img--luhv {
@@ -143,4 +204,21 @@ body {
 }
 .l-content-container--8-col {
   max-width: 1060px;
+}
+
+.u-small-caps {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.u-visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

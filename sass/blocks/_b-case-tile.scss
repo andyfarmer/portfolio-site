@@ -1,0 +1,45 @@
+@use 'tools/variables/colours';
+
+.b-case-tile{
+	display: flex;
+	&__details{
+		width: 50%;
+		padding: 72px 24px 72px 7vw;
+		background: colours.$background-cream;
+	}
+	&__img{
+		width: 50%;
+	}
+	&__eyebrow{
+		color: colours.$text-secondary;
+	}
+	&__heading{
+		padding-bottom: 24px;
+	}
+	&__copy{
+		color: colours.$text-secondary;
+		max-width: 470px;
+		padding-bottom: 40px;
+	}
+
+	&--dark &{
+		&__details{
+			background: colours.$background-dark;
+			color: #fff;
+		}
+		&__copy,
+		&__eyebrow{
+			color: #fff;
+		}
+	}
+
+	&--reversed &{
+		&__img{
+			order: 1;
+		}
+		&__details{
+			order: 2;
+			padding-left: 5vw;
+		}
+	}
+}
