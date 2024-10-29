@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "sass:meta";
+@use 'tools/variables/breakpoints';
+
+@mixin breakpoint($breakpoint) {
+  @if map.has-key(breakpoints.$breakpoints, $breakpoint) {
+    @media #{meta.inspect(map.get(breakpoints.$breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+  }
+}

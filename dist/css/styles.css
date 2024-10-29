@@ -42,6 +42,12 @@ body {
   background: #3E3691;
 }
 
+@media (max-width: 1200px) {
+  .e-button {
+    font-size: 1rem;
+    padding: 4px 16px;
+  }
+}
 .e-eyebrow {
   display: block;
   padding-bottom: 8px;
@@ -76,6 +82,21 @@ body {
   letter-spacing: -0.02em;
 }
 
+@media (max-width: 1200px) {
+  .e-heading--jumbo {
+    font-size: 3.75rem;
+    line-height: 4.5rem;
+  }
+  .e-heading--xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .e-heading--l {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: -0.02em;
+  }
+}
 .e-text {
   line-height: 2rem;
 }
@@ -84,6 +105,15 @@ body {
   line-height: 2rem;
 }
 
+@media (max-width: 1200px) {
+  .e-text {
+    line-height: 1.75rem;
+  }
+  .e-text--large {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
 .b-portfolio-preview {
   padding-top: 88px;
   padding-bottom: 80px;
@@ -162,6 +192,19 @@ body {
   padding-left: 5vw;
 }
 
+@media (max-width: 1200px) {
+  .b-case-tile__details {
+    padding-top: 64px;
+    padding-bottom: 56px;
+    padding-left: 5vw;
+  }
+  .b-case-tile__heading {
+    padding-bottom: 16px;
+  }
+  .b-case-tile__copy {
+    padding-bottom: 32px;
+  }
+}
 .b-contact {
   padding-top: 56px;
   padding-bottom: 56px;
@@ -173,8 +216,21 @@ body {
 }
 .b-contact__copy {
   padding-bottom: 32px;
+  color: #42404F;
 }
 
+@media (max-width: 1200px) {
+  .b-contact {
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  .b-contact__heading {
+    padding-bottom: 8px;
+  }
+  .b-contact__copy {
+    padding-bottom: 24px;
+  }
+}
 .b-experience {
   position: relative;
   padding-top: 160px;
@@ -215,6 +271,33 @@ body {
   left: 9%;
 }
 
+@media (max-width: 1200px) {
+  .b-experience__img {
+    transform: scale(0.9);
+  }
+  .b-experience__img--itv {
+    top: 40px;
+    right: 23%;
+  }
+  .b-experience__img--home-office {
+    bottom: 38px;
+    right: 17%;
+  }
+  .b-experience__img--wagg {
+    right: 9%;
+  }
+  .b-experience__img--playstation {
+    top: 30px;
+    left: 13%;
+  }
+  .b-experience__img--nhs {
+    bottom: 68px;
+    left: 24%;
+  }
+  .b-experience__img--luhv {
+    left: 4%;
+  }
+}
 .b-header {
   background: #F8F3EC;
   padding-top: 32px;
@@ -232,6 +315,20 @@ body {
   max-width: 57%;
 }
 
+@media (max-width: 1200px) {
+  .b-header {
+    padding-bottom: 104px;
+  }
+  .b-header__heading {
+    padding-top: 40px;
+    padding-bottom: 24px;
+  }
+  .b-header__intro {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    max-width: 50%;
+  }
+}
 .b-navigation__list {
   display: flex;
   margin: 0;

@@ -1,4 +1,5 @@
 @use 'tools/functions/rem';
+@use 'tools/mixins/breakpoint';
 @use 'tools/variables/colours';
 
 .e-button{
@@ -12,5 +13,12 @@
 	font-weight: 600;
 	&:hover{
 		background: colours.$brand;
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.e-button{
+		font-size: rem.rem(16);
+		padding: 4px 16px;
 	}
 }

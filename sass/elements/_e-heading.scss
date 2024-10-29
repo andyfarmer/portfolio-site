@@ -1,4 +1,5 @@
 @use 'tools/functions/rem';
+@use 'tools/mixins/breakpoint';
 
 .e-heading{
   font-weight: 600;
@@ -31,5 +32,23 @@
 		font-size: rem.rem(20);
 		line-height: rem.rem(24);
 		letter-spacing: -0.02em;
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.e-heading{
+		&--jumbo{
+			font-size: rem.rem(60);
+			line-height: rem.rem(72);
+		}
+		&--xl{
+			font-size: rem.rem(36);
+			line-height: rem.rem(40);
+		}
+		&--l{
+			font-size: rem.rem(24);
+			line-height: rem.rem(32);
+			letter-spacing: -0.02em;
+		}
 	}
 }

@@ -1,12 +1,8 @@
+@use 'tools/mixins/breakpoint';
 @use 'tools/variables/colours';
 
 .b-case-tile{
 	display: flex;
-	// max-width: 1680px;
-	// margin: {
-	// 	left: auto;
-	// 	right: auto;
-	// }
 	&__details{
 		width: 50%;
 		padding: 72px 24px 72px 7vw;
@@ -45,6 +41,24 @@
 		&__details{
 			order: 2;
 			padding-left: 5vw;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.b-case-tile{
+		&__details{
+			padding: {
+				top: 64px;
+				bottom: 56px;
+				left: 5vw;
+			}
+		}
+		&__heading{
+			padding-bottom: 16px;
+		}
+		&__copy{
+			padding-bottom: 32px;
 		}
 	}
 }

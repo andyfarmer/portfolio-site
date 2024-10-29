@@ -1,3 +1,4 @@
+@use 'tools/mixins/breakpoint';
 @use 'tools/variables/colours';
 
 .b-experience{
@@ -42,5 +43,34 @@
 			left: 9%;
 		}
 	}
+}
 
+@include breakpoint.breakpoint(large){
+	.b-experience{
+		&__img{
+			transform: scale(0.9);
+			&--itv{
+				top: 40px;
+				right: 23%;
+			}
+			&--home-office{
+				bottom: 38px;
+				right: 17%;
+			}
+			&--wagg{
+				right: 9%;
+			}
+			&--playstation{
+				top: 30px;
+				left: 13%;
+			}
+			&--nhs{
+				bottom: 68px;
+				left: 24%
+			}
+			&--luhv{
+				left: 4%;
+			}
+		}
+	}
 }
