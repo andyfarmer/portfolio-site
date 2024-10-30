@@ -15,6 +15,10 @@
 	&__link{
 		color: colours.$text-secondary;
 		text-decoration: none;
+		&:hover,
+		&:focus{
+			text-decoration: underline;
+		}
 		&--active{
 			color: colours.$text-primary;
 			text-decoration: underline;

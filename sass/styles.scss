@@ -3,6 +3,7 @@
 
 @use 'elements/e-button';
 @use 'elements/e-eyebrow';
+@use 'elements/e-folio-img';
 @use 'elements/e-heading';
 @use 'elements/e-text';
 
@@ -11,6 +12,7 @@
 @use 'blocks/b-contact';
 @use 'blocks/b-experience';
 @use 'blocks/b-header';
+@use 'blocks/b-home-header';
 @use 'blocks/b-navigation';
 
 @use 'layouts/l-content-container';

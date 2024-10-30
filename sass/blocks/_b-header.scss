@@ -3,68 +3,39 @@
 @use 'tools/variables/colours';
 
 .b-header{
-	background: colours.$background-cream;
+	background: colours.$background-dark;
+	color: colours.$text-off-white;
 	padding: {
 		top: 32px;
-		bottom: 144px;
+		bottom: 104px;
 	}
 	&__heading{
+		color: #fff;
 		padding: {
 			top: 48px;
 			bottom: 32px;
 		}
 	}
 	&__intro{
-		color: colours.$text-secondary;
-		font-size: rem.rem(36);
-		line-height: rem.rem(48);
-		letter-spacing: -0.03em;
-		max-width: 57%;
+		padding-bottom: 8px;
 	}
-}
+	&__footnote{
+		font-size: rem.rem(16);
+	}
+	&__link{
+		color: #fff;
+	}
 
-@include breakpoint.breakpoint(large){
-	.b-header{
-		padding-bottom: 104px;
-		&__heading{
-			padding: {
-				top: 40px;
-				bottom: 24px;
+	.b-navigation{
+		&__link{
+			color: colours.$text-off-white;
+			&:hover,
+			&:focus{
+
 			}
-		}
-		&__intro{
-			font-size: rem.rem(24);
-			line-height: rem.rem(36);
-			max-width: 50%;
-		}
-	}
-}
-
-@include breakpoint.breakpoint(medium){
-	.b-header{
-		&__intro{
-			max-width: 75%;
-		}
-	}
-}
-
-@include breakpoint.breakpoint('type-break-2'){
-	.b-header{
-		padding: {
-			top: 24px;
-			bottom: 72px;
-		}
-		&__intro{
-			font-size: rem.rem(21);
-			line-height: rem.rem(32);
-		}
-	}
-}
-
-@include breakpoint.breakpoint('small'){
-	.b-header{
-		&__intro{
-			max-width: none;
+			&--active{
+				color: #fff;
+			}
 		}
 	}
 }

@@ -1,0 +1,20 @@
+{% extends './templates/base.njk' %}
+
+{% from 'components/b-navigation.njk' import navigation %}
+
+{% block content %}
+
+	<header class="b-header">
+		<div class="l-content-container">
+			{{ navigation('Portfolio')}}
+			<h1 class="b-header__heading e-heading e-heading--jumbo">Portfolio</h1>
+			<p class="b-header__intro e-text--large">A visual collection of previous work examples. Just keep scrolling.</p>
+			<p class="b-header__footnote">For a more in-depth look at my process, see <a href="/case-studies" class="b-header__link">case studies</a>.</p>
+		</div>
+	</header>
+
+	<section>
+		<img srcset="images/portfolio/navy/home@2x.jpg 2x" src="images/portfolio/navy/home.jpg" class="e-folio-img">
+	</section>
+
+{% endblock %}
