@@ -1,8 +1,15 @@
 @use 'tools/functions/rem';
+@use 'tools/mixins/breakpoint';
 
 .u-small-caps{
 	font-size: rem.rem(14);
 	line-height: rem.rem(24);
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
+}
+
+@include breakpoint.breakpoint('type-break-2'){
+	.u-small-caps{
+		font-size: rem.rem(12);
+	}
 }

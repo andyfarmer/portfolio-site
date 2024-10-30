@@ -39,3 +39,32 @@
 		}
 	}
 }
+
+@include breakpoint.breakpoint(medium){
+	.b-header{
+		&__intro{
+			max-width: 75%;
+		}
+	}
+}
+
+@include breakpoint.breakpoint('type-break-2'){
+	.b-header{
+		padding: {
+			top: 24px;
+			bottom: 72px;
+		}
+		&__intro{
+			font-size: rem.rem(21);
+			line-height: rem.rem(32);
+		}
+	}
+}
+
+@include breakpoint.breakpoint('small'){
+	.b-header{
+		&__intro{
+			max-width: none;
+		}
+	}
+}

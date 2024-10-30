@@ -1,4 +1,11 @@
+@use 'tools/mixins/breakpoint';
+
 .e-eyebrow{
 	display: block;
 	padding-bottom: 8px;
+}
+@include breakpoint.breakpoint('type-break-2'){
+	.e-eyebrow{
+		padding-bottom: 4px;
+	}
 }

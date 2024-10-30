@@ -1,11 +1,13 @@
+@use 'tools/mixins/breakpoint';
+
 .l-content-container {
 	margin: {
 		left: auto;
 		right: auto;
 	}
 	padding: {
-		left: 24px;
-		right: 24px;
+		left: 32px;
+		right: 32px;
 	}
 	max-width: 1296px;
 
@@ -15,5 +17,24 @@
 
 	&--4-col {
 		max-width: 448px;
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.l-content-container{
+		max-width: 840px;
+
+		&--4-col {
+			max-width: 440px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.l-content-container{
+		padding: {
+			left: 16px;
+			right: 16px;
+		}
 	}
 }
