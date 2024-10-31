@@ -131,6 +131,21 @@ body {
     letter-spacing: -0.02em;
   }
 }
+.e-tag {
+  display: inline-block;
+  font-weight: 600;
+  padding: 4px 8px;
+  color: #fff;
+  background: #3E3691;
+  border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+  .e-tag {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}
 .e-text {
   line-height: 2rem;
 }
@@ -515,6 +530,16 @@ body {
     left: 32%;
   }
 }
+.b-folio-details {
+  max-width: 506px;
+}
+.b-folio-details__heading {
+  padding: 16px 0;
+}
+.b-folio-details__copy {
+  padding-bottom: 16px;
+}
+
 .b-header {
   background: #2B2938;
   color: #DFDEE7;
@@ -542,6 +567,15 @@ body {
   color: #fff;
 }
 
+@media (max-width: 1200px) {
+  .b-header {
+    padding-bottom: 80px;
+  }
+  .b-header__heading {
+    padding-top: 40px;
+    padding-bottom: 24px;
+  }
+}
 .b-home-header {
   background: #F8F3EC;
   padding-top: 32px;
@@ -642,6 +676,62 @@ body {
   .l-content-container {
     padding-left: 16px;
     padding-right: 16px;
+  }
+}
+.l-folio-navy {
+  display: flex;
+  justify-content: center;
+  padding: 32px 32px 72px 32px;
+  background: linear-gradient(180deg, #F0EFF5 0%, #F0EFF5 45%, #fff 45%, #fff 80%, #F0EFF5 80%, #F0EFF5 100%);
+}
+.l-folio-navy__home {
+  margin-right: 40px;
+}
+.l-folio-navy__right {
+  padding-left: 24px;
+}
+.l-folio-navy__details {
+  padding-top: 128px;
+  padding-bottom: 176px;
+}
+
+@media (max-width: 1200px) {
+  .l-folio-navy__details {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
+}
+@media (max-width: 910px) {
+  .l-folio-navy__details {
+    padding-top: 72px;
+    padding-bottom: 96px;
+  }
+}
+@media (max-width: 767px) {
+  .l-folio-navy {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 32px;
+  }
+  .l-folio-navy__right {
+    order: 1;
+    padding-left: 0;
+    padding-bottom: 24px;
+    width: 100%;
+  }
+  .l-folio-navy__left {
+    order: 2;
+    width: 100%;
+  }
+  .l-folio-navy__home {
+    margin-right: 0;
+  }
+  .l-folio-navy__details {
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+  .l-folio-navy .e-folio-img {
+    width: 100%;
   }
 }
 .u-small-caps {

@@ -5,17 +5,20 @@
 @use 'elements/e-eyebrow';
 @use 'elements/e-folio-img';
 @use 'elements/e-heading';
+@use 'elements/e-tag';
 @use 'elements/e-text';
 
 @use 'blocks/b-portfolio-preview';
 @use 'blocks/b-case-tile';
 @use 'blocks/b-contact';
 @use 'blocks/b-experience';
+@use 'blocks/b-folio-details';
 @use 'blocks/b-header';
 @use 'blocks/b-home-header';
 @use 'blocks/b-navigation';
 
 @use 'layouts/l-content-container';
+@use 'layouts/l-folio-navy';
 
 @use 'utilities/u-small-caps';
 @use 'utilities/u-visually-hidden';

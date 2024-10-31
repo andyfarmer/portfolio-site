@@ -29,12 +29,20 @@
 	.b-navigation{
 		&__link{
 			color: colours.$text-off-white;
-			&:hover,
-			&:focus{
-
-			}
 			&--active{
 				color: #fff;
+			}
+		}
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.b-header{
+		padding-bottom: 80px;
+		&__heading{
+			padding: {
+				top: 40px;
+				bottom: 24px;
 			}
 		}
 	}

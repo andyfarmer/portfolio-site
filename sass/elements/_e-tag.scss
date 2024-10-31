@@ -1,0 +1,18 @@
+@use 'tools/mixins/breakpoint';
+@use 'tools/variables/colours';
+
+.e-tag{
+	display: inline-block;
+	font-weight: 600;
+	padding: 4px 8px;
+	color: #fff;
+	background: colours.$brand;
+	border-radius: 4px;
+}
+
+@include breakpoint.breakpoint(small){
+	.e-tag{
+		padding-top: 2px;
+		padding-bottom: 2px;
+	}
+}
