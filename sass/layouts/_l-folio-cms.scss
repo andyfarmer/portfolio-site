@@ -114,7 +114,11 @@
 			display: none;
 		}
 		&__dash-imgs{
-			margin-top: -104px;
+			margin: {
+				top: -104px;
+				bottom: 0;
+			}
+			padding-bottom: 16px;
 		}
 		&__dash-imgs,
 		&__files-wrap{
@@ -138,7 +142,11 @@
 			width: 100%;
 		}
 		&__files-wrap{
-			margin-bottom: 24px;
+			margin: {
+				bottom: 24px;
+				top: 0;
+			}
+			padding-top: 16px;
 		}
 		.b-folio-details{
 			max-width: none;

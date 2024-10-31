@@ -775,6 +775,8 @@ body {
   }
   .l-folio-cms__dash-imgs {
     margin-top: -104px;
+    margin-bottom: 0;
+    padding-bottom: 16px;
   }
   .l-folio-cms__dash-imgs, .l-folio-cms__files-wrap {
     padding-left: 16px;
@@ -794,6 +796,8 @@ body {
   }
   .l-folio-cms__files-wrap {
     margin-bottom: 24px;
+    margin-top: 0;
+    padding-top: 16px;
   }
   .l-folio-cms .b-folio-details {
     max-width: none;
