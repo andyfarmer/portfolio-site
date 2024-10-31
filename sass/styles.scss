@@ -3,6 +3,7 @@
 
 @use 'elements/e-button';
 @use 'elements/e-eyebrow';
+@use 'elements/e-folio-fullwidth';
 @use 'elements/e-folio-img';
 @use 'elements/e-heading';
 @use 'elements/e-tag';
@@ -18,6 +19,7 @@
 @use 'blocks/b-navigation';
 
 @use 'layouts/l-content-container';
+@use 'layouts/l-folio-cms';
 @use 'layouts/l-folio-navy';
 
 @use 'utilities/u-small-caps';

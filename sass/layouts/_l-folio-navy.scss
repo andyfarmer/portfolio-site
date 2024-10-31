@@ -8,6 +8,8 @@
 	background: linear-gradient(180deg, colours.$background-off-white 0%, colours.$background-off-white 45%, #fff 45%, #fff 80%, colours.$background-off-white 80%, colours.$background-off-white 100%);
 	&__home{
 		margin-right: 40px;
+		position: relative;
+		right: 24px;
 	}
 	&__right{
 		padding-left: 24px;
@@ -27,6 +29,9 @@
 				top: 96px;
 				bottom: 120px;
 			}
+		}
+		&__home{
+			right: 0;
 		}
 	}
 }
@@ -61,6 +66,7 @@
 			margin-right: 0;
 		}
 		&__details{
+			max-width: none;
 			padding: {
 				top: 24px;
 				bottom: 32px;

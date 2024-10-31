@@ -1,3 +1,5 @@
+@use 'tools/variables/colours';
+
 .b-folio-details{
 	max-width: 506px;
 	&__heading{
@@ -5,5 +7,13 @@
 	}
 	&__copy{
 		padding-bottom: 16px;
+	}
+	&--dark &{
+		&__heading{
+			color: #fff;
+		}
+		&__copy{
+			color: colours.$text-off-white;
+		}
 	}
 }
