@@ -1,0 +1,94 @@
+@use 'tools/mixins/breakpoint';
+@use 'tools/variables/colours';
+
+.l-folio-severfield{
+	display: flex;
+	justify-content: center;
+	padding: 64px 32px 72px 32px;
+	background: linear-gradient(180deg, colours.$background-dark 0%, colours.$background-dark 23%, #fff 23%, #fff 53%, colours.$background-off-white 53%, colours.$background-off-white 100%);
+	&__right{
+		padding-left: 12px;
+	}
+	&__left{
+		padding-right: 12px;
+	}
+	&__details{
+		padding-top: 40px;
+	}
+	&__home{
+		position: relative;
+		right: 56px;
+	}
+	&__projects{
+		margin: {
+			top: 96px;
+			left: 48px;
+		}
+	}
+	&__project{
+		margin-top: 136px;
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.l-folio-severfield{
+		padding-top: 56px;
+		&__home{
+			right: 8px;
+		}
+		&__projects{
+			margin: {
+				top: 72px;
+				left: 24px;
+			}
+		}
+		&__project{
+			margin-top: 72px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(type-break-2){
+	.l-folio-severfield{
+		padding-top: 40px;
+		&__details{
+			padding-top: 24px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.l-folio-severfield{
+		flex-direction: column;
+		padding: 0 16px 32px;
+		&__right{
+			order: 1;
+			padding-left: 0;
+		}
+		&__left{
+			order: 2;
+			padding-right: 0;
+		}
+		&__details{
+			max-width: none;
+			width: 100%;
+			padding: 40px 0 0;
+		}
+		&__projects{
+			width: 100%;
+			margin: {
+				left: 0;
+				top: 36px;
+			}
+		}
+		&__project{
+			width: 100%;
+			margin-top: 32px;
+		}
+		&__home{
+			width: 100%;
+			margin-top: 32px;
+			right: 0
+		}
+	}
+}

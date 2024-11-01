@@ -69,8 +69,7 @@ body {
 
 .e-folio-img {
   border-radius: 4px;
-  box-shadow: 0px 2px 6px 2px hsla(0, 0%, 0%, 0.15);
-  box-shadow: 0px 1px 2px 0px hsla(0, 0%, 0%, 0.3);
+  box-shadow: 0px 2px 6px 2px hsla(0, 0%, 0%, 0.1), 0px 1px 2px 0px hsla(0, 0%, 0%, 0.3);
 }
 
 .e-heading {
@@ -923,6 +922,89 @@ body {
   }
   .l-folio-navy .e-folio-img {
     width: 100%;
+  }
+}
+.l-folio-severfield {
+  display: flex;
+  justify-content: center;
+  padding: 64px 32px 72px 32px;
+  background: linear-gradient(180deg, #2B2938 0%, #2B2938 23%, #fff 23%, #fff 53%, #F0EFF5 53%, #F0EFF5 100%);
+}
+.l-folio-severfield__right {
+  padding-left: 12px;
+}
+.l-folio-severfield__left {
+  padding-right: 12px;
+}
+.l-folio-severfield__details {
+  padding-top: 40px;
+}
+.l-folio-severfield__home {
+  position: relative;
+  right: 56px;
+}
+.l-folio-severfield__projects {
+  margin-top: 96px;
+  margin-left: 48px;
+}
+.l-folio-severfield__project {
+  margin-top: 136px;
+}
+
+@media (max-width: 1200px) {
+  .l-folio-severfield {
+    padding-top: 56px;
+  }
+  .l-folio-severfield__home {
+    right: 8px;
+  }
+  .l-folio-severfield__projects {
+    margin-top: 72px;
+    margin-left: 24px;
+  }
+  .l-folio-severfield__project {
+    margin-top: 72px;
+  }
+}
+@media (max-width: 910px) {
+  .l-folio-severfield {
+    padding-top: 40px;
+  }
+  .l-folio-severfield__details {
+    padding-top: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .l-folio-severfield {
+    flex-direction: column;
+    padding: 0 16px 32px;
+  }
+  .l-folio-severfield__right {
+    order: 1;
+    padding-left: 0;
+  }
+  .l-folio-severfield__left {
+    order: 2;
+    padding-right: 0;
+  }
+  .l-folio-severfield__details {
+    max-width: none;
+    width: 100%;
+    padding: 40px 0 0;
+  }
+  .l-folio-severfield__projects {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 36px;
+  }
+  .l-folio-severfield__project {
+    width: 100%;
+    margin-top: 32px;
+  }
+  .l-folio-severfield__home {
+    width: 100%;
+    margin-top: 32px;
+    right: 0;
   }
 }
 .u-small-caps {
