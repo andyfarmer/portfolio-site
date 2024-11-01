@@ -1,0 +1,181 @@
+@use 'tools/mixins/breakpoint';
+@use 'tools/variables/colours';
+
+.l-folio-duffield{
+	overflow: hidden;
+	&__header{
+		background: colours.$background-dark;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		padding: {
+			left: calc(50vw - 616px);
+			top: 56px;
+			bottom: 80px;
+			right: 32px;
+		}
+	}
+	&__snap{
+		position: absolute;
+		right: calc(50vw - 664px);
+		top: 112px;
+		border-radius: 8px;
+	}
+	&__screens{
+		display: flex;
+		justify-content: center;
+		background: colours.$background-off-white;
+		padding-bottom: 72px;
+	}
+	&__left{
+		width: 50%;
+		padding-left: calc(50vw - 648px);
+		margin-top: -104px;
+	}
+	&__right{
+		width: 50%;
+		padding-top: 56px;
+		position: relative;
+	}
+	&__garages{
+		max-width: none;
+		margin-left: -24px;
+	}
+	&__mobile-1{
+		margin: {
+			left: 48px;
+			top: 40px;
+		}
+	}
+	&__mobile-2{
+		position: absolute;
+		bottom: 0;
+		left: 316px;
+	}
+}
+
+@media (max-width: 1380px){
+	.l-folio-duffield{
+		&__header{
+			padding-left: 40px;
+		}
+		&__snap{
+			right: 24px;
+			width: 53vw;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.l-folio-duffield{
+		&__header{
+			padding: {
+				left: 32px;
+				top: 40px;
+				bottom: 64px;
+			}
+		}
+		&__snap{
+			top: 5vw;
+			width: 50vw;
+		}
+		&__details{
+			width: 45%;
+		}
+		&__garages{
+			max-width: 110%;
+			margin-left: 24px;
+		}
+		&__mobile-1,
+		&__mobile-2{
+			width: 25vw;
+		}
+		&__mobile-2{
+			bottom: 17vw;
+			left: 22vw;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.l-folio-duffield{
+		&__left{
+			padding-left: 24px;
+			margin-top: -6vw;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(type-break-2){
+	.l-folio-duffield{
+		&__header{
+			flex-direction: column;
+			align-items: center;
+			padding-bottom: 0;
+		}
+		&__snap{
+			position: static;
+			margin-top: 24px;
+			margin-bottom: -40px;
+			width: 70%;
+		}
+		&__details{
+			width: 60%;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.l-folio-duffield{
+		&__header{
+			padding: 32px 16px 24px;
+		}
+		&__details{
+			max-width: none;
+			width: 100%;
+		}
+		&__snap{
+			width: 90%;
+			margin-bottom: 0;
+		}
+		&__screens{
+			display: block;
+			padding: {
+				left: 16px;
+				right: 16px;
+			}
+		}
+		&__left,
+		&__right{
+			width: 100%;
+		}
+		&__left{
+			padding: {
+				left: 0;
+				top: 24px;
+			}
+			margin-top: 0;
+		}
+		&__right{
+			padding: {
+				left: 0;
+				top: 32px;
+			}
+		}
+		&__garages{
+			max-width: 100%;
+			margin-left: 0;
+		}
+		&__mobile-1,
+		&__mobile-2{
+			width: 48vw;
+		}
+		&__mobile-1{
+			margin-left: 5vw;
+		}
+		&__mobile-2{
+			bottom: -4vw;
+			left: 42vw;
+		}
+	}
+}
