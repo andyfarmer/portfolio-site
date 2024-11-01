@@ -1,0 +1,17 @@
+{% from 'components/b-navigation.njk' import navigation %}
+
+{# {
+	heading: 'Heading',
+	intro: 'Intro',
+	active: 'Active nav'
+} #}
+
+{% macro header(params) %}
+	<header class="b-header">
+		<div class="l-content-container">
+			{{ navigation(params.active)}}
+			<h1 class="b-header__heading e-heading e-heading--jumbo">{{params.heading}}</h1>
+			<p class="b-header__intro e-text--large">{{params.intro}}</p>
+		</div>
+	</header>
+{% endmacro %}

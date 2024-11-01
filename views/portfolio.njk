@@ -1,18 +1,15 @@
 {% extends './templates/base.njk' %}
 
 {% from 'components/b-contact.njk' import contact %}
-{% from 'components/b-navigation.njk' import navigation %}
+{% from 'components/b-header.njk' import header %}
 
 {% block content %}
 
-	<header class="b-header">
-		<div class="l-content-container">
-			{{ navigation('Portfolio')}}
-			<h1 class="b-header__heading e-heading e-heading--jumbo">Portfolio</h1>
-			<p class="b-header__intro e-text--large">A visual collection of previous work examples. Just keep scrolling.</p>
-			<p class="b-header__footnote">For a more in-depth look at my process, see <a href="/case-studies" class="b-header__link">case studies</a>.</p>
-		</div>
-	</header>
+	{{ header({
+		heading: 'Portfolio',
+		intro: 'A visual collection of previous work examples. Just keep scrolling.',
+		active: 'Portfolio'
+	}) }}
 
 	<section class="l-folio-navy">
 		<div class="l-folio-navy__left">
@@ -118,5 +115,7 @@
 	</section>
 
 	{{ contact('cream') }}
+
+	{% include "components/b-footer.njk" %}
 
 {% endblock %}

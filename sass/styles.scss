@@ -14,10 +14,12 @@
 @use 'blocks/b-contact';
 @use 'blocks/b-experience';
 @use 'blocks/b-folio-details';
+@use 'blocks/b-footer';
 @use 'blocks/b-header';
 @use 'blocks/b-home-header';
 @use 'blocks/b-navigation';
 
+@use 'layouts/l-case-studies';
 @use 'layouts/l-content-container';
 @use 'layouts/l-folio-cms';
 @use 'layouts/l-folio-ddh';

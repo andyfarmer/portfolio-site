@@ -1,0 +1,32 @@
+@use 'tools/functions/rem';
+@use 'tools/mixins/breakpoint';
+@use 'tools/variables/colours';
+
+.b-footer{
+	background: colours.$background-dark;
+	color: #fff;
+	padding: 24px 0;
+	font-size: rem.rem(14);
+	&__container{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__link{
+		color: #fff;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.b-footer{
+		&__container{
+			display: block;
+			text-align: center;
+		}
+		&__copy{
+			padding-bottom: 8px;
+		}
+	}
+}

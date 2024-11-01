@@ -552,6 +552,32 @@ body {
   color: #DFDEE7;
 }
 
+.b-footer {
+  background: #2B2938;
+  color: #fff;
+  padding: 24px 0;
+  font-size: 0.875rem;
+}
+.b-footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+.b-footer__link {
+  color: #fff;
+}
+.b-footer__link:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .b-footer__container {
+    display: block;
+    text-align: center;
+  }
+  .b-footer__copy {
+    padding-bottom: 8px;
+  }
+}
 .b-header {
   background: #2B2938;
   color: #DFDEE7;
@@ -662,6 +688,18 @@ body {
   text-decoration: underline;
 }
 
+.l-case-studies .b-case-tile {
+  margin: 56px 0;
+}
+.l-case-studies .b-case-tile__details {
+  padding: 64px 40px;
+}
+
+@media (max-width: 1024px) {
+  .l-case-studies .b-case-tile__details {
+    padding: 32px;
+  }
+}
 .l-content-container {
   margin-left: auto;
   margin-right: auto;
@@ -998,6 +1036,10 @@ body {
   .l-folio-duffield__right {
     padding-left: 0;
     padding-top: 32px;
+  }
+  .l-folio-duffield__listing {
+    display: block;
+    margin: 0 auto;
   }
   .l-folio-duffield__garages {
     max-width: 100%;
