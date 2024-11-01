@@ -15,6 +15,9 @@
 		padding-bottom: 32px;
 		color: colours.$text-secondary;
 	}
+	&--cream{
+		background: colours.$background-cream;
+	}
 }
 
 @include breakpoint.breakpoint(large){

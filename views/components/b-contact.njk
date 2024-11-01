@@ -1,0 +1,10 @@
+{% macro contact(colour) %}
+	{% set colour = colour or 'grey' %}
+	<section class="b-contact b-contact--{{colour}}">
+		<div class="l-content-container l-content-container--4-col">
+			<h3 class="b-contact__heading e-heading e-heading--l">Get in touch</h3>
+			<p class="b-contact__copy e-text">To learn more about my experience or to get in contact, please reach out on LinkedIn.</p>
+			<a href="https://www.linkedin.com/in/andy-farmer-305b0281" class="e-button">View LinkedIn profile</a>
+		</div>
+	</section>
+{% endmacro %}
