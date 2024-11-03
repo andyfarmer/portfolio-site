@@ -1,0 +1,48 @@
+@use 'tools/functions/rem';
+@use 'tools/mixins/breakpoint';
+@use 'tools/variables/colours';
+
+.b-case-intro{
+	padding: 48px 0 72px;
+	&__heading{
+		padding-bottom: 32px;
+	}
+	&__header{
+		color: colours.$text-secondary;
+		font-size: rem.rem(16);
+		font-weight: 400;
+		padding-bottom: 8px;
+	}
+	&__copy{
+		padding-bottom: 24px;
+	}
+	&__body{
+		display: flex;
+	}
+	&__details{
+		width: 25%;
+		order: 1;
+	}
+	&__overview{
+		width: 75%;
+		order: 2;
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.b-case-intro{
+		padding: 32px 0 40px;
+		&__body{
+			flex-direction: column;
+		}
+		&__details{
+			width: 100%;
+			order: 2;
+			padding-top: 16px;
+		}
+		&__overview{
+			width: 100%;
+			order: 1;
+		}
+	}
+}

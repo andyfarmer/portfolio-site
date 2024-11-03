@@ -1,0 +1,21 @@
+@use 'tools/mixins/breakpoint';
+
+.u-space{
+	&-top-24{
+		margin-top: 24px;
+	}
+	&-top-72{
+		margin-top: 72px;
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.u-space{
+		&-top-24{
+			margin-top: 16px;
+		}
+		&-top-72{
+			margin-top: 48px;
+		}
+	}
+}

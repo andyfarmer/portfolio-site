@@ -1,0 +1,25 @@
+@use 'tools/functions/rem';
+@use 'tools/mixins/breakpoint';
+@use 'tools/variables/colours';
+
+.e-detail-list{
+	&__label{
+		font-size: rem.rem(16);
+		line-height: rem.rem(24);
+		color: colours.$text-secondary;
+	}
+	&__value{
+		padding-bottom: 16px;
+		line-height: rem.rem(32);
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.e-detail-list{
+		display: flex;
+		flex-wrap: wrap;
+		&__item{
+			width: 50%;
+		}
+	}
+}

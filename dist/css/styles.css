@@ -53,6 +53,25 @@ body {
     padding: 4px 16px;
   }
 }
+.e-detail-list__label {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #42404F;
+}
+.e-detail-list__value {
+  padding-bottom: 16px;
+  line-height: 2rem;
+}
+
+@media (max-width: 767px) {
+  .e-detail-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .e-detail-list__item {
+    width: 50%;
+  }
+}
 .e-eyebrow {
   display: block;
   padding-bottom: 8px;
@@ -134,6 +153,75 @@ body {
     letter-spacing: -0.02em;
   }
 }
+.e-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+.e-portfolio-grid__img-1 {
+  grid-area: 1/1/3/2;
+}
+.e-portfolio-grid__img-2 {
+  grid-area: 1/2/2/3;
+}
+.e-portfolio-grid__img-3 {
+  grid-area: 2/2/3/4;
+}
+.e-portfolio-grid__img-4 {
+  grid-area: 1/3/2/4;
+}
+.e-portfolio-grid__img-5 {
+  grid-area: 1/4/2/5;
+}
+.e-portfolio-grid__img-6 {
+  grid-area: 2/4/3/5;
+}
+
+@media (max-width: 767px) {
+  .e-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .e-portfolio-grid__img-1 {
+    grid-area: 1/1/3/2;
+  }
+  .e-portfolio-grid__img-2 {
+    grid-area: 1/2/2/3;
+  }
+  .e-portfolio-grid__img-3 {
+    grid-area: 3/1/4/3;
+  }
+  .e-portfolio-grid__img-4 {
+    grid-area: 2/2/3/3;
+  }
+  .e-portfolio-grid__img-5 {
+    grid-area: 4/2/5/3;
+  }
+  .e-portfolio-grid__img-6 {
+    grid-area: 4/1/5/2;
+  }
+}
+.e-result-list {
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+.e-result-list__item {
+  padding: 0 0 8px 0;
+  list-style: none;
+}
+.e-result-list__stat {
+  width: 64px;
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .e-result-list__stat {
+    width: auto;
+  }
+}
 .e-tag {
   display: inline-block;
   font-weight: 600;
@@ -174,6 +262,30 @@ body {
     font-size: 1.0625rem;
   }
 }
+.b-article .e-heading--l {
+  padding-top: 32px;
+  padding-bottom: 16px;
+}
+.b-article .e-heading--m {
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+.b-article .e-heading--l + .e-heading--m {
+  padding-top: 0;
+}
+.b-article .e-text--large {
+  padding-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+  .b-article .e-heading--l {
+    padding-top: 24px;
+  }
+  .b-article .e-heading--m {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
 .b-portfolio-preview {
   padding-top: 88px;
   padding-bottom: 80px;
@@ -184,31 +296,6 @@ body {
   margin-right: auto;
   padding-bottom: 48px;
   text-align: center;
-}
-.b-portfolio-preview__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-.b-portfolio-preview__img-1 {
-  grid-area: 1/1/3/2;
-}
-.b-portfolio-preview__img-2 {
-  grid-area: 1/2/2/3;
-}
-.b-portfolio-preview__img-3 {
-  grid-area: 2/2/3/4;
-}
-.b-portfolio-preview__img-4 {
-  grid-area: 1/3/2/4;
-}
-.b-portfolio-preview__img-5 {
-  grid-area: 1/4/2/5;
-}
-.b-portfolio-preview__img-6 {
-  grid-area: 2/4/3/5;
 }
 .b-portfolio-preview__cta {
   padding-top: 32px;
@@ -262,6 +349,60 @@ body {
   }
   .b-portfolio-preview__img-6 {
     grid-area: 4/1/5/2;
+  }
+}
+.b-case-header {
+  background: #F8F3EC;
+  padding: 32px 0;
+}
+
+@media (max-width: 767px) {
+  .b-case-header {
+    padding: 24px 0;
+  }
+}
+.b-case-intro {
+  padding: 48px 0 72px;
+}
+.b-case-intro__heading {
+  padding-bottom: 32px;
+}
+.b-case-intro__header {
+  color: #42404F;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+.b-case-intro__copy {
+  padding-bottom: 24px;
+}
+.b-case-intro__body {
+  display: flex;
+}
+.b-case-intro__details {
+  width: 25%;
+  order: 1;
+}
+.b-case-intro__overview {
+  width: 75%;
+  order: 2;
+}
+
+@media (max-width: 767px) {
+  .b-case-intro {
+    padding: 32px 0 40px;
+  }
+  .b-case-intro__body {
+    flex-direction: column;
+  }
+  .b-case-intro__details {
+    width: 100%;
+    order: 2;
+    padding-top: 16px;
+  }
+  .b-case-intro__overview {
+    width: 100%;
+    order: 1;
   }
 }
 .b-case-tile {
@@ -709,6 +850,9 @@ body {
 }
 .l-content-container--10-col {
   max-width: 1060px;
+}
+.l-content-container--8-col {
+  max-width: 888px;
 }
 .l-content-container--4-col {
   max-width: 448px;
@@ -1287,6 +1431,21 @@ body {
 @media (max-width: 910px) {
   .u-small-caps {
     font-size: 0.75rem;
+  }
+}
+.u-space-top-24 {
+  margin-top: 24px;
+}
+.u-space-top-72 {
+  margin-top: 72px;
+}
+
+@media (max-width: 767px) {
+  .u-space-top-24 {
+    margin-top: 16px;
+  }
+  .u-space-top-72 {
+    margin-top: 48px;
   }
 }
 .u-visually-hidden {

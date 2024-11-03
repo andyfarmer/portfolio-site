@@ -2,14 +2,20 @@
 @use 'base/typography';
 
 @use 'elements/e-button';
+@use 'elements/e-detail-list';
 @use 'elements/e-eyebrow';
 @use 'elements/e-folio-fullwidth';
 @use 'elements/e-folio-img';
 @use 'elements/e-heading';
+@use 'elements/e-portfolio-grid';
+@use 'elements/e-result-list';
 @use 'elements/e-tag';
 @use 'elements/e-text';
 
+@use 'blocks/b-article';
 @use 'blocks/b-portfolio-preview';
+@use 'blocks/b-case-header';
+@use 'blocks/b-case-intro';
 @use 'blocks/b-case-tile';
 @use 'blocks/b-contact';
 @use 'blocks/b-experience';
@@ -29,4 +35,5 @@
 @use 'layouts/l-folio-severfield';
 
 @use 'utilities/u-small-caps';
+@use 'utilities/u-spacing';
 @use 'utilities/u-visually-hidden';

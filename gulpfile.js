@@ -5,7 +5,7 @@ const sass = require('gulp-sass')(require('sass'));
 
 gulp.task('html', function(){
 
-  return gulp.src('./views/*.njk')
+  return gulp.src('./views/pages/**/*.njk')
     .pipe(nunjucksRender({
       path: ['./views']
     }))
