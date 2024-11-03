@@ -8,3 +8,4 @@
  - Separate webpack entries for each template
  - Responsive images
  - Minify `dist` output
+ - Custom domain
