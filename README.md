@@ -1,5 +1,4 @@
-# portfolio-site
-Andy Farmer's Product Design Portfolio Website
+# Andy Farmer's Portfolio Website
 
 ## Roadmap
  - CMS case study
