@@ -11,6 +11,12 @@
 	background: linear-gradient(to right, #554BBE, #6359C0);
 	color: #fff;
 	font-weight: 600;
+	&--disabled{
+		opacity: 0.9;
+	}
+}
+
+a.e-button{
 	&:hover{
 		background: colours.$brand;
 	}

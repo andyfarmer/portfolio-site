@@ -43,7 +43,11 @@ body {
   color: #fff;
   font-weight: 600;
 }
-.e-button:hover {
+.e-button--disabled {
+  opacity: 0.9;
+}
+
+a.e-button:hover {
   background: #3E3691;
 }
 

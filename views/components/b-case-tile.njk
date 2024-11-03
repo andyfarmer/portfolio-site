@@ -5,7 +5,8 @@
 		img: 'images/url',
 		href: '#',
 		dark: false,
-		reversed: false
+		reversed: false,
+		disabled: false
 	}
 #}
 
@@ -17,7 +18,11 @@
 				{{params.heading}}
 			</h2>
 			<p class="b-case-tile__copy e-text--large">{{params.copy}}</p>
-			<a href="{{params.href}}" class="e-button">View case study</a>
+			{% if params.disabled == true %}
+				<span class="e-button e-button--disabled">Coming soon</span>
+			{% else %}
+				<a href="{{params.href}}" class="e-button">View case study</a>
+			{% endif %}
 		</div>
 		<div class="b-case-tile__img-wrap">
 			<img src="{{params.img}}" role="presentation" class="b-case-tile__img">
