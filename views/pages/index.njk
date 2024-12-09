@@ -15,4 +15,78 @@
 		<img src="images/arrow.svg" class="b-home-header__arrow" role="presentation">
 	</header>
 
+	<section class="l-experience">
+		<div class="l-content-container">
+			<h2 class="e-eyebrow u-small-caps">Background</h2>
+			<h3 class="e-heading--l l-experience__heading">Over a decade of experience across a variety of domains</h3>
+			<div class="l-experience__grid">
+				{% set experience = [
+					{
+						heading: 'Sales and e-commerce',
+						copy: 'From growing small businesses to a bespoke platform for a national retailer.'
+					},
+					{
+						heading: 'Enterprise SaaS',
+						copy: 'Content management, case management and workflow tools.'
+					},
+					{
+						heading: 'Booking engines',
+						copy: 'Holiday search and booking experiences for multiple leisure and tourism brands.'
+					},
+					{
+						heading: 'Mobile apps',
+						copy: 'Consumer mobile apps across different  platforms and diverse industries.'
+					},
+					{
+						heading: 'Digital marketing',
+						copy: 'Highly-optimised marketing and campaign websites that drive business metrics.'
+					},
+					{
+						heading: 'AI and biometrics',
+						copy: 'AI-powered identity verification mobile apps and web platform.'
+					}
+				] %}
+				{% for example in experience %}
+					<div class="l-experience__example">
+						<h4 class="l-experience__sub-heading e-heading--s">{{example.heading}}</h4>
+						<p class="l-experience__copy">{{example.copy}}</p>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+		<div class="l-experience__screens">
+			{% set panel1 = [
+				'cms-overview',
+				'voice-record',
+				'navy',
+				'ddh-basket-mobile',
+				'severfield-home',
+				'face-recognition',
+				'ddh-products-mobile',
+				'cms-listing'
+			] %}
+			{% set panel2 = [
+				'severfield-projects',
+				'ddh-home',
+				'ddh-account',
+				'learnid-instructions',
+				'cms-dashboard',
+				'learnid-menu',
+				'ddh-stockists'
+			] %}
+
+			<div class="l-experience__screens-panel">
+				{% for screen in panel1 %}
+					<img srcset="images/mini-screens/{{screen}}@2x.jpg 2x" src="images/mini-screens/{{screen}}.jpg" class="l-experience__image" role="presentation">
+				{% endfor %}
+			</div>
+			<div class="l-experience__screens-panel">
+				{% for screen in panel2 %}
+					<img srcset="images/mini-screens/{{screen}}@2x.jpg 2x" src="images/mini-screens/{{screen}}.jpg" class="l-experience__image" role="presentation">
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
 {% endblock %}

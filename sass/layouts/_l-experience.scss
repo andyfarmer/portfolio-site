@@ -1,0 +1,38 @@
+@use 'tools/variables/colours';
+
+.l-experience{
+	background: colours.$background-cream;
+	padding: 136px 0 180px;
+	&__heading{
+		max-width: 50%;
+		padding-bottom: 48px;
+	}
+	&__grid{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -16px;
+	}
+	&__example{
+		width: 33.33%;
+		padding: 0 16px 48px;
+	}
+	&__sub-heading{
+		padding-bottom: 4px;
+	}
+	&__copy{
+		color: colours.$text-secondary;
+	}
+	&__image{
+		border-radius: 5px;
+		margin: 0 16px;
+		box-shadow: 0px 2px 6px 2px hsla(0, 0%, 0%, 0.1), 0px 1px 2px 0px hsla(0, 0%, 0%, 0.3);
+	}
+	&__screens {
+		padding-top: 40px;
+	}
+	&__screens-panel{
+		display: flex;
+		justify-content: center;
+		padding-bottom: 32px;
+	}
+}

@@ -2,38 +2,34 @@
 @use 'tools/mixins/breakpoint';
 
 .e-heading{
-  font-weight: 600;
 
 	&--jumbo{
 		font-family: "Radley", serif;
-  	font-weight: 400;
+		font-weight: 400;
 		font-size: rem.rem(60);
 		line-height: rem.rem(64);
 		letter-spacing: -0.025em;
 	}
 
-  &--xl{
-		font-size: rem.rem(48);
-		line-height: rem.rem(56);
-		letter-spacing: -0.04em;
-	}
-
 	&--l{
-		font-size: rem.rem(36);
-		line-height: rem.rem(40);
-		letter-spacing: -0.04em;
+		font-weight: 450;
+		font-size: rem.rem(44);
+		line-height: rem.rem(52);
+		letter-spacing: -0.01em;
 	}
 
 	&--m{
-		font-size: rem.rem(24);
-		line-height: rem.rem(32);
-		letter-spacing: -0.02em;
+		font-weight: 400;
+		font-size: rem.rem(236);
+		line-height: rem.rem(40);
+		letter-spacing: -0.005em;
 	}
 
 	&--s{
-		font-size: rem.rem(20);
-		line-height: rem.rem(24);
-		letter-spacing: -0.02em;
+		font-weight: 400;
+		font-size: rem.rem(24);
+		line-height: rem.rem(32);
+		letter-spacing: -0.005em;
 	}
 }
 
@@ -42,10 +38,6 @@
 		&--jumbo{
 			font-size: rem.rem(60);
 			line-height: rem.rem(72);
-		}
-		&--xl{
-			font-size: rem.rem(36);
-			line-height: rem.rem(40);
 		}
 		&--l{
 			font-size: rem.rem(25);
@@ -70,11 +62,6 @@
 			font-size: rem.rem(48);
 			line-height: rem.rem(56);
 			letter-spacing: -0.04em;
-		}
-		&--xl{
-			font-size: rem.rem(28);
-			line-height: rem.rem(36);
-			letter-spacing: -0.02em;
 		}
 	}
 }
