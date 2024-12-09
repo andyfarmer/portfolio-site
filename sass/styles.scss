@@ -4,35 +4,14 @@
 @use 'elements/e-button';
 @use 'elements/e-detail-list';
 @use 'elements/e-eyebrow';
-@use 'elements/e-folio-fullwidth';
 @use 'elements/e-folio-img';
 @use 'elements/e-heading';
-@use 'elements/e-portfolio-grid';
-@use 'elements/e-result-list';
 @use 'elements/e-tag';
 @use 'elements/e-text';
 
 @use 'blocks/b-article';
-@use 'blocks/b-portfolio-preview';
-@use 'blocks/b-case-header';
-@use 'blocks/b-case-intro';
-@use 'blocks/b-case-tile';
-@use 'blocks/b-contact';
-@use 'blocks/b-experience';
-@use 'blocks/b-folio-details';
-@use 'blocks/b-footer';
-@use 'blocks/b-header';
-@use 'blocks/b-home-header';
-@use 'blocks/b-navigation';
 
-@use 'layouts/l-case-studies';
 @use 'layouts/l-content-container';
-@use 'layouts/l-folio-cms';
-@use 'layouts/l-folio-ddh';
-@use 'layouts/l-folio-duffield';
-@use 'layouts/l-folio-learnid';
-@use 'layouts/l-folio-navy';
-@use 'layouts/l-folio-severfield';
 
 @use 'utilities/u-small-caps';
 @use 'utilities/u-spacing';
