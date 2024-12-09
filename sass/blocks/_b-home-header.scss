@@ -1,0 +1,18 @@
+@use 'tools/variables/colours';
+
+.b-home-header {
+	position: relative;
+	background: colours.$background-biscuit;
+	padding: 80px 0 136px;
+	&__heading{
+		max-width: 80%;
+		padding-top: 40px;
+		padding-right: 32px;
+	}
+	&__arrow{
+		position: absolute;
+		bottom: 0;
+		left: calc(50% - 557px);
+		transform: translateY(50%);
+	}
+}

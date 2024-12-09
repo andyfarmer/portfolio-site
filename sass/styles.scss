@@ -1,6 +1,7 @@
 @use 'base/reset';
 @use 'base/typography';
 
+@use 'elements/e-avatar';
 @use 'elements/e-button';
 @use 'elements/e-detail-list';
 @use 'elements/e-eyebrow';
@@ -10,6 +11,7 @@
 @use 'elements/e-text';
 
 @use 'blocks/b-article';
+@use 'blocks/b-home-header';
 
 @use 'layouts/l-content-container';
 

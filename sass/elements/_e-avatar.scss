@@ -1,0 +1,12 @@
+.e-avatar{
+	width: 154px;
+	height: 162px;
+	position: relative;
+	&__image{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+	}
+}

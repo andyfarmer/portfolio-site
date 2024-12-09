@@ -5,9 +5,11 @@
   font-weight: 600;
 
 	&--jumbo{
-		font-size: rem.rem(72);
-		line-height: rem.rem(80);
-		letter-spacing: -0.05em;
+		font-family: "Radley", serif;
+  	font-weight: 400;
+		font-size: rem.rem(60);
+		line-height: rem.rem(64);
+		letter-spacing: -0.025em;
 	}
 
   &--xl{
