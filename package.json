@@ -9,11 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^3.0.3"
-  },
-  "dependencies": {
-    "gsap": "^3.12.5",
-    "gulp": "^5.0.0",
+    "browser-sync": "^3.0.3",
+		"gulp": "^5.0.0",
     "gulp-copy": "^5.0.0",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-sass": "^5.1.0",

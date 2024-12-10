@@ -15,7 +15,7 @@
 		<img src="images/arrow.svg" class="b-home-header__arrow" role="presentation">
 	</header>
 
-	<section class="l-experience">
+	<section class="l-experience" id="scroll-trigger">
 		<div class="l-content-container">
 			<h2 class="e-eyebrow u-small-caps">Background</h2>
 			<h3 class="e-heading--l l-experience__heading">Over a decade of experience across a variety of domains</h3>
@@ -76,12 +76,12 @@
 				'ddh-stockists'
 			] %}
 
-			<div class="l-experience__screens-panel">
+			<div class="l-experience__screens-panel" id="panel-1">
 				{% for screen in panel1 %}
 					<img srcset="images/mini-screens/{{screen}}@2x.jpg 2x" src="images/mini-screens/{{screen}}.jpg" class="l-experience__image" role="presentation">
 				{% endfor %}
 			</div>
-			<div class="l-experience__screens-panel">
+			<div class="l-experience__screens-panel" id="panel-2">
 				{% for screen in panel2 %}
 					<img srcset="images/mini-screens/{{screen}}@2x.jpg 2x" src="images/mini-screens/{{screen}}.jpg" class="l-experience__image" role="presentation">
 				{% endfor %}
@@ -89,4 +89,10 @@
 		</div>
 	</section>
 
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+	<script src="js/index.js"></script>
 {% endblock %}
