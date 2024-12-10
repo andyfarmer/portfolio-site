@@ -89,6 +89,79 @@
 		</div>
 	</section>
 
+	<section class="l-skillset">
+		<div class="l-skillset__intro l-content-container l-content-container--6-col">
+			<h2 class="e-eyebrow u-small-caps">Expertise</h2>
+			<h3 class="l-skillset__heading e-heading--l">A T-shaped skillset</h3>
+			<p>I always invest time to learn adjacent skills for the context of a role. This hugely benefits collaboration and has given me a versatile set of skills to bring to the team.</p>
+		</div>
+
+		{% set skills = [
+			{
+				name: 'Product Strategy',
+				level: 1,
+				alt: 'Experienced enough to contribute'
+			},
+			{
+				name: 'Brand Strategy',
+				level: 2,
+				alt: 'More than experienced enough to contribute'
+			},
+			{
+				name: 'User Research',
+				level: 3,
+				alt: 'Nearly experienced enough to lead'
+			},
+			{
+				name: 'UX Design',
+				level: 4,
+				alt: 'Experienced enough to lead'
+			},
+			{
+				name: 'UI Design',
+				level: 5,
+				alt: 'More than experienced enough to lead'
+			},
+			{
+				name: 'Front&#8209;end Dev',
+				level: 4,
+				alt: 'Experienced enough to lead'
+			},
+			{
+				name: 'UX Writing',
+				level: 3,
+				alt: 'Nearly experienced enough to lead'
+			},
+			{
+				name: 'Graphic Design',
+				level: 2,
+				alt: 'More than experienced enough to contribute'
+			},
+			{
+				name: 'Digital Marketing',
+				level: 1,
+				alt: 'Experienced enough to contribute'
+			}
+		] %}
+
+		<div class="l-content-container">
+			<div class="l-skillset__chart b-skillchart">
+				<div class="b-skillchart__labels" role="presentation">
+					<p class="b-skillchart__label b-skillchart__label--1">Experienced enough to contribute</p>
+					<p class="b-skillchart__label b-skillchart__label--2">Experienced enough to lead</p>
+				</div>
+				<dl class="b-skillchart__skills">
+					{% for skill in skills %}
+						<div class="b-skillchart__item">
+							<dt class="b-skillchart__name b-skillchart__name--{{skill.level}}">{{skill.name|safe}}</dt>
+							<dd class="b-skillchart__bar b-skillchart__bar--{{skill.level}}">{{skill.alt}}</dd>
+						</div>
+					{% endfor %}
+				</dl>
+			</div>
+		</div>
+	</section>
+
 {% endblock %}
 
 {% block scripts %}

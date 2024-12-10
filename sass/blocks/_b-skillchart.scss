@@ -1,0 +1,87 @@
+@use 'tools/functions/rem';
+@use 'tools/variables/colours';
+
+.b-skillchart{
+	display: flex;
+	background: colours.$background-light-grey;
+	border-radius: 12px;
+	padding: 40px 32px;
+	&__labels{
+		width: 170px;
+		padding-bottom: 40px;
+	}
+	&__label{
+		font-weight: 800;
+		font-size: rem.rem(16);
+		line-height: rem.rem(22);
+		margin-top: 96px;
+		color: colours.$text-secondary;
+	}
+	&__skills{
+		display: flex;
+		position: relative;
+		padding-left: 16px;
+		margin-left: 16px;
+		&:before,
+		&:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background: colours.$border-primary;
+		}
+		&:before{
+			top: 120px;
+		}
+		&:after{
+			top: 260px;
+		}
+	}
+	&__item{
+		width: 74px;
+		margin-right: 32px;
+		&:last-child{
+			margin-right: 16px;
+		}
+	}
+	&__name{
+		font-weight: 800;
+		font-size: rem.rem(16);
+		line-height: rem.rem(22);
+		padding-bottom: 8px;
+		&--1{
+			opacity: 0.5;
+		}
+		&--2{
+			opacity: 0.6;
+		}
+		&--3{
+			opacity: 0.7;
+		}
+		&--4,
+		&--5{
+			color: colours.$brand;
+		}
+	}
+	&__bar{
+		color: rgba(0,0,0,0);
+		width: 100%;
+		background: linear-gradient(rgba(193, 182,237,1), rgba(193, 182,237,0.3));
+		&--1{
+			height: 96px;
+		}
+		&--2{
+			height: 129px;
+		}
+		&--3{
+			height: 173px;
+		}
+		&--4{
+			height: 240px;
+		}
+		&--5{
+			height: 265px;
+		}
+	}
+}

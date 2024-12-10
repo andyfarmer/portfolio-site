@@ -18,4 +18,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			scrub: 0.1
 		}
 	});
+
+	gsap.from('.b-skillchart__bar', {
+		opacity: 0,
+		height: 0,
+		duration: 1.3,
+		stagger: 0.05,
+		scrollTrigger: '.b-skillchart__label--2'
+	});
+
 });

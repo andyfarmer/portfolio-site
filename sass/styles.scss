@@ -12,9 +12,11 @@
 
 @use 'blocks/b-article';
 @use 'blocks/b-home-header';
+@use 'blocks/b-skillchart';
 
 @use 'layouts/l-content-container';
 @use 'layouts/l-experience';
+@use 'layouts/l-skillset';
 
 @use 'utilities/u-small-caps';
 @use 'utilities/u-spacing';
