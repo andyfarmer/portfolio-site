@@ -3,6 +3,8 @@
 .l-experience{
 	background: colours.$background-cream;
 	padding: 136px 0 180px;
+	width: 100vw;
+	overflow-x: hidden;
 	&__heading{
 		max-width: 50%;
 		padding-bottom: 48px;
@@ -29,10 +31,38 @@
 	}
 	&__screens {
 		padding-top: 40px;
+		max-width: 2000px;
+		overflow-x: hidden;
+		margin: 0 auto;
 	}
 	&__screens-panel{
 		display: flex;
 		justify-content: center;
 		padding-bottom: 32px;
+	}
+}
+
+@media (min-width: 2000px){
+	.l-experience{
+		&__screens{
+			position: relative;
+			&:before,
+			&:after {
+				content: '';
+				width: 30px;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				z-index: 10;
+				background: linear-gradient(to left, rgba(244,243,240,1), rgba(244,243,240,0));
+			}
+			&:before{
+				left: 0;
+				transform: rotate(180deg);
+			}
+			&:after{
+				right: 0;
+			}
+		}
 	}
 }

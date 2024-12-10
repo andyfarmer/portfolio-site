@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger);
 
 	gsap.to('#panel-1', {
-		xPercent: -20,
+		xPercent: -15,
 		ease: 'none',
 		scrollTrigger: {
 			trigger: '#panel-1',
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	});
 
 	gsap.to('#panel-2', {
-		xPercent: 20,
+		xPercent: 15,
 		ease: 'none',
 		scrollTrigger: {
 			trigger: '#panel-2',

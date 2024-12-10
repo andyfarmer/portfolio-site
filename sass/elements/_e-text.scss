@@ -3,8 +3,9 @@
 
 .e-text{
 	line-height: rem.rem(32);
-	&--large{
-		font-size: rem.rem(20);
+
+	&--minor{
+		font-size: rem.rem(18);
 		line-height: rem.rem(32);
 	}
 }
@@ -12,17 +13,10 @@
 	.e-text{
 		line-height: rem.rem(28);
 	}
-	.e-text--large{
-		font-size: rem.rem(18);
-		line-height: rem.rem(28);
-	}
 }
 
 @include breakpoint.breakpoint('type-break-2'){
 	.e-text{
 		line-height: rem.rem(24);
-		&--large{
-			font-size: rem.rem(17);
-		}
 	}
 }

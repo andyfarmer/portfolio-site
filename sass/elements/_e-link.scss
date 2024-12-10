@@ -1,0 +1,8 @@
+@use 'tools/variables/colours';
+
+.e-link{
+	color: colours.$brand;
+	&--blend{
+		text-decoration: none;
+	}
+}

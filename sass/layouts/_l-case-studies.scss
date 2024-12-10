@@ -1,0 +1,9 @@
+@use 'tools/variables/colours';
+
+.l-case-studies{
+	background: colours.$background-light-grey;
+	padding: 104px 0 80px;
+	&__header{
+		padding-bottom: 48px;
+	}
+}

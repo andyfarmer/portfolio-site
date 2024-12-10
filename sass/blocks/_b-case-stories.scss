@@ -1,0 +1,20 @@
+.b-case-stories{
+	padding: 24px 0 64px;
+	margin: 0;
+	&__item{
+		display: flex;
+		align-items: flex-start;
+		padding: 0 0 24px;
+		margin: 0;
+	}
+	&__heading{
+		width: calc(33.33% + 32px);
+	}
+	&__copy{
+		width: calc(49% - 16px);
+	}
+	&__button-wrap{
+		text-align: right;
+		flex: 1;
+	}
+}

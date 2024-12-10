@@ -1,0 +1,25 @@
+@use 'tools/variables/colours';
+
+.b-case-study-tile{
+	border-top: 1px solid colours.$border-primary;
+	padding: 16px 0;
+	display: flex;
+	align-items: center;
+	&__details{
+		width: calc(50% + 16px);
+		padding-right: calc(8.33% + 64px);
+		padding-bottom: 24px;
+	}
+	&__heading{
+		padding-bottom: 20px;
+	}
+	&__copy{
+		color: colours.$text-secondary;
+	}
+	&__link{
+		margin-top: 32px;
+		&.e-link{
+			display: block;
+		}
+	}
+}

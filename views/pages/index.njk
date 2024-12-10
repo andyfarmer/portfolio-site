@@ -1,6 +1,6 @@
 {% extends './templates/base.njk' %}
 
-{# {% from 'components/b-case-tile.njk' import caseTile %} #}
+{% from 'components/b-case-study-tile.njk' import caseStudyTile %}
 
 {% block content %}
 
@@ -49,7 +49,7 @@
 				{% for example in experience %}
 					<div class="l-experience__example">
 						<h4 class="l-experience__sub-heading e-heading--s">{{example.heading}}</h4>
-						<p class="l-experience__copy">{{example.copy}}</p>
+						<p class="l-experience__copy e-text">{{example.copy}}</p>
 					</div>
 				{% endfor %}
 			</div>
@@ -57,23 +57,30 @@
 
 		<div class="l-experience__screens">
 			{% set panel1 = [
+				'lovat-hero',
+				'4paws-options',
 				'cms-overview',
 				'voice-record',
 				'navy',
 				'ddh-basket-mobile',
 				'severfield-home',
-				'face-recognition',
 				'ddh-products-mobile',
-				'cms-listing'
+				'4paws-payment',
+				'cms-listing',
+				'face-recognition'
 			] %}
 			{% set panel2 = [
 				'severfield-projects',
+				'4paws-loading',
 				'ddh-home',
+				'4paws-q2',
 				'ddh-account',
 				'learnid-instructions',
 				'cms-dashboard',
+				'learnid-frame',
+				'ddh-stockists',
 				'learnid-menu',
-				'ddh-stockists'
+				'navy-product'
 			] %}
 
 			<div class="l-experience__screens-panel" id="panel-1">
@@ -93,7 +100,7 @@
 		<div class="l-skillset__intro l-content-container l-content-container--6-col">
 			<h2 class="e-eyebrow u-small-caps">Expertise</h2>
 			<h3 class="l-skillset__heading e-heading--l">A T-shaped skillset</h3>
-			<p>I always invest time to learn adjacent skills for the context of a role. This hugely benefits collaboration and has given me a versatile set of skills to bring to the team.</p>
+			<p class="e-text">I always invest time to learn adjacent skills for the context of a role. This hugely benefits collaboration and has given me a versatile set of skills to bring to the team.</p>
 		</div>
 
 		{% set skills = [
@@ -159,6 +166,73 @@
 					{% endfor %}
 				</dl>
 			</div>
+		</div>
+	</section>
+
+	<section class="l-case-studies">
+		<div class="l-case-studies__header l-content-container">
+			<h2 class="e-eyebrow u-small-caps">Case studies</h2>
+			<h3 class="l-case-studies__heading e-heading--l">Design that delivers</h3>
+		</div>
+		<div class="l-content-container">
+
+			{{caseStudyTile({
+				heading: '0 to 1 design of large, complex internal system',
+				copy: 'How I designed a Case Management System that would provide reusable capabilities and could be easily scaled across multiple business areas.',
+				link: {
+					href: '/case-studies/cms',
+					text: 'Read project overview',
+					button: false
+				},
+				image: {
+					path: 'images/cms-tile',
+					alt: 'UI examples of a Case Management System'
+				}
+			})}}
+
+			{% set stories = [
+				{
+					heading: 'Boosting team efficiency with workload dashboards',
+					copy: 'How I enabled caseworkers to manage their workload and provided management with actionable insights to inform resource decisions.',
+					link: '#'
+				},
+				{
+					heading: 'Using automation to remove unnecessary manual input',
+					copy: 'How good design thinking led to the creation of one of the product’s most successful and most-loved features.',
+					link: '#'
+				},
+				{
+					heading: '“What if we approached this a different way?”',
+					copy: 'How my rethinking of the requirements reduced complexity and removed friction from the user experience.',
+					link: '#'
+				}
+			] %}
+			<ul class="b-case-stories">
+				{% for story in stories %}
+					<li class="b-case-stories__item">
+						<h5 class="b-case-stories__heading e-heading--s">{{story.heading}}</h5>
+						<p class="b-case-stories__copy e-text e-text--minor">{{story.copy}}</p>
+						<div class="b-case-stories__button-wrap">
+							<a href="{{story.link}}" class="e-button">View case study</a>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+
+			{{caseStudyTile({
+				heading: 'Increasing conversion rate for new policy sign-ups',
+				copy: 'How I tackled a customer acquisition problem with a redesigned journey that reduced time on task and maximised conversions.',
+				link: {
+					href: '/case-studies/4paws',
+					text: 'View case study',
+					button: true
+				},
+				image: {
+					path: 'images/4paws-tile',
+					alt: 'UI examples of a pet insurance user flow'
+				}
+			})}}
+
 		</div>
 	</section>
 
