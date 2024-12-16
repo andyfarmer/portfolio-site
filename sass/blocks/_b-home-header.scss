@@ -1,4 +1,6 @@
+@use 'tools/mixins/breakpoint';
 @use 'tools/variables/colours';
+
 
 .b-home-header {
 	position: relative;
@@ -14,5 +16,26 @@
 		bottom: 0;
 		left: calc(50% - 557px);
 		transform: translateY(50%);
+	}
+}
+
+@media screen and (max-width: 1310px){
+	.b-home-header {
+		&__heading{
+			max-width: 85%;
+		}
+		&__arrow{
+			left: 8.3%;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.b-home-header {
+		padding: 64px 0 120px;
+		&__heading{
+			padding-top: 24px;
+			max-width: none;
+		}
 	}
 }

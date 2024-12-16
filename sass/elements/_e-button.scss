@@ -23,9 +23,8 @@ a.e-button{
 	}
 }
 
-@include breakpoint.breakpoint(large){
+@include breakpoint.breakpoint(medium){
 	.e-button{
-		font-size: rem.rem(16);
 		padding: 4px 16px;
 	}
 }

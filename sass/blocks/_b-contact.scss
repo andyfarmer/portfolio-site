@@ -1,3 +1,4 @@
+@use 'tools/mixins/breakpoint';
 @use 'tools/variables/colours';
 
 .b-contact{
@@ -16,5 +17,11 @@
 	&__footnote{
 		margin-top: 8px;
 		color: colours.$text-secondary;
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.b-contact{
+		padding: 48px 0 56px;
 	}
 }

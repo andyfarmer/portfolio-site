@@ -28,9 +28,16 @@
 	}
 }
 
+@include breakpoint.breakpoint(large){
+	.l-content-container{
+		&--6-col{
+			max-width: 640px;
+		}
+	}
+}
+
 @include breakpoint.breakpoint(medium){
 	.l-content-container{
-		max-width: 840px;
 
 		&--4-col {
 			max-width: 440px;

@@ -1,3 +1,4 @@
+@use 'tools/mixins/breakpoint';
 @use 'tools/variables/colours';
 
 .b-case-stories{
@@ -20,5 +21,18 @@
 		text-align: right;
 		flex: 1;
 		padding-top: 12px;
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.b-case-stories{
+		padding-bottom: 56px;
+		&__heading{
+			width: calc(33.33% + 24px);
+			padding-right: 24px;
+		}
+		&__copy{
+			width: calc(41% + 24px);
+		}
 	}
 }

@@ -16,6 +16,7 @@
 }
 @include breakpoint.breakpoint(large){
 	.e-text{
+		font-size: rem.rem(18);
 		line-height: rem.rem(28);
 	}
 }

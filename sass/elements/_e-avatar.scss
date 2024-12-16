@@ -1,3 +1,5 @@
+@use 'tools/mixins/breakpoint';
+
 .e-avatar{
 	width: 154px;
 	height: 162px;
@@ -8,5 +10,11 @@
 		top: 50%;
 		transform: translate(-50%, -50%);
 		border-radius: 50%;
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.e-avatar{
+		transform: scale(0.9);
 	}
 }

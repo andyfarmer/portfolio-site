@@ -1,3 +1,4 @@
+@use 'tools/mixins/breakpoint';
 @use 'tools/variables/colours';
 
 .l-experience{
@@ -63,6 +64,23 @@
 			&:after{
 				right: 0;
 			}
+		}
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.l-experience{
+		padding: 104px 0 112px;
+		&__heading{
+			max-width: 60%;
+			padding-bottom: 32px;
+		}
+		&__grid{
+			margin: 0 -12px;
+		}
+		&__example{
+			width: 33.33%;
+			padding: 0 12px 32px;
 		}
 	}
 }

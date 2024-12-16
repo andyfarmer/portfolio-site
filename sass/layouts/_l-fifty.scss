@@ -1,3 +1,5 @@
+@use 'tools/mixins/breakpoint';
+
 .l-fifty{
 	display: flex;
 	&__item{
@@ -6,6 +8,17 @@
 		&:last-child{
 			padding-left: 16px;
 			padding-right: 7%;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.l-fifty{
+		&__item{
+			&:last-child{
+				padding-left: 0;
+				padding-right: 0;
+			}
 		}
 	}
 }
