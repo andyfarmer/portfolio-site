@@ -39,3 +39,13 @@
 		}
 	}
 }
+
+@include breakpoint.breakpoint(medium){
+	.b-home-header{
+		padding: 40px 0 80px;
+		&__heading{
+			padding-top: 16px;
+			padding-right: 0;
+		}
+	}
+}

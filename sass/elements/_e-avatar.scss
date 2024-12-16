@@ -15,6 +15,20 @@
 
 @include breakpoint.breakpoint(large){
 	.e-avatar{
-		transform: scale(0.9);
+		width: 139px;
+		height: 146px;
+		&__image{
+			transform: translate(-50%, -50%) scale(0.9);
+		}
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.e-avatar{
+		width: 134px;
+		height: 141px;
+		&__image{
+			transform: translate(-50%, -50%) scale(0.87);
+		}
 	}
 }

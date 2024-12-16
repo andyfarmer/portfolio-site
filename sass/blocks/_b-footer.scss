@@ -1,3 +1,4 @@
+@use 'tools/mixins/breakpoint';
 @use 'tools/variables/colours';
 
 .b-footer{
@@ -16,5 +17,18 @@
 	}
 	&__right{
 		text-align: right;
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.b-footer{
+		padding-bottom: 32px;
+		&__container{
+			display: block;
+		}
+		&__left,
+		&__right{
+			text-align: center;
+		}
 	}
 }

@@ -15,6 +15,14 @@
 	}
 }
 
+@include breakpoint.breakpoint(medium){
+	.u-space{
+		&-top-60{
+			margin-top: 40px;
+		}
+	}
+}
+
 @include breakpoint.breakpoint(small){
 	.u-space{
 		&-top-24{

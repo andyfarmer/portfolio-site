@@ -36,3 +36,33 @@
 		}
 	}
 }
+
+@include breakpoint.breakpoint(large){
+	.b-case-stories{
+		padding: 0 0 32px;
+		width: 80%;
+		margin: {
+			left: auto;
+			right: auto;
+		}
+		&__item{
+			display: block;
+			position: relative;
+			padding-right: 180px;
+			padding-top: 20px;
+			border-top: 1px solid colours.$border-light;
+		}
+		&__heading,
+		&__copy{
+			width: auto;
+		}
+		&__heading{
+			padding-bottom: 8px;
+		}
+		&__button-wrap{
+			position: absolute;
+			top: 12px;
+			right: 0;
+		}
+	}
+}

@@ -159,7 +159,7 @@
 				</div>
 				<dl class="b-skillchart__skills">
 					{% for skill in skills %}
-						<div class="b-skillchart__item">
+						<div class="b-skillchart__item"{% if loop.index == 8 %} id="bar-mobile-trigger"{% endif %}>
 							<dt class="b-skillchart__name b-skillchart__name--{{skill.level}}">{{skill.name|safe}}</dt>
 							<dd class="b-skillchart__bar b-skillchart__bar--{{skill.level}}">{{skill.alt}}</dd>
 						</div>

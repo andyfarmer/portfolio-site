@@ -36,15 +36,6 @@
 	}
 }
 
-@include breakpoint.breakpoint(medium){
-	.l-content-container{
-
-		&--4-col {
-			max-width: 440px;
-		}
-	}
-}
-
 @include breakpoint.breakpoint(small){
 	.l-content-container{
 		padding: {

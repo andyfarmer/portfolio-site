@@ -24,3 +24,12 @@
 		}
 	}
 }
+
+@include breakpoint.breakpoint(medium){
+	.l-skillset{
+		padding: 56px 0 72px;
+		&__chart{
+			margin-top: 48px;
+		}
+	}
+}

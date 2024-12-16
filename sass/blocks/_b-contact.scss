@@ -25,3 +25,9 @@
 		padding: 48px 0 56px;
 	}
 }
+
+@include breakpoint.breakpoint(medium){
+	.b-contact{
+		padding: 40px 0 32px;
+	}
+}

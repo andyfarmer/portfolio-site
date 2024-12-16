@@ -12,7 +12,7 @@
 	}
 
 	&--l{
-		font-weight: 450;
+		font-weight: 400;
 		font-size: rem.rem(44);
 		line-height: rem.rem(52);
 		letter-spacing: -0.01em;
@@ -37,6 +37,7 @@
 	.e-heading{
 		&--jumbo{
 			font-size: rem.rem(55);
+			line-height: rem.rem(60);
 		}
 		&--l{
 			font-size: rem.rem(38);
@@ -55,19 +56,10 @@
 
 @include breakpoint.breakpoint(medium){
 	.e-heading{
-		&--m{
-			font-size: rem.rem(20);
-			line-height: rem.rem(28);
+		&--jumbo{
+			font-size: rem.rem(48);
+			line-height: rem.rem(56);
 		}
 	}
 }
 
-@include breakpoint.breakpoint('type-break-2'){
-	.e-heading{
-		&--jumbo{
-			font-size: rem.rem(48);
-			line-height: rem.rem(56);
-			letter-spacing: -0.04em;
-		}
-	}
-}

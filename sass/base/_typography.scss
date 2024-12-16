@@ -12,8 +12,8 @@ body{
 	font-size: rem.rem(20);
 }
 
-@include breakpoint.breakpoint('type-break-2'){
+@include breakpoint.breakpoint(large){
 	body{
-		font-size: rem.rem(16);
+		font-size: rem.rem(18);
 	}
 }
