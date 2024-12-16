@@ -11,4 +11,22 @@
 		color: colours.$brand-20;
 		text-decoration: none;
 	}
+	&--external {
+		&:after{
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 24px;
+			height: 24px;
+			background: url('/images/icons/external.svg') center center no-repeat;
+			margin-left: 8px;
+		}
+	}
+}
+
+.e-text--tiny .e-link--external {
+	&:after{
+		background-size: 20px 20px;
+		margin-left: 4px;
+	}
 }

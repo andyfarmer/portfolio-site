@@ -1,0 +1,20 @@
+@use 'tools/variables/colours';
+
+.b-footer{
+	background: colours.$background-biscuit;
+	padding: 16px 0;
+	&__container{
+		display: flex;
+	}
+	&__left,
+	&__middle,
+	&__right{
+		flex: 1;
+	}
+	&__middle{
+		text-align: center;
+	}
+	&__right{
+		text-align: right;
+	}
+}
