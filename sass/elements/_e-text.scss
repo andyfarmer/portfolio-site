@@ -8,6 +8,11 @@
 		font-size: rem.rem(18);
 		line-height: rem.rem(32);
 	}
+
+	&--tiny{
+		font-size: rem.rem(14);
+		line-height: rem.rem(24);
+	}
 }
 @include breakpoint.breakpoint(large){
 	.e-text{

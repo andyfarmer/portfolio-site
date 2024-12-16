@@ -1,3 +1,5 @@
+@use 'tools/variables/colours';
+
 .b-case-stories{
 	padding: 24px 0 64px;
 	margin: 0;
@@ -12,9 +14,11 @@
 	}
 	&__copy{
 		width: calc(49% - 16px);
+		color: colours.$text-secondary;
 	}
 	&__button-wrap{
 		text-align: right;
 		flex: 1;
+		padding-top: 12px;
 	}
 }

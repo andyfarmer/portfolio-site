@@ -2,7 +2,13 @@
 
 .e-link{
 	color: colours.$brand;
+	text-underline-offset: 0.2em;
 	&--blend{
+		text-decoration: none;
+	}
+	&:hover,
+	&:focus{
+		color: colours.$brand-20;
 		text-decoration: none;
 	}
 }

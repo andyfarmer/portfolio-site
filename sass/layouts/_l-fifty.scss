@@ -1,0 +1,11 @@
+.l-fifty{
+	display: flex;
+	&__item{
+		width: 50%;
+		padding-right: 8.33%;
+		&:last-child{
+			padding-left: 16px;
+			padding-right: 7%;
+		}
+	}
+}
