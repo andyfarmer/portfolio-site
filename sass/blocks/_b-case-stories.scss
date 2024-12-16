@@ -37,7 +37,7 @@
 	}
 }
 
-@include breakpoint.breakpoint(large){
+@include breakpoint.breakpoint(medium){
 	.b-case-stories{
 		padding: 0 0 32px;
 		width: 80%;
@@ -63,6 +63,20 @@
 			position: absolute;
 			top: 12px;
 			right: 0;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.b-case-stories{
+		width: 100%;
+		padding-bottom: 24px;
+		&__item{
+			padding-right: 0;
+		}
+		&__button-wrap{
+			position: static;
+			text-align: left;
 		}
 	}
 }

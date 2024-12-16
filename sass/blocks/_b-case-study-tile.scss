@@ -72,3 +72,12 @@
 		}
 	}
 }
+
+@include breakpoint.breakpoint(medium){
+	.b-case-study-tile{
+		width: 100%;
+		&__heading{
+			padding-bottom: 12px;
+		}
+	}
+}

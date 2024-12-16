@@ -23,3 +23,10 @@
 	}
 }
 
+@include breakpoint.breakpoint(small){
+	.e-text{
+		&--minor{
+			font-size: rem.rem(16);
+		}
+	}
+}

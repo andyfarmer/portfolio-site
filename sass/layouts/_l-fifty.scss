@@ -39,3 +39,11 @@
 		}
 	}
 }
+
+@include breakpoint.breakpoint(small){
+	.l-fifty{
+		&__item{
+			width: auto;
+		}
+	}
+}

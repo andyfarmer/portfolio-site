@@ -33,3 +33,15 @@
 		}
 	}
 }
+
+@include breakpoint.breakpoint(small){
+	.l-skillset{
+		padding: 40px 0 48px;
+		&__heading{
+			padding-bottom: 16px;
+		}
+		&__chart{
+			margin-top: 40px;
+		}
+	}
+}

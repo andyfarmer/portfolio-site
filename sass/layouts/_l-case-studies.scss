@@ -18,12 +18,22 @@
 	}
 }
 
-@include breakpoint.breakpoint(large){
+@include breakpoint.breakpoint(medium){
 	.l-case-studies{
 		padding: 56px 0 40px;
 		&__header{
 			width: calc(80% + 16px);
 			padding-bottom: 32px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.l-case-studies{
+		padding: 32px 0 24px;
+		&__header{
+			width: auto;
+			padding-bottom: 24px;
 		}
 	}
 }

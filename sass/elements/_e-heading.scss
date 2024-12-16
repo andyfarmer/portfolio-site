@@ -63,3 +63,23 @@
 	}
 }
 
+@include breakpoint.breakpoint(small){
+	.e-heading{
+		&--jumbo{
+			font-size: rem.rem(32);
+			line-height: rem.rem(40);
+		}
+		&--l{
+			font-size: rem.rem(28);
+			line-height: rem.rem(32);
+		}
+		&--m{
+			font-size: rem.rem(23);
+			line-height: rem.rem(28);
+		}
+		&--s{
+			font-size: rem.rem(20);
+			line-height: rem.rem(24);
+		}
+	}
+}

@@ -8,3 +8,9 @@
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 }
+
+@include breakpoint.breakpoint(small){
+	.u-small-caps{
+		font-size: rem.rem(12);
+	}
+}

@@ -31,3 +31,12 @@
 		padding: 40px 0 32px;
 	}
 }
+
+@include breakpoint.breakpoint(small){
+	.b-contact{
+		padding: 32px 0 16px;
+		&__heading{
+			max-width: 240px;
+		}
+	}
+}

@@ -107,3 +107,24 @@
 		}
 	}
 }
+
+@include breakpoint.breakpoint(small){
+	.l-experience{
+		padding: 72px 0 32px;
+		&__heading{
+			max-width: none;
+			padding-bottom: 20px;
+		}
+		&__example{
+			width: 100%;
+			padding-bottom: 24px;
+		}
+		&__image{
+			height: 96px;
+			margin: 0 8px;
+		}
+		&__screens {
+			padding-top: 20px;
+		}
+	}
+}

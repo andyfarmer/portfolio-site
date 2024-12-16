@@ -90,17 +90,14 @@
 @include breakpoint.breakpoint(large){
 	.b-skillchart {
 		padding: 32px 24px;
-		&__label{
+		&__label,
+		&__name{
 			font-size: rem.rem(15);
 			line-height: rem.rem(20);
 		}
 		&__item{
 			width: 64px;
 			margin-right: 24px;
-		}
-		&__name{
-			font-size: rem.rem(15);
-			line-height: rem.rem(20);
 		}
 	}
 }
@@ -180,6 +177,48 @@
 			&--5{
 				width: calc(90% - 80px);
 			}
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.b-skillchart{
+		padding: 8px 16px 16px;
+		&__skills{
+			padding-bottom: 8px;
+			&:before{
+				left: 38%;
+			}
+			&:after{
+				left: 79%;
+			}
+		}
+		&__labels{
+			height: 48px;
+		}
+		&__label{
+			width: 124px;
+			&--1{
+				left: calc(38% - 60px);
+			}
+			&--2{
+				left: calc(79% - 60px);
+			}
+		}
+		&__label,
+		&__name{
+			font-size: rem.rem(12);
+			line-height: rem.rem(16);
+		}
+		&__item{
+			margin-bottom: 4px;
+		}
+		&__name{
+			width: 80px;
+			padding-top: 0;
+		}
+		&__bar{
+			height: 32px;
 		}
 	}
 }
