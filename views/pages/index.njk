@@ -1,6 +1,8 @@
 {% extends './templates/base.njk' %}
 
 {% from 'components/b-case-study-tile.njk' import caseStudyTile %}
+{% from 'components/b-contact.njk' import contact %}
+{% from 'components/b-footer.njk' import footer %}
 
 {% block content %}
 
@@ -255,23 +257,11 @@
 
 	</div>
 
-	<section class="b-contact u-space-top-56">
-		<div class="l-content-container l-content-container--6-col">
-			<h3 class="e-eyebrow u-small-caps">Contact</h3>
-			<h4 class="b-contact__heading e-heading--m">Give me some new problems to solve</h4>
-			<p class="b-contact__copy e-text">An experienced Product Designer looking for a remote full-time position that will bring new challenges and opportunity for growth.</p>
-			<a href="mailto:andyfarmer9@gmail.com" class="e-button">Send me an email</a>
-			<p class="b-contact__footnote e-text--tiny">(opens mail client)</p>
-		</div>
-	</section>
+	<div class="u-space-top-56">
+		{{contact()}}
+	</div>
 
-	<footer class="b-footer">
-		<div class="b-footer__container l-content-container">
-			<p class="b-footer__left e-text--tiny">Coded by me. <a href="https://github.com/andyfarmer/portfolio-site" target="_blank" class="e-link e-link--external">View on GitHub</a></p>
-			<p class="b-footer__middle e-text--tiny">&copy; Andy Farmer 2024 - 2025. All rights reserved.</p>
-			<p class="b-footer__right e-text--tiny"><a href="#top" class="e-link e-top-link">Back to top</a></p>
-		</div>
-	</footer>
+	{{footer()}}
 
 {% endblock %}
 

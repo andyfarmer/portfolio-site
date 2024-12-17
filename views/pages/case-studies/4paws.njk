@@ -4,7 +4,9 @@
 
 {% from 'components/e-dividing-heading.njk' import dividingHeading %}
 {% from 'components/e-metrics-list.njk' import metricsList %}
+{% from 'components/b-contact.njk' import contact %}
 {% from 'components/b-figure.njk' import figure %}
+{% from 'components/b-footer.njk' import footer %}
 
 {% block content %}
 
@@ -235,7 +237,7 @@
 
 	{{dividingHeading({
 		eyebrow: 'Feedback',
-		heading: 'What Senior Leadership said'
+		heading: 'What senior leadership said'
 	})}}
 	<div class="l-content-container l-content-container--6-col">
 		<p>After presenting to the client project team, I was asked to present the concepts to the Senior Leadership Team for feedback.</p>
@@ -283,5 +285,11 @@
 		<p>While Concept D performed well and was a huge improvement, it was only tested against the current design. My expectation following initial concept development was that multiple concepts would be prototyped, tested and iterated upon.</p>
 		<p>Introducing some concept testing at this stage would have significantly reduced the risk being carried into development and would’ve enabled us to make a decision based on data to achieve the best outcome.</p>
 	</div>
+
+	<div class="u-space-top-56">
+		{{contact()}}
+	</div>
+
+	{{footer()}}
 
 {% endblock %}
