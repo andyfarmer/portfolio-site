@@ -38,7 +38,10 @@ gulp.task('serve', gulp.series(['html', 'sass', 'js', 'images'], function(){
 
   browserSync.init({
     server: {
-      baseDir: "./dist"
+      baseDir: "./dist",
+			serveStaticOptions: {
+				extensions: ['html']
+			}
     }
   });
 

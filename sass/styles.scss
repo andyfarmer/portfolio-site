@@ -4,18 +4,20 @@
 @use 'elements/e-avatar';
 @use 'elements/e-button';
 @use 'elements/e-detail-list';
+@use 'elements/e-dividing-heading';
 @use 'elements/e-eyebrow';
-@use 'elements/e-folio-img';
 @use 'elements/e-heading';
+@use 'elements/e-lead-image';
 @use 'elements/e-link';
-@use 'elements/e-tag';
+@use 'elements/e-metrics-list';
 @use 'elements/e-text';
 @use 'elements/e-top-link';
 
-@use 'blocks/b-article';
+@use 'blocks/b-case-overview';
 @use 'blocks/b-case-stories';
 @use 'blocks/b-case-study-tile';
 @use 'blocks/b-contact';
+@use 'blocks/b-figure';
 @use 'blocks/b-footer';
 @use 'blocks/b-home-header';
 @use 'blocks/b-skillchart';
@@ -27,6 +29,8 @@
 @use 'layouts/l-experience';
 @use 'layouts/l-fifty';
 @use 'layouts/l-skillset';
+
+@use 'pages/p-case-study';
 
 @use 'utilities/u-small-caps';
 @use 'utilities/u-spacing';

@@ -1,0 +1,14 @@
+@use 'tools/variables/colours';
+
+.b-figure{
+	padding: 24px 0;
+	&__caption{
+		color: colours.$text-secondary;
+		width: 672px;
+		margin: 4px auto 0;
+		padding: {
+			left: 32px;
+			right: 32px;
+		}
+	}
+}

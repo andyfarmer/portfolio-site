@@ -9,6 +9,11 @@
 		line-height: rem.rem(32);
 	}
 
+	&--small{
+		font-size: rem.rem(16);
+		line-height: rem.rem(24);
+	}
+
 	&--tiny{
 		font-size: rem.rem(14);
 		line-height: rem.rem(24);

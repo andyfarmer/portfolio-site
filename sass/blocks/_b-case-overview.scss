@@ -1,0 +1,12 @@
+@use 'tools/variables/colours';
+
+.b-case-overview{
+	display: flex;
+	&__eyebrow{
+		color: colours.$text-secondary;
+		width: calc(25% + 8px);
+	}
+	&__details{
+		width: 672px;
+	}
+}

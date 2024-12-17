@@ -1,0 +1,17 @@
+.e-metrics-list{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	&__item{
+		width: 25%;
+		padding: 0 32px 16px 16px;
+		margin: 0;
+		position: relative;
+	}
+	&__icon{
+		position: absolute;
+		top: 4px;
+		right: calc(100% - 8px);
+	}
+}

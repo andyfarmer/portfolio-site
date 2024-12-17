@@ -1,0 +1,25 @@
+@use 'tools/functions/rem';
+
+.p-case-study{
+	h1, h2, h3, h4, h5, h6{
+		text-wrap: auto;
+	}
+	h1{
+		padding: {
+			top: 56px;
+			bottom: 32px;
+		}
+	}
+	.e-heading{
+		&--m{
+			padding-bottom: 24px;
+		}
+		&--s{
+			padding-bottom: 8px;
+		}
+	}
+	p{
+		line-height: rem.rem(32);
+		padding-bottom: 32px;
+	}
+}
