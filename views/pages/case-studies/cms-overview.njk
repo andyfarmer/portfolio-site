@@ -3,11 +3,21 @@
 {% set mainClasses = 'p-case-study' %}
 
 {% from 'components/e-dividing-heading.njk' import dividingHeading %}
+{% from 'components/e-lead-image.njk' import leadImage %}
 {% from 'components/b-contact.njk' import contact %}
 {% from 'components/b-figure.njk' import figure %}
 {% from 'components/b-footer.njk' import footer %}
 
 {% block content %}
+
+	{{leadImage({
+		colour: 'blue',
+		image: {
+			url: '/images/case-studies/cms/cms-desktop',
+			type: 'jpg',
+			alt: '3 desktop screenshots from a Case Management System'
+		}
+	})}}
 
 	<div class="l-content-container l-content-container--6-col">
 		<h1 class="e-heading--l">0 to 1 design of large, complex internal system</h1>

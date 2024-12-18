@@ -3,6 +3,7 @@
 {% set mainClasses = 'p-case-study' %}
 
 {% from 'components/e-dividing-heading.njk' import dividingHeading %}
+{% from 'components/e-lead-image.njk' import leadImage %}
 {% from 'components/e-metrics-list.njk' import metricsList %}
 {% from 'components/b-contact.njk' import contact %}
 {% from 'components/b-figure.njk' import figure %}
@@ -10,9 +11,14 @@
 
 {% block content %}
 
-	<div class="e-lead-image e-lead-image--green">
-		<img srcset="/images/case-studies/4paws/4paws-mobile-screens@2x.jpg 2x" src="/images/case-studies/4paws/4paws-mobile-screens.jpg" alt="4 mobile device screenshots from a pet insurance website" class="e-lead-image__img">
-	</div>
+	{{leadImage({
+		colour: 'green',
+		image: {
+			url: '/images/case-studies/4paws/4paws-mobile-screens',
+			type: 'jpg',
+			alt: '4 mobile device screenshots from a pet insurance website'
+		}
+	})}}
 
 	<div class="l-content-container l-content-container--6-col">
 		<h1 class="e-heading--l">Increasing conversion rate for new policy sign-ups</h1>
