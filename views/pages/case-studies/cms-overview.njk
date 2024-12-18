@@ -1,0 +1,100 @@
+{% extends './templates/base.njk' %}
+
+{% set mainClasses = 'p-case-study' %}
+
+{% from 'components/e-dividing-heading.njk' import dividingHeading %}
+{% from 'components/b-contact.njk' import contact %}
+{% from 'components/b-figure.njk' import figure %}
+{% from 'components/b-footer.njk' import footer %}
+
+{% block content %}
+
+	<div class="l-content-container l-content-container--6-col">
+		<h1 class="e-heading--l">0 to 1 design of large, complex internal system</h1>
+	</div>
+
+	{{dividingHeading({
+		eyebrow: 'Problem definition',
+		heading: 'Different departments, same challenges'
+	})}}
+	<div class="l-content-container l-content-container--6-col">
+		<p>Multiple departments within the organisation were facing similar challenges:</p>
+		<ul>
+			<li>Their operational processes were managed through a combination of paper files and legacy IT systems including Access databases and spreadsheets</li>
+			<li>These systems were unreliable and unsupported</li>
+			<li>Data was siloed and often inaccessible for trend analysis or reporting purposes</li>
+			<li>Ways of working included unnecessary manual effort such as needing to double-key information. This caused inefficiencies and was prone to human error.</li>
+		</ul>
+		<p>Although they shared similar pain points, each department was a self-contained area of the organisation and they each dealt with different types of cases. There was no interaction between the departments and cases were not passed between them.</p>
+	</div>
+
+	{{dividingHeading({
+		eyebrow: 'The vision',
+		heading: 'Generic, crosscutting case management capabilities that could be configured to specific use cases'
+	})}}
+	<div class="l-content-container l-content-container--6-col">
+		<p>The vision for the product was to develop a core set of case management capabilities that could be easily customised through low-code configuration to enable quick and easy onboarding of multiple business areas.</p>
+	</div>
+
+	{{dividingHeading({
+		eyebrow: 'Challenges',
+		heading: 'Key challenges that influenced the project'
+	})}}
+	<div class="l-content-container l-content-container--6-col">
+		<h4 class="e-heading--s">How to create generic, flexible patterns that were also robust and fit for purpose</h4>
+		<p>The toughest design challenge was that each pattern needed to be generic and flexible so that it could be used across multiple contexts and use cases. At the same time, they needed to be fit for purpose; they needed to be well-designed, well-tested and meet the individual needs of each user group.</p>
+		<h4 class="e-heading--s">Cutting code from sprint 1</h4>
+		<p>To be able to meet the timescales of the programme, we knew we needed to start coding early. After completing sprint 0, the engineers got to work writing code. This didn’t give us long in the design team to get ahead and create designs ready for production.</p>
+		<p>This was a continuous challenge throughout the project as we ran all activities across discovery, design, development and testing in parallel. It required continuous communication and coordination between all disciplines for us to keep the programme on schedule.</p>
+	</div>
+
+	{{dividingHeading({
+		eyebrow: 'Accelerators',
+		heading: 'What we had going for us'
+	})}}
+	<div class="l-content-container l-content-container--6-col">
+		<h4 class="e-heading--s">Engaged business stakeholders</h4>
+		<p>Throughout the project we had highly-engaged Product Owners, Subject Matter Experts and other business stakeholders. We had direct access to key decision makers and developed excellent working relationships with them through consistent and frequent collaboration.</p>
+
+		<h4 class="e-heading--s">Engaged users</h4>
+		<p>We also had highly-engaged users. They were invested in the success of the product as they would be using it every day for their job. This enabled us to test our designs regularly and continuously iterate based on feedback.</p>
+	</div>
+
+	{{dividingHeading({
+		eyebrow: 'Project approach',
+		heading: 'One continuous ‘core’ roadmap, three staggered department roadmaps'
+	})}}
+	<div class="l-content-container l-content-container--6-col">
+		<p>One of the first (and biggest) decisions we faced as a team was how to ensure we continuously delivered against multiple department roadmaps. We saw 2 options:</p>
+		<ol>
+			<li>Build ‘horizontally’ by developing capabilities across all 3 departments. Prioritising features that were needed by all user groups.</li>
+			<li>Build ‘vertically’ by focusing on developing capabilities for 1 department in full. Then, onboard a second department, configure the overlapping capabilities and develop new capabilities to fill the gaps.</li>
+		</ol>
+
+		<p>We decided to build vertically and began by delivering the MVP capabilities for 1 department. This enabled us to be more agile, narrowed the requirements, and allowed us to focus on delivering an MVP in full.</p>
+		<p>This meant that I was never working with a full set of requirements as I designed each feature. I knew what the Blue Department needed, but I didn’t fully understand the needs of the Red or Green Department until later in the project.</p>
+	</div>
+
+	{{dividingHeading({
+		eyebrow: 'Strategy',
+		heading: 'Key design principles that guided the project'
+	})}}
+	<div class="l-content-container l-content-container--6-col">
+		<h4 class="e-heading--s">Design the system, design the patterns</h4>
+		<p>To achieve the combination of flexibility and robustness, I needed to design the UI as a system. The system needed a solid foundation of layout, typography, colours, spacing rules and for each component to ‘fit’ into the system. The UI was broken down into the smallest components and those components combined to create patterns.</p>
+		<p>Each specific design problem needed to be abstracted to answer the question “What’s the best design solution for problems like this?” This would lead to the design of the reusable pattern.</p>
+
+		<h4 class="e-heading--s">Test our riskiest assumptions</h4>
+		<p>A good principle to adopt for most projects, but it was particularly key in this instance. I was working at pace and producing a lot of UI. As each design approached test-readiness, the User Researcher and I would make a point of discussing the assumptions that have been made and how big a risk those assumptions were. We then made sure that the riskiest assumptions could be tested in the next research round.</p>
+
+		<h4 class="e-heading--s">Continuously iterate and embrace change</h4>
+		<p>Our agreed project approach meant that there would always be a potential need for change. This was a risk we collectively agreed to tolerate and plan for. There was an explicit agreement between the team that all decisions were made from the information we had available and as we onboarded new departments and continued discovery, we’d learn new information that could mean changing design decisions. If we needed to throw out designs, or rewrite code, that was all part of the process.</p>
+	</div>
+
+	<div class="u-space-top-56">
+		{{contact()}}
+	</div>
+
+	{{footer()}}
+
+{% endblock %}

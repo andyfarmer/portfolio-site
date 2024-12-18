@@ -5,6 +5,7 @@
 	padding-top: 64px;
 	&__eyebrow{
 		color: colours.$text-secondary;
+		padding-top: 4px;
 		width: calc(25% + 8px);
 	}
 	&__heading{

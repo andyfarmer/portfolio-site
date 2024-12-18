@@ -18,8 +18,18 @@
 			padding-bottom: 8px;
 		}
 	}
-	p{
+	p, ul, ol{
 		line-height: rem.rem(32);
 		padding-bottom: 32px;
+	}
+	ul, ol {
+		padding-left: 56px;
+		li {
+			padding-bottom: 8px;
+		}
+	}
+	p + ul,
+	p + ol {
+		margin-top: -16px;
 	}
 }
