@@ -8,6 +8,8 @@
 {% macro dividingHeading(params) %}
 	<div class="e-dividing-heading l-content-container">
 		<h2 class="e-dividing-heading__eyebrow u-small-caps">{{params.eyebrow}}</h2>
-		<h3 class="e-dividing-heading__heading e-heading--m">{{params.heading}}</h3>
+		{% if params.heading %}
+			<h3 class="e-dividing-heading__heading e-heading--m">{{params.heading}}</h3>
+		{% endif %}
 	</div>
 {% endmacro %}

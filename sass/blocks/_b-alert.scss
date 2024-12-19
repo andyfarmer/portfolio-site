@@ -1,0 +1,27 @@
+@use 'tools/functions/rem';
+@use 'tools/variables/colours';
+
+.b-alert{
+	display: flex;
+	align-items: flex-start;
+	border-radius: 4px;
+	padding: 8px 16px;
+	border: 1px solid;
+	&__text{
+		line-height: rem.rem(28);
+		padding-bottom: 0;
+	}
+	&__icon{
+		margin: {
+			top: 4px;
+			right: 16px;
+		}
+	}
+	&__link{
+		color: colours.$text-neutral;
+	}
+ 	&--info{
+		background: colours.$background-neutral;
+		border-color: colours.$border-neutral;
+	}
+}

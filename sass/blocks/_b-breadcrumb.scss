@@ -1,0 +1,19 @@
+@use 'tools/variables/colours';
+
+.b-breadcrumb{
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	&__item{
+		margin-right: 8px;
+		padding: 0;
+		&:not(:last-child) {
+			&:after {
+				content: '\2192';
+				color: colours.$text-secondary;
+				margin-left: 8px;
+			}
+		}
+	}
+}

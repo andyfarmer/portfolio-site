@@ -1,0 +1,25 @@
+@use 'tools/functions/rem';
+@use 'tools/variables/colours';
+
+.e-pullquote{
+	&__text{
+		font-family: "Radley", serif;
+		font-weight: 400;
+		letter-spacing: -0.025em;
+		font-size: rem.rem(36);
+		line-height: rem.rem(48);
+		p{
+			padding-bottom: 16px;
+		}
+	}
+	&__cite{
+		color: colours.$text-secondary;
+		display: block;
+		width: 672px;
+		margin: 0 auto;
+		padding: {
+			left: 32px;
+			right: 32px;
+		}
+	}
+}

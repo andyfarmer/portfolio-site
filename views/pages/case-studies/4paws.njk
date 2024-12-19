@@ -1,10 +1,13 @@
 {% extends './templates/base.njk' %}
 
-{% set mainClasses = 'p-case-study' %}
+{% block pageTitle %}Pet Insurance Case Study | Andy Farmer Design Portfolio{% endblock %}
 
 {% from 'components/e-dividing-heading.njk' import dividingHeading %}
 {% from 'components/e-lead-image.njk' import leadImage %}
 {% from 'components/e-metrics-list.njk' import metricsList %}
+{% from 'components/b-breadcrumb.njk' import breadcrumb %}
+{% from 'components/b-case-overview.njk' import caseOverview %}
+{% from 'components/b-case-study-tile.njk' import caseStudyTile %}
 {% from 'components/b-contact.njk' import contact %}
 {% from 'components/b-figure.njk' import figure %}
 {% from 'components/b-footer.njk' import footer %}
@@ -20,13 +23,29 @@
 		}
 	})}}
 
-	<div class="l-content-container l-content-container--6-col">
-		<h1 class="e-heading--l">Increasing conversion rate for new policy sign-ups</h1>
+	<div class="l-content-container l-content-container--6-col u-space-top-24">
+		{{breadcrumb([
+			{
+				text: 'Home',
+				url: '/'
+			},
+			{
+				text: 'Case studies',
+				url: '/case-studies'
+			},
+			{
+				text: '4Paws Pet Insurance'
+			}
+		])}}
 	</div>
 
-	<div class="b-case-overview l-content-container">
-		<h2 class="b-case-overview__eyebrow u-small-caps">Overview</h2>
-		{% set details = [
+	<div class="p-case-study">
+
+		<div class="l-content-container l-content-container--6-col">
+			<h1 class="e-heading--l">Increasing conversion rate for new policy sign-ups</h1>
+		</div>
+
+		{{caseOverview([
 			{
 				label: 'Summary',
 				value: 'Over 95% of customer acquisition for 4Paws Pet Insurance happens through their website. I was tasked with optimising the new policy workflow from initial quote through to final payment.',
@@ -48,248 +67,257 @@
 				label: 'Timeline',
 				value: '6-8 weeks'
 			}
-		]%}
-
-		<dl class="b-case-overview__details e-detail-list">
-			{% for detail in details %}
-				<div class="e-detail-list__item{% if detail.fullwidth %} e-detail-list__item--fullwidth{% endif %}">
-					<dt class="e-detail-list__label">{{detail.label}}</dt>
-					<dd class="e-detail-list__value">{{detail.value|safe}}</dd>
-				</div>
-			{% endfor %}
-		</dl>
-	</div>
-
-	{{dividingHeading({
-		eyebrow: 'Problem definition',
-		heading: 'A high dropout rate throughout the  funnel resulting in a high cost per acquisition'
-	})}}
-	<div class="l-content-container l-content-container--6-col">
-		<p>4Paws originally engaged the agency with the goal of optimising their pay-per-click advertising to drive direct traffic rather than  referrals from aggregator websites.</p>
-		<p>Our PPC Executive had improved their campaigns and increased direct website traffic. However, overall cost per acquisition remained high as only a small percentage of traffic was converting to the sale of a new policy.</p>
-		<p>Analytics data showed that there was a low conversion rate across all channels. I was tasked with reviewing the end-to-end website journey to decrease drop-offs at each stage.</p>
-	</div>
-
-	{{dividingHeading({
-		eyebrow: 'Success metrics',
-		heading: 'Agreeing the objectives and how success would be measured'
-	})}}
-	<div class="l-content-container l-content-container--6-col">
-		<p>Before starting any work, we workshopped specific objectives with the client and collectively agreed what success would look like for the project. We set measurable* objectives for:</p>
-	</div>
-
-	<div class="l-content-container l-content-container--8-col">
-		{{metricsList([
-			{
-				direction: 'up',
-				label: 'Increased conversions'
-			},
-			{
-				direction: 'down',
-				label: 'Decreased drop&#8209;offs'
-			},
-			{
-				direction: 'down',
-				label: 'Decreased time on task'
-			},
-			{
-				direction: 'down',
-				label: 'Decreased cost per acquisition'
-			}
 		])}}
-	</div>
 
-	<p class="e-text--tiny l-content-container l-content-container--6-col u-space-top-24">* Specific targets are company confidential and have been omitted.</p>
+		{{dividingHeading({
+			eyebrow: 'Problem definition',
+			heading: 'A high dropout rate throughout the  funnel resulting in a high cost per acquisition'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>4Paws originally engaged the agency with the goal of optimising their pay-per-click advertising to drive direct traffic rather than  referrals from aggregator websites.</p>
+			<p>Our PPC Executive had improved their campaigns and increased direct website traffic. However, overall cost per acquisition remained high as only a small percentage of traffic was converting to the sale of a new policy.</p>
+			<p>Analytics data showed that there was a low conversion rate across all channels. I was tasked with reviewing the end-to-end website journey to decrease drop-offs at each stage.</p>
+		</div>
 
-	{{dividingHeading({
-		eyebrow: 'Constraints',
-		heading: 'Key challenges that informed my approach'
-	})}}
-	<div class="l-content-container l-content-container--6-col">
-		<h4 class="e-heading--s">Limited time and budget</h4>
-		<p>The client had to find additional funding as this work wasn’t planned for in their original marketing budget. This meant I had limited budget to work with.</p>
-		<h4 class="e-heading--s">No access to real users</h4>
-		<p>Any engagement with users would require starting from scratch with recruitment as there wasn’t an existing pool of users that could be recruited from.</p>
-	</div>
+		{{dividingHeading({
+			eyebrow: 'Success metrics',
+			heading: 'Agreeing the objectives and how success would be measured'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>Before starting any work, we workshopped specific objectives with the client and collectively agreed what success would look like for the project. We set measurable* objectives for:</p>
+		</div>
 
-	{{dividingHeading({
-		eyebrow: 'Accelerators',
-		heading: 'What we had going for us'
-	})}}
-	<div class="l-content-container l-content-container--6-col">
-		<h4 class="e-heading--s">We had data</h4>
-		<p>There was an established Google Analytics setup which provided a rich set of tracking data through the funnel.</p>
-		<p>HotJar had been running on the site for a while so there were plenty of session recordings to provide insights.</p>
-	</div>
+		<div class="l-content-container l-content-container--8-col">
+			{{metricsList([
+				{
+					direction: 'up',
+					label: 'Increased conversions'
+				},
+				{
+					direction: 'down',
+					label: 'Decreased drop&#8209;offs'
+				},
+				{
+					direction: 'down',
+					label: 'Decreased time on task'
+				},
+				{
+					direction: 'down',
+					label: 'Decreased cost per acquisition'
+				}
+			])}}
+		</div>
 
-	{{dividingHeading({
-		eyebrow: 'Strategy',
-		heading: 'Key principles I set to guide my design thinking'
-	})}}
-	<div class="l-content-container l-content-container--6-col">
-		<h4 class="e-heading--s">Design for performance</h4>
-		<p>The primary objective for this piece of work was to move the needle on the agreed business metrics. This guided decision making during ideation and designs.</p>
-		<h4 class="e-heading--s">Keep it lean</h4>
-		<p>Budget was tight. I needed to ensure that my approach maximised the time and resources available. Each stage of the process needed to cover ‘just enough’ to be able to move forward.</p>
-		<h4 class="e-heading--s">Bring everything back to metrics</h4>
-		<p>The client was laser-focused on ROI. All recommendations and outputs from this project needed to clearly evidence how they would impact the key success metrics.</p>
-	</div>
+		<p class="e-text--tiny l-content-container l-content-container--6-col u-space-top-24">* Specific targets are company confidential and have been omitted.</p>
 
-	{{figure({
-		image:{
-			url: '/images/case-studies/4paws/existing-design',
-			type: 'jpg',
-			alt: '2 desktop screenshots of existing website design'
-		},
-		caption: 'Screens from the existing design'
-	})}}
+		{{dividingHeading({
+			eyebrow: 'Constraints',
+			heading: 'Key challenges that informed my approach'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<h4 class="e-heading--s">Limited time and budget</h4>
+			<p>The client had to find additional funding as this work wasn’t planned for in their original marketing budget. This meant I had limited budget to work with.</p>
+			<h4 class="e-heading--s">No access to real users</h4>
+			<p>Any engagement with users would require starting from scratch with recruitment as there wasn’t an existing pool of users that could be recruited from.</p>
+		</div>
 
-	{{dividingHeading({
-		eyebrow: 'Research',
-		heading: 'Assessing the existing design'
-	})}}
-	<div class="l-content-container l-content-container--6-col">
-		<p>I started by analysing all existing data points to gain insight into where the current design had problems. This insight came from 3 sources:</p>
-		<h4 class="e-heading--s">Google Analytics</h4>
-		<p>I create a conversion funnel in Google Analytics to determine user drop-off rates at each step of the process.</p>
-		<h4 class="e-heading--s">HotJar recordings</h4>
-		<p>User recordings provided insight into user behaviour as they moved through the workflow and highlighted key pain points that were causing confusion and frustration.</p>
-		<h4 class="e-heading--s">Heuristic evaluation</h4>
-		<p>I conducted my own evaluation of the interface to identify potential usability problems.</p>
-	</div>
+		{{dividingHeading({
+			eyebrow: 'Accelerators',
+			heading: 'What we had going for us'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<h4 class="e-heading--s">We had data</h4>
+			<p>There was an established Google Analytics setup which provided a rich set of tracking data through the funnel.</p>
+			<p>HotJar had been running on the site for a while so there were plenty of session recordings to provide insights.</p>
+		</div>
 
-	{{dividingHeading({
-		eyebrow: 'Analysis',
-		heading: 'Synthesising the research and drawing conclusions'
-	})}}
-	<div class="l-content-container l-content-container--6-col">
-		<p>I created a Mural board to collect my observations as I completed my assessment. This enabled me to synthesise all my findings and determine where my evaluation (yellow stickies) was supported by data in HotJar (red stickies) or Analytics (blue stickies).</p>
-	</div>
+		{{dividingHeading({
+			eyebrow: 'Strategy',
+			heading: 'Key principles I set to guide my design thinking'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<h4 class="e-heading--s">Design for performance</h4>
+			<p>The primary objective for this piece of work was to move the needle on the agreed business metrics. This guided decision making during ideation and designs.</p>
+			<h4 class="e-heading--s">Keep it lean</h4>
+			<p>Budget was tight. I needed to ensure that my approach maximised the time and resources available. Each stage of the process needed to cover ‘just enough’ to be able to move forward.</p>
+			<h4 class="e-heading--s">Bring everything back to metrics</h4>
+			<p>The client was laser-focused on ROI. All recommendations and outputs from this project needed to clearly evidence how they would impact the key success metrics.</p>
+		</div>
 
-	{{figure({
-		image: {
-			url: '/images/case-studies/4paws/analysis',
-			type: 'jpg',
-			alt: 'A whiteboard with annotations surrounding screenshots of the existing design'
-		},
-		caption: 'Mural board of research analysis'
-	})}}
-
-	{{dividingHeading({
-		eyebrow: 'Ideation',
-		heading: 'Exploring design options'
-	})}}
-
-	{{figure({
-		image:{
-			url: '/images/case-studies/4paws/concept-a',
-			type: 'jpg',
-			alt: 'Design screenshots showing a simple form layout'
-		},
-		caption: 'Design concept A'
-	})}}
-	<div class="l-content-container l-content-container--6-col">
-		<h4 class="e-heading--s">Concept A: Optimising changes only</h4>
-		<p>Concept A gets the job done. This design focused on addressing the priority usability issues but didn’t try to reinvent how the pages function. The visual design was also kept very close to the original, except where this caused issues (for example, changing the heavy of use of red). This concept didn’t change any of the content of the form.</p>
-		<p>Concept A was the simplest and would involve the lowest dev effort, but would still deliver results.</p>
-	</div>
-
-	<div class="u-space-top-24">
 		{{figure({
 			image:{
-				url: '/images/case-studies/4paws/concept-b',
+				url: '/images/case-studies/4paws/existing-design',
 				type: 'jpg',
-				alt: 'Design screenshots showing 1 form field per page'
+				alt: '2 desktop screenshots of existing website design'
 			},
-			caption: 'Design concept B'
+			caption: 'Screens from the existing design'
 		})}}
-	</div>
-	<div class="l-content-container l-content-container--6-col">
-		<h4 class="e-heading--s">Concept B: Quick quote</h4>
-		<p>Concept B built upon Concept A but focused on making the quote form shorter. I reviewed the questions on the form and removed any that didn’t have a direct influence on policy price. Moving the additional fields to later in the journey reduced the time to get a quote and enabled users to see prices sooner.</p>
-		<p>It also experimented with ways to make the form feel shorter, utilising well-research and established approaches such as one thing per page.</p>
-	</div>
 
-	<div class="u-space-top-24">
+		{{dividingHeading({
+			eyebrow: 'Research',
+			heading: 'Assessing the existing design'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>I started by analysing all existing data points to gain insight into where the current design had problems. This insight came from 3 sources:</p>
+			<h4 class="e-heading--s">Google Analytics</h4>
+			<p>I create a conversion funnel in Google Analytics to determine user drop-off rates at each step of the process.</p>
+			<h4 class="e-heading--s">HotJar recordings</h4>
+			<p>User recordings provided insight into user behaviour as they moved through the workflow and highlighted key pain points that were causing confusion and frustration.</p>
+			<h4 class="e-heading--s">Heuristic evaluation</h4>
+			<p>I conducted my own evaluation of the interface to identify potential usability problems.</p>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Analysis',
+			heading: 'Synthesising the research and drawing conclusions'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>I created a Mural board to collect my observations as I completed my assessment. This enabled me to synthesise all my findings and determine where my evaluation (yellow stickies) was supported by data in HotJar (red stickies) or Analytics (blue stickies).</p>
+		</div>
+
+		{{figure({
+			image: {
+				url: '/images/case-studies/4paws/analysis',
+				type: 'jpg',
+				alt: 'A whiteboard with annotations surrounding screenshots of the existing design'
+			},
+			caption: 'Mural board of research analysis'
+		})}}
+
+		{{dividingHeading({
+			eyebrow: 'Ideation',
+			heading: 'Exploring design options'
+		})}}
+
 		{{figure({
 			image:{
-				url: '/images/case-studies/4paws/concept-c',
+				url: '/images/case-studies/4paws/concept-a',
 				type: 'jpg',
-				alt: 'Mobile design screenshots showing a chat interface'
+				alt: 'Design screenshots showing a simple form layout'
 			},
-			caption: 'Design concept C'
+			caption: 'Design concept A'
 		})}}
-	</div>
-	<div class="l-content-container l-content-container--6-col">
-		<h4 class="e-heading--s">Concept C: Friendly chat interface</h4>
-		<p>For Concept C I explored a different approach for the initial data capture part of the flow. I introduced a chat interface to make the process feel more personable and bring a friendlier tone to the design.</p>
-		<p>This concept also helped to break the process down into smaller steps in order to feel shorter and less effort.</p>
-	</div>
+		<div class="l-content-container l-content-container--6-col">
+			<h4 class="e-heading--s">Concept A: Optimising changes only</h4>
+			<p>Concept A gets the job done. This design focused on addressing the priority usability issues but didn’t try to reinvent how the pages function. The visual design was also kept very close to the original, except where this caused issues (for example, changing the heavy of use of red). This concept didn’t change any of the content of the form.</p>
+			<p>Concept A was the simplest and would involve the lowest dev effort, but would still deliver results.</p>
+		</div>
 
-	<div class="u-space-top-24">
-		{{figure({
-			image:{
-				url: '/images/case-studies/4paws/4paws-mobile-screens',
-				type: 'jpg',
-				alt: 'Mobile design screenshots showing a chat interface'
-			},
-			caption: 'Design concept D'
+		<div class="u-space-top-24">
+			{{figure({
+				image:{
+					url: '/images/case-studies/4paws/concept-b',
+					type: 'jpg',
+					alt: 'Design screenshots showing 1 form field per page'
+				},
+				caption: 'Design concept B'
+			})}}
+		</div>
+		<div class="l-content-container l-content-container--6-col">
+			<h4 class="e-heading--s">Concept B: Quick quote</h4>
+			<p>Concept B built upon Concept A but focused on making the quote form shorter. I reviewed the questions on the form and removed any that didn’t have a direct influence on policy price. Moving the additional fields to later in the journey reduced the time to get a quote and enabled users to see prices sooner.</p>
+			<p>It also experimented with ways to make the form feel shorter, utilising well-research and established approaches such as one thing per page.</p>
+		</div>
+
+		<div class="u-space-top-24">
+			{{figure({
+				image:{
+					url: '/images/case-studies/4paws/concept-c',
+					type: 'jpg',
+					alt: 'Mobile design screenshots showing a chat interface'
+				},
+				caption: 'Design concept C'
+			})}}
+		</div>
+		<div class="l-content-container l-content-container--6-col">
+			<h4 class="e-heading--s">Concept C: Friendly chat interface</h4>
+			<p>For Concept C I explored a different approach for the initial data capture part of the flow. I introduced a chat interface to make the process feel more personable and bring a friendlier tone to the design.</p>
+			<p>This concept also helped to break the process down into smaller steps in order to feel shorter and less effort.</p>
+		</div>
+
+		<div class="u-space-top-24">
+			{{figure({
+				image:{
+					url: '/images/case-studies/4paws/4paws-mobile-screens',
+					type: 'jpg',
+					alt: 'Mobile design screenshots showing a chat interface'
+				},
+				caption: 'Design concept D'
+			})}}
+		</div>
+		<div class="l-content-container l-content-container--6-col">
+			<h4 class="e-heading--s">Concept D: Chat interface with a glow up</h4>
+			<p>The first 3 concepts kept the visual styling inline with what 4Paws already had in place. For Concept D I decided to explore how the visual design of the UI might be improved to feel more modern and professional but still in-keeping with the brand.</p>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Feedback',
+			heading: 'What senior leadership said'
 		})}}
-	</div>
-	<div class="l-content-container l-content-container--6-col">
-		<h4 class="e-heading--s">Concept D: Chat interface with a glow up</h4>
-		<p>The first 3 concepts kept the visual styling inline with what 4Paws already had in place. For Concept D I decided to explore how the visual design of the UI might be improved to feel more modern and professional but still in-keeping with the brand.</p>
+		<div class="l-content-container l-content-container--6-col">
+			<p>After presenting to the client project team, I was asked to present the concepts to the Senior Leadership Team for feedback.</p>
+			<p>I facilitated a workshop where we discussed each concept in a lightweight design critique format.</p>
+			<p>Overall the feedback on the project was overwhelmingly positive. Several members of the SLT strongly backed Concept D and it was collectively decided that this was the design to move forward with.</p>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Impact',
+			heading: 'The results are in'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>Concept D was developed and then A/B tested against the existing design. There was a significant improvement in all target metrics*.</p>
+		</div>
+
+		<div class="l-content-container l-content-container--8-col">
+			{{metricsList([
+				{
+					direction: 'up',
+					label: 'Increased conversions'
+				},
+				{
+					direction: 'down',
+					label: 'Decreased drop&#8209;offs'
+				},
+				{
+					direction: 'down',
+					label: 'Decreased time on task'
+				},
+				{
+					direction: 'down',
+					label: 'Decreased cost per acquisition'
+				}
+			])}}
+		</div>
+
+		<p class="e-text--tiny l-content-container l-content-container--6-col u-space-top-24">* Specific results are considered company confidential and I’ve not been permitted to publish. </p>
+
+		{{dividingHeading({
+			eyebrow: 'Reflection',
+			heading: 'What I would like to have done differently'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<h4 class="e-heading--s">Concept testing</h4>
+			<p>While Concept D performed well and was a huge improvement, it was only tested against the current design. My expectation following initial concept development was that multiple concepts would be prototyped, tested and iterated upon.</p>
+			<p>Introducing some concept testing at this stage would have significantly reduced the risk being carried into development and would’ve enabled us to make a decision based on data to achieve the best outcome.</p>
+		</div>
+
 	</div>
 
-	{{dividingHeading({
-		eyebrow: 'Feedback',
-		heading: 'What senior leadership said'
-	})}}
-	<div class="l-content-container l-content-container--6-col">
-		<p>After presenting to the client project team, I was asked to present the concepts to the Senior Leadership Team for feedback.</p>
-		<p>I facilitated a workshop where we discussed each concept in a lightweight design critique format.</p>
-		<p>Overall the feedback on the project was overwhelmingly positive. Several members of the SLT strongly backed Concept D and it was collectively decided that this was the design to move forward with.</p>
-	</div>
-
-	{{dividingHeading({
-		eyebrow: 'Impact',
-		heading: 'The results are in'
-	})}}
-	<div class="l-content-container l-content-container--6-col">
-		<p>Concept D was developed and then A/B tested against the existing design. There was a significant improvement in all target metrics*.</p>
-	</div>
-
-	<div class="l-content-container l-content-container--8-col">
-		{{metricsList([
-			{
-				direction: 'up',
-				label: 'Increased conversions'
+	<div class="l-content-container u-space-top-56">
+		<h5 class="u-small-caps e-eyebrow">Other projects</h5>
+		{{caseStudyTile({
+			heading: '0 to 1 design of large, complex internal system',
+			copy: 'How I designed a Case Management System that would provide reusable capabilities and could be easily scaled across multiple business areas.',
+			link: {
+				href: '/case-studies/cms-overview',
+				text: 'Read project overview',
+				button: false
 			},
-			{
-				direction: 'down',
-				label: 'Decreased drop&#8209;offs'
-			},
-			{
-				direction: 'down',
-				label: 'Decreased time on task'
-			},
-			{
-				direction: 'down',
-				label: 'Decreased cost per acquisition'
+			image: {
+				path: '/images/cms-tile',
+				alt: 'UI examples of a Case Management System'
 			}
-		])}}
-	</div>
-
-	<p class="e-text--tiny l-content-container l-content-container--6-col u-space-top-24">* Specific results are considered company confidential and I’ve not been permitted to publish. </p>
-
-	{{dividingHeading({
-		eyebrow: 'Reflection',
-		heading: 'What I would like to have done differently'
-	})}}
-	<div class="l-content-container l-content-container--6-col">
-		<h4 class="e-heading--s">Concept testing</h4>
-		<p>While Concept D performed well and was a huge improvement, it was only tested against the current design. My expectation following initial concept development was that multiple concepts would be prototyped, tested and iterated upon.</p>
-		<p>Introducing some concept testing at this stage would have significantly reduced the risk being carried into development and would’ve enabled us to make a decision based on data to achieve the best outcome.</p>
+		})}}
 	</div>
 
 	<div class="u-space-top-56">

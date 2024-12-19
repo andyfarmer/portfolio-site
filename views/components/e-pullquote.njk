@@ -1,0 +1,18 @@
+{#
+	{
+		textHTML: '<p>&ldquo;There was such a sense of shared understanding and a shared commitment to delivering something that really will transform how we work.</p>
+			<p>I can't stress how important that has been to how well I think this product has been designed and delivered for us.&rdquo;</p>',
+		cite: 'Gemma, Head of [Blue Department]'
+	}
+ #}
+
+{% macro pullQuote(params) %}
+	<figure class="e-pullquote">
+		<blockquote class="e-pullquote__text">
+			{{params.textHTML|safe}}
+		</blockquote>
+		<figcaption class="e-text--small">
+			<cite class="e-pullquote__cite">— {{params.cite}}</cite>
+		</figcaption>
+	</figure>
+{% endmacro %}

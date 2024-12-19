@@ -10,9 +10,12 @@
 @use 'elements/e-lead-image';
 @use 'elements/e-link';
 @use 'elements/e-metrics-list';
+@use 'elements/e-pullquote';
 @use 'elements/e-text';
 @use 'elements/e-top-link';
 
+@use 'blocks/b-alert';
+@use 'blocks/b-breadcrumb';
 @use 'blocks/b-case-overview';
 @use 'blocks/b-case-stories';
 @use 'blocks/b-case-study-tile';

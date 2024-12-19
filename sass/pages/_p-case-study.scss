@@ -32,4 +32,15 @@
 	p + ol {
 		margin-top: -16px;
 	}
+
+	.e-pullquote{
+		margin: {
+			top: 24px;
+			bottom: 60px;
+		}
+		&__text p{
+			line-height: rem.rem(48);
+			padding-bottom: 16px;
+		}
+	}
 }

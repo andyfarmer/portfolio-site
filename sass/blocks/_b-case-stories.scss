@@ -22,6 +22,9 @@
 		flex: 1;
 		padding-top: 12px;
 	}
+	h5.b-case-stories__heading{
+		text-wrap: balance;
+	}
 }
 
 @include breakpoint.breakpoint(large){
@@ -57,6 +60,7 @@
 			width: auto;
 		}
 		&__heading{
+
 			padding-bottom: 8px;
 		}
 		&__button-wrap{
