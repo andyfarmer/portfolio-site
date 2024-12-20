@@ -1,4 +1,5 @@
 @use 'tools/functions/rem';
+@use 'tools/mixins/breakpoint';
 
 .p-case-study{
 	h1, h2, h3, h4, h5, h6{
@@ -33,6 +34,10 @@
 		margin-top: -16px;
 	}
 
+	.e-text--tiny{
+		line-height: rem.rem(24);
+	}
+
 	.e-pullquote{
 		margin: {
 			top: 24px;
@@ -41,6 +46,39 @@
 		&__text p{
 			line-height: rem.rem(48);
 			padding-bottom: 16px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.p-case-study{
+		h1{
+			padding-top: 40px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.p-case-study{
+		p, ul, ol{
+			padding-bottom: 28px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.p-case-study{
+		ul, ol {
+			padding-left: 32px;
+		}
+		.e-pullquote{
+			margin: {
+				top: 8px;
+				bottom: 48px;
+			}
+			&__text p{
+				line-height: rem.rem(32);
+			}
 		}
 	}
 }

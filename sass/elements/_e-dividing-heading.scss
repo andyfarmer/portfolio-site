@@ -1,14 +1,48 @@
+@use 'tools/mixins/breakpoint';
 @use 'tools/variables/colours';
 
 .e-dividing-heading{
-	display: flex;
+	position: relative;
 	padding-top: 64px;
 	&__eyebrow{
 		color: colours.$text-secondary;
+		position: absolute;
 		padding-top: 4px;
-		width: calc(25% + 8px);
+		top: 64px;
+		left: calc(-50% + 48px);
 	}
-	&__heading{
-		width: 672px;
+}
+
+@media screen and (max-width: 1312px) {
+	.e-dividing-heading{
+		&__eyebrow{
+			left: calc(-50vw + 368px);
+		}
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.e-dividing-heading{
+		padding-top: 48px;
+		&__eyebrow{
+			top: 48px;
+			left: calc(-50vw + 352px);
+		}
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.e-dividing-heading{
+		padding-top: 32px;
+		&__eyebrow{
+			position: static;
+			padding-bottom: 8px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.e-dividing-heading{
+		padding-top: 24px;
 	}
 }

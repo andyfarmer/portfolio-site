@@ -1,3 +1,5 @@
+@use 'tools/mixins/breakpoint';
+
 .e-metrics-list{
 	display: flex;
 	margin: 0;
@@ -13,5 +15,20 @@
 		position: absolute;
 		top: 4px;
 		right: calc(100% - 8px);
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.e-metrics-list{
+		padding-left: 16px;
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.e-metrics-list{
+		flex-wrap: wrap;
+		&__item{
+			width: 50%;
+		}
 	}
 }
