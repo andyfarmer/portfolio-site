@@ -1,0 +1,380 @@
+{% extends './templates/base.njk' %}
+
+{% block pageTitle %}Dashboards - Case Management System | Andy Farmer Design Portfolio{% endblock %}
+
+{% from 'components/e-dividing-heading.njk' import dividingHeading %}
+{% from 'components/e-lead-image.njk' import leadImage %}
+{% from 'components/e-pullquote.njk' import pullQuote %}
+{% from 'components/b-breadcrumb.njk' import breadcrumb %}
+{% from 'components/b-case-overview.njk' import caseOverview %}
+{% from 'components/b-case-study-tile.njk' import caseStudyTile %}
+{% from 'components/b-contact.njk' import contact %}
+{% from 'components/b-figure.njk' import figure %}
+{% from 'components/b-footer.njk' import footer %}
+
+{% block content %}
+
+	{{leadImage({
+		colour: 'blue',
+		image: {
+			url: '/images/case-studies/cms/cms-dashboards',
+			type: 'jpg',
+			alt: '2 desktop screenshots showing dashboard views from a Case Management System'
+		}
+	})}}
+
+	<div class="l-content-container l-content-container--6-col u-space-top-24">
+		{{breadcrumb([
+			{
+				text: 'Home',
+				url: '/'
+			},
+			{
+				text: 'Case studies',
+				url: '/case-studies'
+			},
+			{
+				text: 'CMS - Dashboards'
+			}
+		])}}
+	</div>
+
+	<div class="p-case-study">
+
+		<div class="l-content-container l-content-container--6-col">
+			<h1 class="e-heading--l">Boosting team efficiency with workload dashboards</h1>
+		</div>
+
+		{{caseOverview([
+			{
+				label: 'Summary',
+				value: 'Operational dashboards that enabled caseworkers to manage their workload and provided management with actionable insights to inform resource decisions.',
+				fullwidth: true
+			},
+			{
+				label: 'Product',
+				value: 'Case Management System'
+			},
+			{
+				label: 'My role',
+				value: 'Lead Designer'
+			},
+			{
+				label: 'Year',
+				value: '2023'
+			}
+		])}}
+
+		<div class="l-content-container l-content-container--6-col u-space-top-24">
+			<p class="e-text--minor">Note: this case study covers 1 feature of a 20-month programme. For more background and context on the project, see the <a href="/case-studies/cms-overview" class="e-link">project overview.</a></p>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Objective',
+			heading: 'Provide users with accurate information to support the day-to-day operations of the team'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>The dashboard screen would be the main landing page for the system. It needed to be a navigational hub and provide insight into current workload across the team.</p>
+			<p>Dashboards also needed to provide a snaphot of the "current state of play" to enable management decisions.</p>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'As-is',
+			heading: 'Paper-based processes and grey IT'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>Our site visits gave us first-hand experience of the team's current operational processes. This involved paper files and legacy IT systems including Access databases and spreadsheets.</p>
+			<p>The office had full-height wall-to-wall shelving full of orange paper files. Each file was a case in progress needing to be worked to completion. The shelving was divided into sections with each shelf labelled with a case status.</p>
+		</div>
+
+		{{figure({
+			classes: 'l-content-container--8-col',
+			image:{
+				url: '/images/case-studies/cms/paper-files-shelving',
+				type: 'jpg',
+				alt: 'Orange file folders arranged neatly on a shelf in an office setting. The files stand upright and are partially filled with papers.'
+			},
+			caption: 'Numbers of files in each shelf location provided a rough estimate of team workload'
+		})}}
+
+		<div class="l-content-container l-content-container--6-col">
+			<p>These shelves were how the team tracked current workload. Eye-balling a particular section gave an estimate of how many cases were at that stage of the workflow.</p>
+			<p>An Access database provided more accurate reporting, but this was a time-consuming task that had to be run manually and only provided a shallow amount of information.</p>
+			<p>The team also supplemented the process with a number of spreadsheets that tracked cases at critical phases of the workflow. These relied on staff to keep them up-to-date and accurate.</p>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Pain points',
+			heading: 'Lack of operational oversight'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>The biggest pain points were a lack of operational oversight and reliance on manual processes. This also led to additional challenges:</p>
+			<ul>
+				<li>It was difficult to prioritise workload</li>
+				<li>It was difficult for managers to make resource decisions</li>
+				<li>Little visibility of time-bound tasks meant cases could miss legislative deadlines</li>
+				<li>Missed legislative deadlines resulted in cases being cancelled</li>
+				<li>Each cancelled case was a missed revenue opportunity</li>
+			</ul>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'User needs',
+			heading: 'Meeting the needs of two key user groups'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>Our initial user research identified two user groups that the Dashboards feature needed to take into consideration. Their high-level needs were as follows:</p>
+			<h4 class="e-heading--s">As a duty manager, I need:</h4>
+			<ul>
+				<li>To see up-to-date total counts of cases at each stage in the workflow so that I can assign rota duties</li>
+				<li>Visibility of cases with approaching deadlines so that I can ensure appropriate resource is assigned</li>
+			</ul>
+			<h4 class="e-heading--s">As a caseworker, I need:</h4>
+			<ul>
+				<li>To find a list of cases based on the rota duty I've been assigned</li>
+				<li>For the list of cases to be in date order so that I can select the case of highest priority</li>
+				<li>To determine which cases are already in progress so that I can select an available case</li>
+				<li>To select an available case to work on</li>
+				<li>For my colleagues and manager to know which case(s) I am working on</li>
+			</ul>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Scope',
+			heading: 'What dashboards did not need to do'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>We also spent time defining the "non-goals" of this feature as it was important to stay focused on the objective. The dashboard feature did not need to:</p>
+			<ul>
+				<li>Track change over time; it would only show current, up-to-date information</li>
+				<li>Track team performance</li>
+				<li>Provide reporting information or trend analysis</li>
+			</ul>
+			<p>These requirements would be met by other areas of the system.</p>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Strategy',
+			heading: 'Design the pattern'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>The dashboards needed to work across multiple business areas so I considered how they could be generated programatically through low-code configuration. It was particularly important for this feature to follow one of the project key principles: Design the pattern.</p>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Design',
+			heading: 'First design iteration'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>I started by exploring some concepts and arrived at an initial layout fairly quickly. I then focused on designing the generic pattern for each dashboard panel. Each panel was designed for a specific use case.</p>
+		</div>
+
+		{{figure({
+			image:{
+				url: '/images/case-studies/cms/dashboard-panels',
+				type: 'jpg',
+				alt: '4 dashboard panels labelled 1 to 4'
+			},
+			caption: 'Generic components for each type of dashboard panel'
+		})}}
+
+		<div class="l-content-container l-content-container--6-col">
+			<p>Once the generic components were designed, I brought them back into the layout and configured them for the specific use cases of one department.</p>
+		</div>
+
+		{{figure({
+			image:{
+				url: '/images/case-studies/cms/dashboard-iteration-1',
+				type: 'jpg',
+				alt: ''
+			},
+			caption: 'First major iteration of dashboard design'
+		})}}
+
+		{{dividingHeading({
+			eyebrow: 'Concept testing',
+			heading: 'Testing the designs with users'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>I built an interactive prototype of the dashboard using Figma. This allowed us to test with users early and gain critical feedback.</p>
+			<p>The dashboard feature was tested throughout the project as it was where we started most concept test scenarios. This meant that we were able to refine the design through constant iteration.<p>
+		</div>
+
+		<div class="l-content-container l-content-container--8-col">
+			{{pullQuote({
+				textHTML: "<p>&ldquo;My team have been so involved in the design and development. We can really see how it's going to simplify so much of what we do and allow us to focus on the tasks that staff actually get more value from delivering.&rdquo;</p>",
+				cite: 'Gemma, Head of [Blue Department]'
+			})}}
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Insights',
+			heading: 'Insights from user testing'
+		})}}
+
+		<div class="l-content-container l-content-container--6-col">
+			<p>There were lots of learnings from the early concept tests, some of the key insights we gathered were:</p>
+			<h4 class="e-heading--s">Dashboard view</h4>
+			{% set dashboardFeedback = [
+				{
+					icon: 'check-circle',
+					text: 'Overall, the concept and layouts were working well. We observed users working through each panel and making sense of the different labels and groupings.'
+				},
+				{
+					icon: 'check-circle',
+					text: 'Users could see how each panel mapped to a stage in the case process.'
+				},
+				{
+					icon: 'cross-cancel',
+					text: 'The ‘Case list’ panel on the dashboard was both too detailed and not detailed enough. Users reported no need to see specific cases on the high-level dashboard, and the information displayed didn’t provide enough detail to make decisions.'
+				},
+				{
+					icon: 'cross-cancel',
+					text: 'Users found the time-bound panel very useful but wanted to see more information about the statuses of cases in each time bracket.'
+				},
+				{
+					icon: 'cross-cancel',
+					text: 'Users found the ‘Single status’ panel confusing and couldn’t see a use for it. They expected to see all statuses grouped in the phases.'
+				}
+			]%}
+			<ul class="e-icon-list">
+				{% for item in dashboardFeedback %}
+					<li class="e-icon-list__item">
+						<img src="/images/icons/{{item.icon}}.svg" class="e-icon-list__icon">
+						<span class="e-icon-list__text">{{item.text}}</span>
+					</li>
+				{% endfor %}
+			</ul>
+			<h4 class="e-heading--s">Listing view</h4>
+			{% set listingFeedback = [
+				{
+					icon: 'cross-cancel',
+					text: 'Users were fairly slow to process the page.'
+				},
+				{
+					icon: 'cross-cancel',
+					text: 'Users gave consistent accounts of how the case information needed to change to help them make priority decisions.'
+				}
+			] %}
+			<ul class="e-icon-list">
+				{% for item in listingFeedback %}
+					<li class="e-icon-list__item">
+						<img src="/images/icons/{{item.icon}}.svg" class="e-icon-list__icon">
+						<span class="e-icon-list__text">{{item.text}}</span>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+
+
+		{{dividingHeading({
+			eyebrow: 'Iterate',
+			heading: 'Continuous iteration and refinement'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>Over the course of the project, the dashboard design went through a series of iterations before we arrived at a design that we were comfortable to take forward to a pilot.</p>
+		</div>
+
+		{{figure({
+			image:{
+				url: '/images/case-studies/cms/dashboard-iteration-2',
+				type: 'jpg',
+				alt: ''
+			},
+			caption: 'The final dashboard design'
+		})}}
+
+		<div class="l-content-container l-content-container--6-col">
+			<h4 class="e-heading--s">Key changes made to the dashboard</h4>
+			<ul>
+				<li>Added status counts to time-bound panel to provide additional insight</li>
+				<li>Removed 'case list' panel</li>
+				<li>Added 'Your cases' panel (an additional requirement that came later in the project)</li>
+				<li>Content changes to simplify language and use plain English</li>
+			</ul>
+		</div>
+
+		{{figure({
+			image:{
+				url: '/images/case-studies/cms/listing-iteration-2',
+				type: 'jpg',
+				alt: ''
+			},
+			caption: 'The final dashboard listing design'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<h4 class="e-heading--s">Key changes made to the dashboard listing</h4>
+			<ul>
+				<li>Changed from a table to a card-based layout to reduce the density of the information displayed</li>
+				<li>Updated the case information following further input from users</li>
+				<li>Reduced the size of the filter navigation</li>
+				<li>Introduced <a href="/case-studies/cms-ownership" class="e-link">'Pick up' action (read the case study)</a></li>
+			</ul>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Impact',
+			heading: 'Increased efficiency and clear oversight of team workload that empowered decision making'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>Further testing of the Dashboards proved that they were successful in meeting the needs of both user groups and we received some excellent feedback.</p>
+			{{pullQuote({
+				textHTML: "<p>&ldquo;This is exactly what we need.&rdquo;</p>",
+				cite: 'Helen, Head of [Red Department]'
+			})}}
+			<p>The dashboard feature enabled caseworkers to quickly and easily find cases to work on. Management were provided with the oversight needed to make resource decisions and to keep track of cases. This significantly reduced the number of cases that missed statutory deadlines and more revenue was generated as a result.</p>
+		</div>
+
+	</div>
+
+	{% set stories = [
+		{
+			heading: 'Using automation to remove unnecessary manual input',
+			copy: 'How good design thinking led to the creation of one of the product’s most successful and most-loved features.',
+			link: '#'
+		},
+		{
+			heading: '“What if we approached this a different way?”',
+			copy: 'How my rethinking of the requirements reduced complexity and removed friction from the user experience.',
+			link: '/case-studies/cms-ownership'
+		}
+	] %}
+	<div id="case-studies" class="l-content-container u-space-top-56">
+		<h5 class="u-small-caps e-eyebrow">More from this project</h5>
+		<ul class="b-case-stories">
+			{% for story in stories %}
+				<li class="b-case-stories__item">
+					<h5 class="b-case-stories__heading e-heading--s">{{story.heading}}</h5>
+					<p class="b-case-stories__copy e-text e-text--minor">{{story.copy}}</p>
+					<div class="b-case-stories__button-wrap">
+						<a href="{{story.link}}" class="e-button">View case study</a>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+
+	<div class="l-content-container u-space-top-56">
+		<h5 class="u-small-caps e-eyebrow">Other projects</h5>
+		{{caseStudyTile({
+			heading: 'Increasing conversion rate for new policy sign-ups',
+			copy: 'How I tackled a customer acquisition problem with a redesigned journey that reduced time on task and maximised conversions.',
+			link: {
+				href: '/case-studies/4paws',
+				text: 'View case study',
+				button: true
+			},
+			image: {
+				path: '/images/4paws-tile',
+				alt: 'UI examples of a pet insurance user flow'
+			}
+		})}}
+	</div>
+
+	<div class="u-space-top-56">
+		{{contact()}}
+	</div>
+
+	{{footer()}}
+
+{% endblock %}

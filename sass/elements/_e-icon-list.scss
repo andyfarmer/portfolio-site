@@ -1,0 +1,10 @@
+.e-icon-list{
+	padding-left: 0 !important;
+	&__item{
+		display: flex;
+		align-items: flex-start;
+	}
+	&__icon{
+		margin: 4px 8px;
+	}
+}

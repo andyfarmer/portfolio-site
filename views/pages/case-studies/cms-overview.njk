@@ -1,6 +1,6 @@
 {% extends './templates/base.njk' %}
 
-{% block pageTitle %}Content Management System - Project Overview | Andy Farmer Design Portfolio{% endblock %}
+{% block pageTitle %}Case Management System - Project Overview | Andy Farmer Design Portfolio{% endblock %}
 
 {% from 'components/e-dividing-heading.njk' import dividingHeading %}
 {% from 'components/e-lead-image.njk' import leadImage %}
@@ -34,17 +34,17 @@
 				url: '/case-studies'
 			},
 			{
-				text: 'CMS project overview'
+				text: 'CMS - Project overview'
 			}
 		])}}
 	</div>
 
-	<div class="l-content-container l-content-container--8-col u-space-top-32">
+	{# <div class="l-content-container l-content-container--8-col u-space-top-32">
 		<div class="b-alert b-alert--info">
 			<img src="/images/icons/info.svg" class="b-alert__icon">
 			<p class="b-alert__text e-text--minor">This page provides a high-level overview and some background context for the project. <a href="#case-studies" class="e-link e-link--blend b-alert__link">Jump to project case studies.</a></p>
 		</div>
-	</div>
+	</div> #}
 
 	<div class="p-case-study">
 		<div class="l-content-container l-content-container--6-col">
@@ -79,6 +79,10 @@
 				fullwidth: true
 			}
 		])}}
+
+		<div class="l-content-container l-content-container--6-col u-space-top-24">
+			<p class="e-text--minor">Note: this page provides a high-level overview and some background context for the project. For more in-depth information <a href="#case-studies" class="e-link">jump to project case studies.</a></p>
+		</div>
 
 		{{dividingHeading({
 			eyebrow: 'Problem definition',
@@ -128,7 +132,7 @@
 		{{figure({
 			classes: 'l-content-container--8-col',
 			image:{
-				url: '/images/case-studies/cms/paper-files',
+				url: '/images/case-studies/cms/paper-files-shelving',
 				type: 'jpg',
 				alt: 'A stack of paper files on an office desk, a woman writes a sticky note on the top file.'
 			},
@@ -136,8 +140,8 @@
 		})}}
 
 		<div class="l-content-container l-content-container--6-col">
-			<h4 class="e-heading--s">Digitising paper-based processes</h4>
-			<p>All departments had physical case files and their current processes involved written annotations, sticky notes, in trays, comparing multiple images and other paper-based activities that needed digital solutions.</p>
+			<h4 class="e-heading--s">Digitalising paper-based processes</h4>
+			<p>All departments had physical case files and their current processes involved written annotations, sticky notes, in trays, comparing multiple images and other paper-based activities that needed transformation into digital solutions.</p>
 		</div>
 
 		{{dividingHeading({
@@ -211,7 +215,7 @@
 		{
 			heading: 'Boosting team efficiency with workload dashboards',
 			copy: 'How I enabled caseworkers to manage their workload and provided management with actionable insights to inform resource decisions.',
-			link: '#'
+			link: '/case-studies/cms-dashboards'
 		},
 		{
 			heading: 'Using automation to remove unnecessary manual input',
@@ -221,7 +225,7 @@
 		{
 			heading: '“What if we approached this a different way?”',
 			copy: 'How my rethinking of the requirements reduced complexity and removed friction from the user experience.',
-			link: '#'
+			link: '/case-studies/cms-ownership'
 		}
 	] %}
 	<div id="case-studies" class="l-content-container u-space-top-56">

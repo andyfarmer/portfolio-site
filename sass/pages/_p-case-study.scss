@@ -24,7 +24,7 @@
 		padding-bottom: 32px;
 	}
 	ul, ol {
-		padding-left: 56px;
+		padding-left: 32px;
 		li {
 			padding-bottom: 8px;
 		}
@@ -68,9 +68,6 @@
 
 @include breakpoint.breakpoint(small){
 	.p-case-study{
-		ul, ol {
-			padding-left: 32px;
-		}
 		.e-pullquote{
 			margin: {
 				top: 8px;
