@@ -9,14 +9,19 @@
 	padding: 40px 32px;
 	&__labels{
 		width: 170px;
-		padding-bottom: 40px;
+		padding-bottom: 46px;
 	}
 	&__label{
 		font-weight: 800;
 		font-size: rem.rem(16);
 		line-height: rem.rem(22);
-		margin-top: 96px;
 		color: colours.$text-secondary;
+		&--1 {
+			margin-top: 108px;
+		}
+		&--2{
+			margin-top: 120px;
+		}
 	}
 	&__skills{
 		display: flex;
