@@ -4,7 +4,6 @@
 
 {% from 'components/e-dividing-heading.njk' import dividingHeading %}
 {% from 'components/e-lead-image.njk' import leadImage %}
-{% from 'components/e-pullquote.njk' import pullQuote %}
 {% from 'components/b-breadcrumb.njk' import breadcrumb %}
 {% from 'components/b-case-overview.njk' import caseOverview %}
 {% from 'components/b-case-study-tile.njk' import caseStudyTile %}
@@ -17,7 +16,7 @@
 	{{leadImage({
 		colour: 'blue',
 		image: {
-			url: '/images/case-studies/cms/cms-ownership',
+			url: '/images/case-studies/cms/listing-ownership-banner',
 			type: 'jpg',
 			alt: '2 desktop screenshots showing views from a Case Management System'
 		}
@@ -146,6 +145,16 @@
 			eyebrow: 'Design',
 			heading: "Making a clear distinction between available and unavailable cases"
 		})}}
+
+		{{figure({
+			image:{
+				url: '/images/case-studies/cms/listing-ownership',
+				type: 'jpg',
+				alt: 'Screenshot of a Case Management System showing a Case Listing screen'
+			},
+			caption: 'The list view clearly communicates which cases are available to work on.'
+		})}}
+
 		<div class="l-content-container l-content-container--6-col">
 			<p>I proposed a number of solutions that could combine to solve to the problem:</p>
 			<ul>
@@ -230,7 +239,7 @@
 		{
 			heading: 'Using automation to remove unnecessary manual input',
 			copy: 'How good design thinking led to the creation of one of the product’s most successful and most-loved features.',
-			link: '#'
+			link: '/case-studies/cms-timeline'
 		}
 	] %}
 	<div id="case-studies" class="l-content-container u-space-top-56">

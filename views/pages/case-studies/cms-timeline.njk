@@ -1,0 +1,236 @@
+{% extends './templates/base.njk' %}
+
+{% block pageTitle %}Case Timeline - Case Management System| Andy Farmer Design Portfolio{% endblock %}
+
+{% from 'components/e-dividing-heading.njk' import dividingHeading %}
+{% from 'components/e-lead-image.njk' import leadImage %}
+{% from 'components/b-breadcrumb.njk' import breadcrumb %}
+{% from 'components/b-case-overview.njk' import caseOverview %}
+{% from 'components/b-case-study-tile.njk' import caseStudyTile %}
+{% from 'components/b-contact.njk' import contact %}
+{% from 'components/b-figure.njk' import figure %}
+{% from 'components/b-footer.njk' import footer %}
+
+{% block content %}
+
+	{{leadImage({
+		colour: 'blue',
+		image: {
+			url: '/images/case-studies/cms/cms-timeline',
+			type: 'jpg',
+			alt: 'A screenshot of a Case Management System showing the Case Overview screen.'
+		}
+	})}}
+
+	<div class="l-content-container l-content-container--6-col u-space-top-24">
+		{{breadcrumb([
+			{
+				text: 'Home',
+				url: '/'
+			},
+			{
+				text: 'Case studies',
+				url: '/case-studies'
+			},
+			{
+				text: 'CMS - Case timeline'
+			}
+		])}}
+	</div>
+
+	<div class="p-case-study">
+
+		<div class="l-content-container l-content-container--6-col">
+			<h1 class="e-heading--l">Using design thinking to create one of the product’s most-loved features.</h1>
+		</div>
+
+		{{caseOverview([
+			{
+				label: 'Summary',
+				value: 'Through empathy and understanding for the user base, I designed an automated case timeline feature that reduced manual effort and became a favourite with the users.',
+				fullwidth: true
+			},
+			{
+				label: 'Product',
+				value: 'Case Management System'
+			},
+			{
+				label: 'My role',
+				value: 'Lead Designer'
+			},
+			{
+				label: 'Year',
+				value: '2024'
+			}
+		])}}
+
+		<div class="l-content-container l-content-container--6-col u-space-top-24">
+			<p class="e-text--minor">Note: this case study covers 1 feature of a 20-month programme. For more background and context on the project, see the <a href="/case-studies/cms-overview" class="e-link">project overview.</a></p>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Context',
+			heading: 'Case notes: the starting point'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>The automated timeline feature stemmed from a requirement for user-generated case notes. Case Notes was a small but important feature that allowed users to self-document their actions so that a full case history was recorded.</p>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'As-is',
+			heading: 'An MS Access database with one field for notes'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>Part of the solution we were replacing was an MS Access database. This had a single textarea for notes and caseworkers would add a new line to the top of the field as they completed tasks on a case.</p>
+			<p>The field was small so difficult to read and didn't allow for input to be structured in a meaningful way. It was also prone to having content accidentally overwritten.</p>
+		</div>
+
+		{{figure({
+			classes: 'l-content-container--8-col',
+			image:{
+				url: '/images/case-studies/cms/access-notes',
+				type: 'jpg',
+				alt: 'A screenshot of an access database with Notes in a single textarea field'
+			},
+			caption: 'The entire case note history went into the same field.'
+		})}}
+
+		{{dividingHeading({
+			eyebrow: 'Design',
+			heading: 'First design Case Notes'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>The first iteration of the Case Notes design was a simple flow where users entered a note and it displayed on a timeline. This was an improvement on the existing solution, but once we tested with users I realised there was the potential to do much more.</p>
+		</div>
+
+		{{figure({
+			image:{
+				url: '/images/case-studies/cms/cms-case-notes',
+				type: 'jpg',
+				alt: 'Two screenshots from a Case Management System, 1 with a form to add a case note, another that displays case notes on a timeline.'
+			},
+			caption: 'The first design was a simple flow that met the business requirements.'
+		})}}
+
+		{{dividingHeading({
+			eyebrow: 'Research',
+			heading: 'Uncovering greater insights into how Case Notes were being used'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>When we tested the design with users we gained a better understanding of how Case Notes were currently being used. Users were able to give a clear and consistent account of when they would use case notes and provided some examples of what they would write in the notes. The key insights we gained were:</p>
+			<ul>
+				<li>Every interaction with a case, no matter how small, was recorded as a note</li>
+				<li>All team members wrote notes in an agreed, consistent format which included their initials and the date</li>
+				<li>Typically, the first thing to do when opening a new case was to read the notes and become familiar with the case history</li>
+				<li>Asterisks (*) were used to mark notes as important</li>
+			</ul>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Iteration',
+			heading: 'Ideating beyond the original requirements'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>With the newly-gained insight from user research, I realised there was an opportunity to create value beyond the original requirements.</p>
+			<p>A lot of the updates users were self-documenting could be added by the system. For example, when a user completed a form, the system would know the Form Name, User Account and Datetime stamp of the action and these could be added to the timelime to save users entering manually.</p>
+		</div>
+
+		{{figure({
+			classes: 'l-content-container--8-col',
+			image:{
+				url: '/images/case-studies/cms/timeline-components',
+				type: 'jpg',
+				alt: 'A timeline UI component showing different variants for different action types'
+			},
+			caption: 'I created a component variant for each action type.'
+		})}}
+
+		<div class="l-content-container l-content-container--6-col">
+			<p>I started by creating a generic timeline component containing the key elements to be displayed. I then made a list of actions that could be automated and designed a component variation for each action type.</p>
+		</div>
+
+		{{figure({
+			image:{
+				url: '/images/case-studies/cms/case-overview',
+				type: 'jpg',
+				alt: 'A screenshot of a Case Management System showing the Case Overview screen.'
+			},
+			caption: 'The timeline design in context.'
+		})}}
+
+		<div class="l-content-container l-content-container--6-col">
+			<p>The final design displayed a combined timeline of user-generated case notes and system-generated activity logs to provide a rich case history.</p>
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Testing',
+			heading: 'Positive feedback from users'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>The new concept tested very well with users. It was clear to see they were able to switch into 'case working mode' as they processed the information on the timeline. This was good evidence that the design was successful.</p>
+			<p>Users also vocalised a lot of positive feedback during the sessions; saying the timeline was a vast improvement on their current solution and would save them a lot of time on every case.
+		</div>
+
+		{{dividingHeading({
+			eyebrow: 'Impact',
+			heading: 'Reduced manual input and a user-favourite feature'
+		})}}
+		<div class="l-content-container l-content-container--6-col">
+			<p>Although the design went beyond the scope of the original requirements, it created clear value for the users and aligned with the product goal of increasing efficiency.</p>
+			<p>Automating case notes reduced manual entry for the users and provided them with a clear, thorough case history that enabled them to understand the background of a case quickly and easily.</p>
+			<p>The feature was outside the original requirements so needed a strong justification to be added to the roadmap. The timeline was in nearly every concept test we ran, so users were familiar with it. After a time, they started actively going to the Product Owners to request it as a high priority.</p>
+		</div>
+
+	</div>
+
+	{% set stories = [
+		{
+			heading: 'Boosting team efficiency with workload dashboards',
+			copy: 'How I enabled caseworkers to manage their workload and provided management with actionable insights to inform resource decisions.',
+			link: '/case-studies/cms-dashboards'
+		},
+		{
+			heading: '“What if we approached this a different way?”',
+			copy: 'How my rethinking of the requirements reduced complexity and removed friction from the user experience.',
+			link: '/case-studies/cms-ownership'
+		}
+	] %}
+	<div id="case-studies" class="l-content-container u-space-top-56">
+		<h5 class="u-small-caps e-eyebrow">More from this project</h5>
+		<ul class="b-case-stories">
+			{% for story in stories %}
+				<li class="b-case-stories__item">
+					<h5 class="b-case-stories__heading e-heading--s">{{story.heading}}</h5>
+					<p class="b-case-stories__copy e-text e-text--minor">{{story.copy}}</p>
+					<div class="b-case-stories__button-wrap">
+						<a href="{{story.link}}" class="e-button">View case study</a>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+
+	<div class="l-content-container u-space-top-56">
+		<h5 class="u-small-caps e-eyebrow">Other projects</h5>
+		{{caseStudyTile({
+			heading: 'Increasing conversion rate for new policy sign-ups',
+			copy: 'How I tackled a customer acquisition problem with a redesigned journey that reduced time on task and maximised conversions.',
+			link: {
+				href: '/case-studies/4paws',
+				text: 'View case study',
+				button: true
+			},
+			image: {
+				path: '/images/4paws-tile',
+				alt: 'UI examples of a pet insurance user flow'
+			}
+		})}}
+	</div>
+
+	<div class="u-space-top-56">
+		{{contact()}}
+	</div>
+
+	{{footer()}}
+
+{% endblock %}
