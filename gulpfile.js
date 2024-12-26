@@ -61,3 +61,4 @@ gulp.task('serve', gulp.series(['html', 'sass', 'js', 'images'], function(){
 
 gulp.task('default', gulp.series('serve'));
 gulp.task('build', gulp.series(['clean', 'html', 'sass', 'js', 'images']));
+gulp.task('prod', gulp.series(['html', 'sass', 'js', 'images']));
