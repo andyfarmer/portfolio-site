@@ -1,5 +1,3 @@
-const {deleteSync} = require('del');
-
 const browserSync = require('browser-sync').create();
 const gulp = require('gulp');
 const nunjucksRender = require('gulp-nunjucks-render');
@@ -15,10 +13,6 @@ gulp.task('html', function(){
     .pipe(gulp.dest('./dist'))
     .pipe(browserSync.stream());
 
-});
-
-gulp.task('clean', async function(){
-	return deleteSync(['dist/**', '!dist', 'dist/*/']);
 });
 
 gulp.task('sass', function() {
@@ -60,5 +54,4 @@ gulp.task('serve', gulp.series(['html', 'sass', 'js', 'images'], function(){
 }));
 
 gulp.task('default', gulp.series('serve'));
-gulp.task('build', gulp.series(['clean', 'html', 'sass', 'js', 'images']));
-gulp.task('prod', gulp.series(['html', 'sass', 'js', 'images']));
+gulp.task('build', gulp.series(['html', 'sass', 'js', 'images']));
