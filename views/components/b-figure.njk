@@ -1,0 +1,23 @@
+{#
+	{
+		image:{
+			url: '/images/case-studies/4paws/existing-design',
+			type: 'jpg',
+			alt: ''
+		},
+		caption: 'Screens from the existing design'
+	}
+ #}
+
+{% macro figure(params) %}
+	<figure class="b-figure l-content-container{% if params.classes %} {{params.classes}}{% endif %}">
+		<img
+			class="b-figure__img"
+			srcset="{{params.image.url}}@2x.{{params.image.type}} 2x"
+			src="{{params.image.url}}.{{params.image.type}}"
+			alt="{{params.image.alt}}"/>
+		{% if params.caption and params.caption|length > 0 %}
+			<figcaption class="b-figure__caption e-text--small">{{params.caption}}</figcaption>
+		{% endif %}
+	</figure>
+{% endmacro %}

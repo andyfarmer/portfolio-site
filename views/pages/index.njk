@@ -1,68 +1,272 @@
 {% extends './templates/base.njk' %}
 
-{% from 'components/b-case-tile.njk' import caseTile %}
+{% from 'components/b-case-study-tile.njk' import caseStudyTile %}
 {% from 'components/b-contact.njk' import contact %}
-{% from 'components/b-navigation.njk' import navigation %}
+{% from 'components/b-footer.njk' import footer %}
 
 {% block content %}
 
 	<header class="b-home-header">
 		<div class="l-content-container">
-			{{ navigation('Home')}}
-			<h1 class="b-home-header__heading e-heading e-heading--jumbo">Hi, I'm Andy</h1>
-			<p class="b-home-header__intro">A T-shaped designer and strategist with over 12 years experience in crafting digital products and services.</p>
+			<div class="e-avatar">
+				<img src="images/avatar-frame.svg" class="e-avatar__frame" role="presentation">
+				<img srcset="images/avatar@2x.jpg 2x" src="images/avatar.jpg" class="e-avatar__image" role="presentation">
+			</div>
+			<h1 class="b-home-header__heading e-heading e-heading--jumbo">An experienced product designer who blends <em class="e-heading__emphasis">creative</em>, <em class="e-heading__emphasis">strategic</em>, and <em class="e-heading__emphasis">technical</em> expertise to solve complex problems.</h1>
 		</div>
+		<img src="images/arrow.svg" class="b-home-header__arrow" role="presentation">
 	</header>
 
-	<div class="b-experience l-content-container">
-		<p class="b-experience__copy e-heading e-heading--m">From big brands to zero-to-one startups, I’ve worked with clients across multiple industries in both the public and private sector.</p>
-		<img src="images/clients/wagg.svg" alt="Wagg dog food logo" class="b-experience__img b-experience__img--wagg">
-		<img src="images/clients/playstation.svg" alt="Playstation logo" class="b-experience__img b-experience__img--playstation">
-		<img src="images/clients/itv.svg" alt="ITV logo" class="b-experience__img b-experience__img--itv">
-		<img src="images/clients/home-office.svg" alt="The Home Office logo" class="b-experience__img b-experience__img--home-office">
-		<img src="images/clients/nhs.svg" alt="NHS logo" class="b-experience__img b-experience__img--nhs">
-		<img src="images/clients/luhv.png" alt="Luhv Drinks logo" class="b-experience__img b-experience__img--luhv">
-	</div>
-
-	{{ caseTile({
-		heading: 'Designing for scale with a robust design system',
-		copy: 'How I designed the MVP of a highly-configurable Case Management System with a focus on reusability and rapid scalability.',
-		img: 'images/case-study-tiles/ipm.jpg',
-		href: '/case-studies/cms',
-		dark: true,
-		reversed: true,
-		disabled: true
-	}) }}
-
-	<section class="b-portfolio-preview">
+	<section class="l-experience" id="scroll-trigger">
 		<div class="l-content-container">
-			<h2 class="b-portfolio-preview__heading e-heading e-heading--xl">
-				<span class="b-portfolio-preview__eyebrow e-eyebrow u-small-caps">Portfolio<span class="u-visually-hidden">:</span></span>
-				User-centred design that delivers results
-			</h2>
+			<h2 class="e-eyebrow u-small-caps">Background</h2>
+			<h3 class="e-heading--l l-experience__heading">Over a decade of experience across a variety of domains</h3>
+			<div class="l-experience__grid">
+				{% set experience = [
+					{
+						heading: 'Sales and e-commerce',
+						copy: 'From growing small businesses to a bespoke platform for a national retailer.'
+					},
+					{
+						heading: 'Enterprise SaaS',
+						copy: 'Content management, case management and workflow tools.'
+					},
+					{
+						heading: 'Booking engines',
+						copy: 'Holiday search and booking experiences for multiple leisure and tourism brands.'
+					},
+					{
+						heading: 'Mobile apps',
+						copy: 'Consumer mobile apps across different  platforms and diverse industries.'
+					},
+					{
+						heading: 'Digital marketing',
+						copy: 'Highly-optimised marketing and campaign websites that drive business metrics.'
+					},
+					{
+						heading: 'AI and biometrics',
+						copy: 'AI-powered identity verification mobile apps and web platform.'
+					}
+				] %}
+				{% for example in experience %}
+					<div class="l-experience__example">
+						<h4 class="l-experience__sub-heading e-heading--s">{{example.heading}}</h4>
+						<p class="l-experience__copy e-text">{{example.copy}}</p>
+					</div>
+				{% endfor %}
+			</div>
 		</div>
-		<div class="b-portfolio-preview__grid l-content-container e-portfolio-grid">
-			<img src="images/portfolio-grid-tiles/ddh-tall.jpg" alt="Preview of Drive Devilbiss website design" class="e-portfolio-grid__img-1">
-			<img src="images/portfolio-grid-tiles/navy.jpg" alt="Preview of Navy Professional website design" class="e-portfolio-grid__img-2">
-			<img src="images/portfolio-grid-tiles/duffield.jpg" alt="Preview of Duffield Timber website design" class="e-portfolio-grid__img-3">
-			<img src="images/portfolio-grid-tiles/qm-personas.jpg" alt="Preview of Queen Marget's website user personas" class="e-portfolio-grid__img-4">
-			<img src="images/portfolio-grid-tiles/learnid.jpg" alt="Preview of LearnID Mobile App design" class="e-portfolio-grid__img-5">
-			<img src="images/portfolio-grid-tiles/severfield.jpg" alt="Preview of Severfield website designn" class="e-portfolio-grid__img-6">
-		</div>
-		<div class="b-portfolio-preview__cta">
-			<a href="/portfolio" class="e-button">View portfolio</a>
+
+		<div class="l-experience__screens">
+			{% set panel1 = [
+				'lovat-hero',
+				'4paws-options',
+				'cms-overview',
+				'voice-record',
+				'navy',
+				'ddh-basket-mobile',
+				'severfield-home',
+				'ddh-products-mobile',
+				'4paws-payment',
+				'cms-listing',
+				'face-recognition'
+			] %}
+			{% set panel2 = [
+				'severfield-projects',
+				'4paws-loading',
+				'ddh-home',
+				'4paws-q2',
+				'ddh-account',
+				'learnid-instructions',
+				'cms-dashboard',
+				'learnid-frame',
+				'ddh-stockists',
+				'learnid-menu',
+				'navy-product'
+			] %}
+
+			<div class="l-experience__screens-panel" id="panel-1">
+				{% for screen in panel1 %}
+					<img srcset="images/mini-screens/{{screen}}@2x.jpg 2x" src="images/mini-screens/{{screen}}.jpg" class="l-experience__image" role="presentation">
+				{% endfor %}
+			</div>
+			<div class="l-experience__screens-panel" id="panel-2">
+				{% for screen in panel2 %}
+					<img srcset="images/mini-screens/{{screen}}@2x.jpg 2x" src="images/mini-screens/{{screen}}.jpg" class="l-experience__image" role="presentation">
+				{% endfor %}
+			</div>
 		</div>
 	</section>
 
-	{{ caseTile({
-		heading: 'Website redesign that sent sales souring',
-		copy: 'How I delivered a complete new strategy and redesign that resulted in a huge increase in sales leads and online revenue.',
-		img: 'images/case-study-tiles/duffield.jpg',
-		href: '/case-studies/duffield-timber'
-	}) }}
+	<section class="l-skillset">
+		<div class="l-skillset__intro l-content-container l-content-container--6-col">
+			<h2 class="e-eyebrow u-small-caps">Expertise</h2>
+			<h3 class="l-skillset__heading e-heading--l">A T-shaped skillset</h3>
+			<p class="e-text">I always invest time to learn adjacent skills for the context of a role. This hugely benefits collaboration and has given me a versatile set of skills to bring to the team.</p>
+		</div>
 
-	{{contact('grey')}}
+		{% set skills = [
+			{
+				name: 'Product Strategy',
+				level: 1,
+				alt: 'Experienced enough to contribute'
+			},
+			{
+				name: 'Brand Strategy',
+				level: 2,
+				alt: 'More than experienced enough to contribute'
+			},
+			{
+				name: 'User Research',
+				level: 3,
+				alt: 'Nearly experienced enough to lead'
+			},
+			{
+				name: 'UX Design',
+				level: 4,
+				alt: 'Experienced enough to lead'
+			},
+			{
+				name: 'UI Design',
+				level: 5,
+				alt: 'More than experienced enough to lead'
+			},
+			{
+				name: 'Front&#8209;end Dev',
+				level: 4,
+				alt: 'Experienced enough to lead'
+			},
+			{
+				name: 'UX Writing',
+				level: 3,
+				alt: 'Nearly experienced enough to lead'
+			},
+			{
+				name: 'Graphic Design',
+				level: 2,
+				alt: 'More than experienced enough to contribute'
+			},
+			{
+				name: 'Digital Marketing',
+				level: 1,
+				alt: 'Experienced enough to contribute'
+			}
+		] %}
 
-	{% include "components/b-footer.njk" %}
+		<div class="l-content-container">
+			<div class="l-skillset__chart b-skillchart">
+				<div class="b-skillchart__labels" role="presentation">
+					<p class="b-skillchart__label b-skillchart__label--1">Experienced enough to contribute</p>
+					<p class="b-skillchart__label b-skillchart__label--2">Experienced enough to lead</p>
+				</div>
+				<dl class="b-skillchart__skills">
+					{% for skill in skills %}
+						<div class="b-skillchart__item"{% if loop.index == 8 %} id="bar-mobile-trigger"{% endif %}>
+							<dt class="b-skillchart__name b-skillchart__name--{{skill.level}}">{{skill.name|safe}}</dt>
+							<dd class="b-skillchart__bar b-skillchart__bar--{{skill.level}}">{{skill.alt}}</dd>
+						</div>
+					{% endfor %}
+				</dl>
+			</div>
+		</div>
+	</section>
 
+	<section class="l-case-studies">
+		<div class="l-case-studies__header l-content-container">
+			<h2 class="e-eyebrow u-small-caps">Case studies</h2>
+			<h3 class="l-case-studies__heading e-heading--l">Design that delivers</h3>
+		</div>
+		<div class="l-content-container">
+
+			{{caseStudyTile({
+				heading: '0 to 1 design of large, complex internal system',
+				copy: 'How I designed a Case Management System that would provide reusable capabilities and could be easily scaled across multiple business areas.',
+				link: {
+					href: '/case-studies/cms-overview',
+					text: 'Read project overview',
+					button: false
+				},
+				image: {
+					path: '/images/cms-tile',
+					alt: 'UI examples of a Case Management System'
+				}
+			})}}
+
+			{% set stories = [
+				{
+					heading: 'Boosting team efficiency with workload dashboards',
+					copy: 'How I enabled caseworkers to manage their workload and provided management with actionable insights to inform resource decisions.',
+					link: '/case-studies/cms-dashboards'
+				},
+				{
+					heading: 'Using automation to remove unnecessary manual input',
+					copy: 'How good design thinking led to the creation of one of the product’s most successful and most-loved features.',
+					link: '/case-studies/cms-timeline'
+				},
+				{
+					heading: '“What if we approached this a different way?”',
+					copy: 'How my rethinking of the requirements reduced complexity and removed friction from the user experience.',
+					link: '/case-studies/cms-ownership'
+				}
+			] %}
+			<ul class="b-case-stories">
+				{% for story in stories %}
+					<li class="b-case-stories__item">
+						<h5 class="b-case-stories__heading e-heading--s">{{story.heading}}</h5>
+						<p class="b-case-stories__copy e-text e-text--minor">{{story.copy}}</p>
+						<div class="b-case-stories__button-wrap">
+							<a href="{{story.link}}" class="e-button">View case study</a>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+
+			{{caseStudyTile({
+				heading: 'Increasing conversion rate for new policy sign-ups',
+				copy: 'How I tackled a customer acquisition problem with a redesigned journey that reduced time on task and maximised conversions.',
+				link: {
+					href: '/case-studies/4paws',
+					text: 'View case study',
+					button: true
+				},
+				image: {
+					path: 'images/4paws-tile',
+					alt: 'UI examples of a pet insurance user flow'
+				}
+			})}}
+
+		</div>
+	</section>
+
+	<div class="l-content-container l-fifty u-space-top-60">
+		<figure class="b-testimonial l-fifty__item">
+			<h5 class="e-eyebrow u-small-caps">Testimonial</h5>
+			<blockquote>
+				<p class="b-testimonial__text e-text">&ldquo;It’s been amazing to work with Andy and to have a mentor who understands the practice of design. Having access and support from someone in his position has been invaluable to me.&rdquo;</p>
+			</blockquote>
+			<figcaption class="e-text--minor">
+				<cite class="b-testimonial__cite">— Milli, Interaction Designer at Viable Data</cite>
+			</figcaption>
+		</figure>
+
+		<div class="l-fifty__item b-writing">
+			<h5 class="e-eyebrow u-small-caps">Writing</h5>
+			<h6 class="b-writing__heading e-heading--s">Design for all: How embracing design variations can make your product more inclusive</h6>
+			<a class="e-link e-link--external e-text--minor" href="https://www.techuk.org/resource/design-for-all-how-embracing-design-variations-can-make-your-product-more-inclusive.html" target="_blank">Read my article on TechUK</a>
+		</div>
+
+	</div>
+
+	<div class="u-space-top-56">
+		{{contact()}}
+	</div>
+
+	{{footer()}}
+
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+	<script src="js/index.js"></script>
 {% endblock %}

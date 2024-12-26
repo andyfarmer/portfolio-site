@@ -1,10 +1,11 @@
-{% macro contact(colour) %}
-	{% set colour = colour or 'grey' %}
-	<section class="b-contact b-contact--{{colour}}">
-		<div class="l-content-container l-content-container--4-col">
-			<h3 class="b-contact__heading e-heading e-heading--l">Get in touch</h3>
-			<p class="b-contact__copy e-text">To learn more about my experience or to get in contact, please reach out on LinkedIn.</p>
-			<a href="https://www.linkedin.com/in/andy-farmer-305b0281" class="e-button">View LinkedIn profile</a>
+{% macro contact() %}
+	<section class="b-contact ">
+		<div class="l-content-container l-content-container--6-col">
+			<h3 class="e-eyebrow u-small-caps">Contact</h3>
+			<h4 class="b-contact__heading e-heading--m">Give me some new problems to solve</h4>
+			<p class="b-contact__copy e-text">An experienced Product Designer looking for a remote full-time position that will bring new challenges and opportunity for growth.</p>
+			<a href="mailto:andyfarmer9@gmail.com" class="e-button">Send me an email</a>
+			<p class="b-contact__footnote e-text--tiny">(opens mail client)</p>
 		</div>
 	</section>
 {% endmacro %}

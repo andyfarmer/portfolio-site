@@ -1,0 +1,20 @@
+{#
+	{
+		colour: 'green',
+		image: {
+			url: '/images/case-studies/4paws/4paws-mobile-screens',
+			type: 'jpg',
+			alt: '4 mobile device screenshots from a pet insurance website'
+		}
+	}
+ #}
+
+{% macro leadImage(params) %}
+	<div class="e-lead-image e-lead-image--{{params.colour}}">
+		<img
+			srcset="{{params.image.url}}@2x.{{params.image.type}} 2x"
+			src="{{params.image.url}}.{{params.image.type}}"
+			alt="{{params.image.alt}}"
+			class="e-lead-image__img">
+	</div>
+{% endmacro %}

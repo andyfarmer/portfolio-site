@@ -2,77 +2,84 @@
 @use 'tools/mixins/breakpoint';
 
 .e-heading{
-  font-weight: 600;
 
 	&--jumbo{
-		font-size: rem.rem(72);
-		line-height: rem.rem(80);
-		letter-spacing: -0.05em;
-	}
-
-  &--xl{
-		font-size: rem.rem(48);
-		line-height: rem.rem(56);
-		letter-spacing: -0.04em;
+		font-family: "Radley", serif;
+		font-weight: 400;
+		font-size: rem.rem(60);
+		line-height: rem.rem(64);
+		letter-spacing: -0.025em;
 	}
 
 	&--l{
-		font-size: rem.rem(36);
-		line-height: rem.rem(40);
-		letter-spacing: -0.04em;
+		font-weight: 400;
+		font-size: rem.rem(44);
+		line-height: rem.rem(52);
+		letter-spacing: -0.01em;
 	}
 
 	&--m{
-		font-size: rem.rem(24);
-		line-height: rem.rem(32);
-		letter-spacing: -0.02em;
+		font-weight: 400;
+		font-size: rem.rem(36);
+		line-height: rem.rem(40);
+		letter-spacing: -0.005em;
 	}
 
 	&--s{
-		font-size: rem.rem(20);
-		line-height: rem.rem(24);
-		letter-spacing: -0.02em;
+		font-weight: 400;
+		font-size: rem.rem(24);
+		line-height: rem.rem(32);
+		letter-spacing: -0.005em;
 	}
 }
 
 @include breakpoint.breakpoint(large){
 	.e-heading{
 		&--jumbo{
-			font-size: rem.rem(60);
-			line-height: rem.rem(72);
-		}
-		&--xl{
-			font-size: rem.rem(36);
-			line-height: rem.rem(40);
+			font-size: rem.rem(55);
+			line-height: rem.rem(60);
 		}
 		&--l{
-			font-size: rem.rem(25);
-			line-height: rem.rem(32);
-			letter-spacing: -0.02em;
+			font-size: rem.rem(38);
+			line-height: rem.rem(44);
+		}
+		&--m{
+			font-size: rem.rem(32);
+			line-height: rem.rem(36);
+		}
+		&--s{
+			font-size: rem.rem(22);
+			line-height: rem.rem(28);
 		}
 	}
 }
 
 @include breakpoint.breakpoint(medium){
 	.e-heading{
-		&--m{
-			font-size: rem.rem(20);
-			line-height: rem.rem(28);
+		&--jumbo{
+			font-size: rem.rem(48);
+			line-height: rem.rem(56);
 		}
 	}
 }
 
-@include breakpoint.breakpoint('type-break-2'){
+@include breakpoint.breakpoint(small){
 	.e-heading{
 		&--jumbo{
-			font-size: rem.rem(48);
-			line-height: rem.rem(56);
-			letter-spacing: -0.04em;
+			font-size: rem.rem(32);
+			line-height: rem.rem(40);
 		}
-		&--xl{
+		&--l{
 			font-size: rem.rem(28);
-			line-height: rem.rem(36);
-			letter-spacing: -0.02em;
+			line-height: rem.rem(32);
+		}
+		&--m{
+			font-size: rem.rem(23);
+			line-height: rem.rem(28);
+		}
+		&--s{
+			font-size: rem.rem(20);
+			line-height: rem.rem(24);
 		}
 	}
 }

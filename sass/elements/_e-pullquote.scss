@@ -1,0 +1,56 @@
+@use 'tools/functions/rem';
+@use 'tools/mixins/breakpoint';
+@use 'tools/variables/colours';
+
+.e-pullquote{
+	&__text{
+		font-family: "Radley", serif;
+		font-weight: 400;
+		letter-spacing: -0.025em;
+		font-size: rem.rem(36);
+		line-height: rem.rem(48);
+		p{
+			padding-bottom: 16px;
+		}
+	}
+	&__cite{
+		color: colours.$text-secondary;
+		display: block;
+		max-width: 672px;
+		margin: 0 auto;
+		padding: {
+			left: 32px;
+			right: 32px;
+		}
+	}
+}
+@include breakpoint.breakpoint(large){
+	.e-pullquote{
+		&__cite{
+			max-width: 640px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.e-pullquote{
+		&__text{
+			font-size: rem.rem(32);
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.e-pullquote{
+		&__text{
+			font-size: rem.rem(23);
+			line-height: rem.rem(32);
+		}
+		&__cite{
+			padding: {
+				left: 0;
+				right: 0;
+			}
+		}
+	}
+}

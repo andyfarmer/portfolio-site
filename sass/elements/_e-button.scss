@@ -4,10 +4,11 @@
 
 .e-button{
 	display: inline-block;
+	font-size: rem.rem(16);
 	line-height: rem.rem(32);
 	text-decoration: none;
-	padding: 8px 24px;
-	border-radius: 24px;
+	padding: 5px 18px;
+	border-radius: 21px;
 	background: linear-gradient(to right, #554BBE, #6359C0);
 	color: #fff;
 	font-weight: 600;
@@ -18,13 +19,12 @@
 
 a.e-button{
 	&:hover{
-		background: colours.$brand;
+		background: colours.$brand-10;
 	}
 }
 
-@include breakpoint.breakpoint(large){
+@include breakpoint.breakpoint(medium){
 	.e-button{
-		font-size: rem.rem(16);
 		padding: 4px 16px;
 	}
 }

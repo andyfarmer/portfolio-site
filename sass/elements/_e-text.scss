@@ -3,26 +3,35 @@
 
 .e-text{
 	line-height: rem.rem(32);
-	&--large{
-		font-size: rem.rem(20);
+
+	&--minor{
+		font-size: rem.rem(18);
 		line-height: rem.rem(32);
+	}
+
+	&--small{
+		font-size: rem.rem(16);
+		line-height: rem.rem(24);
+	}
+
+	&--tiny{
+		font-size: rem.rem(14);
+		line-height: rem.rem(24);
 	}
 }
 @include breakpoint.breakpoint(large){
 	.e-text{
 		line-height: rem.rem(28);
-	}
-	.e-text--large{
-		font-size: rem.rem(18);
-		line-height: rem.rem(28);
+		&--minor{
+			line-height: rem.rem(28);
+		}
 	}
 }
 
-@include breakpoint.breakpoint('type-break-2'){
+@include breakpoint.breakpoint(small){
 	.e-text{
-		line-height: rem.rem(24);
-		&--large{
-			font-size: rem.rem(17);
+		&--minor{
+			font-size: rem.rem(16);
 		}
 	}
 }

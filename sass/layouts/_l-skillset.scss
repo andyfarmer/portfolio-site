@@ -1,0 +1,47 @@
+@use 'tools/mixins/breakpoint';
+
+.l-skillset{
+	padding: 88px 0 120px;
+	&__intro{
+		text-align: center;
+	}
+	&__heading{
+		padding-bottom: 24px;
+	}
+	&__chart{
+		margin-top: 72px;
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.l-skillset{
+		padding: 72px 0 104px;
+		&__heading{
+			padding-bottom: 20px;
+		}
+		&__chart{
+			margin-top: 60px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.l-skillset{
+		padding: 56px 0 72px;
+		&__chart{
+			margin-top: 48px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.l-skillset{
+		padding: 40px 0 48px;
+		&__heading{
+			padding-bottom: 16px;
+		}
+		&__chart{
+			margin-top: 40px;
+		}
+	}
+}

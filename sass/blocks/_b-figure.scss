@@ -1,0 +1,35 @@
+@use 'tools/mixins/breakpoint';
+@use 'tools/variables/colours';
+
+.b-figure{
+	padding: 24px 0;
+	&__caption{
+		color: colours.$text-secondary;
+		max-width: 672px;
+		margin: 4px auto 0;
+		padding: {
+			left: 32px;
+			right: 32px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.b-figure{
+		&__caption{
+			max-width: 640px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.b-figure{
+		padding-top: 8px;
+		&__caption{
+			padding: {
+				left: 0;
+				right: 0;
+			}
+		}
+	}
+}

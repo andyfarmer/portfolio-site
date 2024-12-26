@@ -1,0 +1,225 @@
+@use 'tools/functions/rem';
+@use 'tools/mixins/breakpoint';
+@use 'tools/variables/colours';
+
+.b-skillchart{
+	display: flex;
+	background: colours.$background-light-grey;
+	border-radius: 12px;
+	padding: 40px 32px;
+	&__labels{
+		width: 170px;
+		padding-bottom: 40px;
+	}
+	&__label{
+		font-weight: 800;
+		font-size: rem.rem(16);
+		line-height: rem.rem(22);
+		margin-top: 96px;
+		color: colours.$text-secondary;
+	}
+	&__skills{
+		display: flex;
+		position: relative;
+		padding-left: 16px;
+		margin-left: 16px;
+		&:before,
+		&:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background: colours.$border-primary;
+		}
+		&:before{
+			top: 120px;
+		}
+		&:after{
+			top: 260px;
+		}
+	}
+	&__item{
+		width: 74px;
+		margin-right: 32px;
+		&:last-child{
+			margin-right: 16px;
+		}
+	}
+	&__name{
+		font-weight: 800;
+		font-size: rem.rem(16);
+		line-height: rem.rem(22);
+		padding-bottom: 8px;
+		&--1{
+			opacity: 0.5;
+		}
+		&--2{
+			opacity: 0.6;
+		}
+		&--3{
+			opacity: 0.7;
+		}
+		&--4,
+		&--5{
+			color: colours.$brand;
+		}
+	}
+	&__bar{
+		color: rgba(0,0,0,0);
+		width: 100%;
+		background: linear-gradient(rgba(193, 182,237,1), rgba(193, 182,237,0.3));
+		&--1{
+			height: 96px;
+		}
+		&--2{
+			height: 129px;
+		}
+		&--3{
+			height: 173px;
+		}
+		&--4{
+			height: 240px;
+		}
+		&--5{
+			height: 265px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.b-skillchart {
+		padding: 32px 24px;
+		&__label,
+		&__name{
+			font-size: rem.rem(15);
+			line-height: rem.rem(20);
+		}
+		&__item{
+			width: 64px;
+			margin-right: 24px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.b-skillchart {
+		padding: 16px 24px 24px;
+		display: block;
+		&__labels{
+			display: flex;
+			width: auto;
+			height: 56px;
+			position: relative;
+		}
+		&__label{
+			margin-top: 8px;
+			width: 160px;
+			text-align: center;
+			position: absolute;
+			&--1{
+				left: calc(42% - 80px);
+			}
+			&--2{
+				left: calc(83% - 80px);
+			}
+		}
+		&__skills{
+			padding: 16px 0;
+			display: block;
+			margin-left: 0;
+			&:before,
+			&:after{
+				top: 0;
+				bottom: 0;
+				right: auto;
+				height: auto;
+				width: 1px;
+				background: colours.$border-primary;
+			}
+			&:before{
+				left: 42%;
+			}
+			&:after{
+				left: 83%;
+			}
+		}
+		&__item{
+			display: flex;
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 8px;
+			&:last-child{
+				margin-right: 0;
+				margin-bottom: 0;
+			}
+		}
+		&__name{
+			width: 100px;
+			padding-top: 4px;
+			padding-right: 35px;
+		}
+		&__bar{
+			height: 48px;
+			background: linear-gradient(to right, rgba(193, 182,237,1), rgba(193, 182,237,0.3));
+			&--1{
+				width: calc(44% - 80px);
+			}
+			&--2{
+				width: calc(54% - 80px);
+			}
+			&--3{
+				width: calc(68% - 80px);
+			}
+			&--4{
+				width: calc(83% - 80px);
+			}
+			&--5{
+				width: calc(90% - 80px);
+			}
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.b-skillchart{
+		padding: 8px 16px 16px;
+		&__skills{
+			padding-bottom: 8px;
+			&:before{
+				left: 38%;
+			}
+			&:after{
+				left: 79%;
+			}
+		}
+		&__labels{
+			height: 48px;
+		}
+		&__label{
+			width: 124px;
+			&--1{
+				left: calc(38% - 60px);
+			}
+			&--2{
+				left: calc(79% - 60px);
+			}
+		}
+		&__label,
+		&__name{
+			font-size: rem.rem(12);
+			line-height: rem.rem(16);
+		}
+		&__item{
+			margin-bottom: 4px;
+		}
+		&__name{
+			width: 80px;
+			padding-top: 0;
+		}
+		&__bar{
+			height: 32px;
+		}
+	}
+}
+

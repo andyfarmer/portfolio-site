@@ -1,38 +1,40 @@
 @use 'base/reset';
 @use 'base/typography';
 
+@use 'elements/e-avatar';
 @use 'elements/e-button';
 @use 'elements/e-detail-list';
+@use 'elements/e-dividing-heading';
 @use 'elements/e-eyebrow';
-@use 'elements/e-folio-fullwidth';
-@use 'elements/e-folio-img';
 @use 'elements/e-heading';
-@use 'elements/e-portfolio-grid';
-@use 'elements/e-result-list';
-@use 'elements/e-tag';
+@use 'elements/e-icon-list';
+@use 'elements/e-lead-image';
+@use 'elements/e-link';
+@use 'elements/e-metrics-list';
+@use 'elements/e-pullquote';
 @use 'elements/e-text';
+@use 'elements/e-top-link';
 
-@use 'blocks/b-article';
-@use 'blocks/b-portfolio-preview';
-@use 'blocks/b-case-header';
-@use 'blocks/b-case-intro';
-@use 'blocks/b-case-tile';
+@use 'blocks/b-alert';
+@use 'blocks/b-breadcrumb';
+@use 'blocks/b-case-overview';
+@use 'blocks/b-case-stories';
+@use 'blocks/b-case-study-tile';
 @use 'blocks/b-contact';
-@use 'blocks/b-experience';
-@use 'blocks/b-folio-details';
+@use 'blocks/b-figure';
 @use 'blocks/b-footer';
-@use 'blocks/b-header';
 @use 'blocks/b-home-header';
-@use 'blocks/b-navigation';
+@use 'blocks/b-skillchart';
+@use 'blocks/b-testimonial';
+@use 'blocks/b-writing';
 
 @use 'layouts/l-case-studies';
 @use 'layouts/l-content-container';
-@use 'layouts/l-folio-cms';
-@use 'layouts/l-folio-ddh';
-@use 'layouts/l-folio-duffield';
-@use 'layouts/l-folio-learnid';
-@use 'layouts/l-folio-navy';
-@use 'layouts/l-folio-severfield';
+@use 'layouts/l-experience';
+@use 'layouts/l-fifty';
+@use 'layouts/l-skillset';
+
+@use 'pages/p-case-study';
 
 @use 'utilities/u-small-caps';
 @use 'utilities/u-spacing';

@@ -1,6 +1,9 @@
-<footer class="b-footer">
-	<div class="b-footer__container l-content-container">
-		<p class="b-footer__copy">&copy; Andy Farmer. All rights reserved.</p>
-		<p class="b-footer__copy"><a href="https://github.com/andyfarmer/portfolio-site" class="b-footer__link">See this website on GitHub</a></p>
-	</div>
-</footer>
+{% macro footer() %}
+	<footer class="b-footer">
+		<div class="b-footer__container l-content-container">
+			<p class="b-footer__left e-text--tiny">Coded by me. <a href="https://github.com/andyfarmer/portfolio-site" target="_blank" class="e-link e-link--external">View on GitHub</a></p>
+			<p class="b-footer__middle e-text--tiny">&copy; Andy Farmer 2024 - 2025. All rights reserved.</p>
+			<p class="b-footer__right e-text--tiny"><a href="#top" class="e-link e-top-link">Back to top</a></p>
+		</div>
+	</footer>
+{% endmacro %}

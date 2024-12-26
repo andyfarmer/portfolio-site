@@ -1,0 +1,84 @@
+@use 'tools/mixins/breakpoint';
+@use 'tools/variables/colours';
+
+.b-case-stories{
+	padding: 24px 0 64px;
+	margin: 0;
+	&__item{
+		display: flex;
+		align-items: flex-start;
+		padding: 0 0 24px;
+		margin: 0;
+	}
+	&__heading{
+		width: calc(33.33% + 32px);
+	}
+	&__copy{
+		width: calc(49% - 16px);
+		color: colours.$text-secondary;
+	}
+	&__button-wrap{
+		text-align: right;
+		flex: 1;
+		padding-top: 12px;
+	}
+	h5.b-case-stories__heading{
+		text-wrap: balance;
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.b-case-stories{
+		padding-bottom: 56px;
+		&__heading{
+			width: calc(33.33% + 24px);
+			padding-right: 24px;
+		}
+		&__copy{
+			width: calc(41% + 24px);
+		}
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.b-case-stories{
+		padding: 0 0 32px;
+		margin: {
+			left: auto;
+			right: auto;
+		}
+		&__item{
+			display: block;
+			position: relative;
+			padding-right: 180px;
+			padding-top: 20px;
+			border-top: 1px solid colours.$border-light;
+		}
+		&__heading,
+		&__copy{
+			width: auto;
+		}
+		&__heading{
+
+			padding-bottom: 8px;
+		}
+		&__button-wrap{
+			position: absolute;
+			top: 12px;
+			right: 0;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.b-case-stories{
+		padding-bottom: 24px;
+		&__item{
+			padding-right: 0;
+		}
+		&__button-wrap{
+			position: static;
+			text-align: left;
+		}
+	}
+}

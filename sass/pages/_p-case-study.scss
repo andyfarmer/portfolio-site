@@ -1,0 +1,81 @@
+@use 'tools/functions/rem';
+@use 'tools/mixins/breakpoint';
+
+.p-case-study{
+	h1, h2, h3, h4, h5, h6{
+		text-wrap: auto;
+	}
+	h1{
+		padding: {
+			top: 56px;
+			bottom: 32px;
+		}
+	}
+	.e-heading{
+		&--m{
+			padding-bottom: 24px;
+		}
+		&--s{
+			padding-bottom: 8px;
+		}
+	}
+	p, ul, ol{
+		line-height: rem.rem(32);
+		padding-bottom: 32px;
+	}
+	ul, ol {
+		padding-left: 32px;
+		li {
+			padding-bottom: 8px;
+		}
+	}
+	p + ul,
+	p + ol {
+		margin-top: -16px;
+	}
+
+	.e-text--tiny{
+		line-height: rem.rem(24);
+	}
+
+	.e-pullquote{
+		margin: {
+			top: 24px;
+			bottom: 60px;
+		}
+		&__text p{
+			line-height: rem.rem(48);
+			padding-bottom: 16px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.p-case-study{
+		h1{
+			padding-top: 40px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.p-case-study{
+		p, ul, ol{
+			padding-bottom: 28px;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.p-case-study{
+		.e-pullquote{
+			margin: {
+				top: 8px;
+				bottom: 48px;
+			}
+			&__text p{
+				line-height: rem.rem(32);
+			}
+		}
+	}
+}

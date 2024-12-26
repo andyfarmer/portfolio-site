@@ -1,0 +1,15 @@
+{#
+	{
+		eyebrow: 'Eyebrow',
+		heading: 'Heading'
+	}
+ #}
+
+{% macro dividingHeading(params) %}
+	<div class="e-dividing-heading l-content-container l-content-container--6-col">
+		<h2 class="e-dividing-heading__eyebrow u-small-caps">{{params.eyebrow}}</h2>
+		{% if params.heading %}
+			<h3 class="e-dividing-heading__heading e-heading--m">{{params.heading}}</h3>
+		{% endif %}
+	</div>
+{% endmacro %}

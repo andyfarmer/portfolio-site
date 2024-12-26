@@ -1,0 +1,31 @@
+{#
+	[
+		{
+				label: 'Summary',
+				value: 'Over 95% of customer acquisition for 4Paws Pet Insurance happens through their website. I was tasked with optimising the new policy workflow from initial quote through to final payment.',
+				fullwidth: true
+			},
+			{
+				label: 'My role',
+				value: 'UX/UI Designer'
+			},
+			{
+				label: 'Year',
+				value: '2021'
+			}
+	]
+ #}
+
+{% macro caseOverview(details) %}
+	<div class="b-case-overview l-content-container l-content-container--6-col">
+		<h2 class="b-case-overview__eyebrow u-small-caps">Overview</h2>
+		<dl class="b-case-overview__details e-detail-list">
+			{% for detail in details %}
+				<div class="e-detail-list__item{% if detail.fullwidth %} e-detail-list__item--fullwidth{% endif %}">
+					<dt class="e-detail-list__label">{{detail.label}}</dt>
+					<dd class="e-detail-list__value">{{detail.value|safe}}</dd>
+				</div>
+			{% endfor %}
+		</dl>
+	</div>
+{% endmacro %}

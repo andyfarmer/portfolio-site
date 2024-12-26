@@ -6,12 +6,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="robots" content="noindex,nofollow">
 
+	<link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
+	<link rel="shortcut icon" href="/images/favicons/favicon.ico" />
+
   <link rel="stylesheet" href="/css/styles.css">
 
 </head>
 <body>
-  <main{% if mainClasses %} class="{{ mainClasses }}"{% endif %}>
+  <main id="top" {% if mainClasses %} class="{{ mainClasses }}"{% endif %}>
     {% block content %}{% endblock %}
   </main>
+
+	{% block scripts %}
+
+	{% endblock %}
 </body>
 </html>

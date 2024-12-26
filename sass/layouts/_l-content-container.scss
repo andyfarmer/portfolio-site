@@ -9,7 +9,7 @@
 		left: 32px;
 		right: 32px;
 	}
-	max-width: 1296px;
+	max-width: 1312px;
 
 	&--10-col {
 		max-width: 1060px;
@@ -19,17 +19,19 @@
 		max-width: 888px;
 	}
 
+	&--6-col {
+		max-width: 672px;
+	}
+
 	&--4-col {
 		max-width: 448px;
 	}
 }
 
-@include breakpoint.breakpoint(medium){
+@include breakpoint.breakpoint(large){
 	.l-content-container{
-		max-width: 840px;
-
-		&--4-col {
-			max-width: 440px;
+		&--6-col{
+			max-width: 640px;
 		}
 	}
 }

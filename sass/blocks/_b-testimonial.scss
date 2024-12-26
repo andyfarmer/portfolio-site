@@ -1,0 +1,10 @@
+@use 'tools/variables/colours';
+
+.b-testimonial {
+	&__text{
+		padding: 8px 0;
+	}
+	&__cite{
+		color: colours.$text-secondary;
+	}
+}

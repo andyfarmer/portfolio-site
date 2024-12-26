@@ -1,0 +1,29 @@
+{#
+	[
+			{
+				text: 'Home',
+				url: '/'
+			},
+			{
+				text: 'Case studies',
+				url: '/case-studies'
+			},
+			{
+				text: 'CMS project overview'
+			}
+		]
+ #}
+
+{% macro breadcrumb(crumbs) %}
+	<ul class="b-breadcrumb e-text--small">
+		{% for crumb in crumbs %}
+			<li class="b-breadcrumb__item">
+				{% if crumb.url %}
+					<a href="{{crumb.url}}" class="b-breadcrumb__link e-link">{{crumb.text}}</a>
+				{% else %}
+					{{crumb.text}}
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+{% endmacro %}

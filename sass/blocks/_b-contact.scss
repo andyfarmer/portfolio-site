@@ -2,35 +2,41 @@
 @use 'tools/variables/colours';
 
 .b-contact{
-	padding: {
-		top: 56px;
-		bottom: 56px;
-	}
+	background: colours.$background-biscuit;
 	text-align: center;
-	background: colours.$background-off-white;
+	padding: 64px 0 72px;
 	&__heading{
-		padding-bottom: 16px;
+		margin: 0 auto;
+		max-width: 340px;
+		padding-bottom: 24px;
 	}
 	&__copy{
 		padding-bottom: 32px;
 		color: colours.$text-secondary;
 	}
-	&--cream{
-		background: colours.$background-cream;
+	&__footnote{
+		margin-top: 8px;
+		color: colours.$text-secondary;
 	}
 }
 
 @include breakpoint.breakpoint(large){
 	.b-contact{
-		padding: {
-			top: 40px;
-			bottom: 48px;
-		}
+		padding: 48px 0 56px;
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.b-contact{
+		padding: 40px 0 32px;
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.b-contact{
+		padding: 32px 0 16px;
 		&__heading{
-			padding-bottom: 8px;
-		}
-		&__copy{
-			padding-bottom: 24px;
+			max-width: 240px;
 		}
 	}
 }

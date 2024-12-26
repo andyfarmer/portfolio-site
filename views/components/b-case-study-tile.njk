@@ -1,0 +1,28 @@
+{#
+	{
+		heading: '0 to 1 design of large, complex internal system',
+		copy: 'How I designed a Case Management System that would provide reusable capabilities and could be easily scaled across multiple business areas.',
+		link: {
+			href: '/case-studies/cms',
+			text: 'Read project overview',
+			button: false
+		},
+		image: {
+			path: 'images/cms-tile',
+			alt: 'UI examples of a Case Management System'
+		}
+	}
+ #}
+
+{% macro caseStudyTile(params) %}
+	<div class="b-case-study-tile">
+		<div class="b-case-study-tile__details">
+			<h4 class="b-case-study-tile__heading e-heading--m">{{params.heading}}</h4>
+			<p class="b-case-study-tile__copy e-text e-text--minor">{{params.copy}}</p>
+			<a href="{{params.link.href}}" class="b-case-study-tile__link {% if params.link.button %}e-button{% else %}e-link e-text e-text--minor{% endif %}">{{params.link.text}}</a>
+		</div>
+		<a href="{{params.link.href}}" class="b-case-study-tile__image-link">
+			<img srcset="{{params.image.path}}@2x.jpg 2x" src="{{params.image.path}}.jpg" class="b-case-study-tile__image" alt="{{params.image.alt}}">
+		</a>
+	</div>
+{% endmacro %}

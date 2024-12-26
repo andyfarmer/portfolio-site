@@ -4,8 +4,25 @@
 	&-top-24{
 		margin-top: 24px;
 	}
+	&-top-32{
+		margin-top: 32px;
+	}
+	&-top-56{
+		margin-top: 56px;
+	}
+	&-top-60{
+		margin-top: 60px;
+	}
 	&-top-72{
 		margin-top: 72px;
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.u-space{
+		&-top-60{
+			margin-top: 40px;
+		}
 	}
 }
 

@@ -1,10 +1,12 @@
 @use 'tools/mixins/breakpoint';
+@use 'tools/variables/colours';
 
 .e-eyebrow{
 	display: block;
 	padding-bottom: 8px;
+	color: colours.$text-secondary;
 }
-@include breakpoint.breakpoint('type-break-2'){
+@include breakpoint.breakpoint('large'){
 	.e-eyebrow{
 		padding-bottom: 4px;
 	}

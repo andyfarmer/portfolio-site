@@ -1,0 +1,31 @@
+{#
+	[
+		{
+			direction: 'up',
+			label: 'Increased conversions'
+		},
+		{
+			direction: 'down',
+			label: 'Decreased drop&#8209;offs'
+		},
+		{
+			direction: 'down',
+			label: 'Decreased time on task'
+		},
+		{
+			direction: 'down',
+			label: 'Decreased cost per acquisition'
+		}
+	]
+ #}
+
+{% macro metricsList(metrics) %}
+	<ul class="e-metrics-list">
+		{% for metric in metrics %}
+			<li class="e-metrics-list__item">
+				<img src="/images/icons/dot-arrow-{{metric.direction}}.svg" class="e-metrics-list__icon">
+				{{metric.label|safe}}
+			</li>
+		{% endfor %}
+	</ul>
+{% endmacro %}

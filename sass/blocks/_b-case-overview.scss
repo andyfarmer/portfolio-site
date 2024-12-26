@@ -1,0 +1,37 @@
+@use 'tools/mixins/breakpoint';
+@use 'tools/variables/colours';
+
+.b-case-overview{
+	position: relative;
+	&__eyebrow{
+		color: colours.$text-secondary;
+		position: absolute;
+		top: 4px;
+		left: calc(-50% + 48px);
+	}
+}
+
+@media screen and (max-width: 1312px) {
+	.b-case-overview{
+		&__eyebrow{
+			left: calc(-50vw + 368px);
+		}
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.b-case-overview{
+		&__eyebrow{
+			left: calc(-50vw + 352px);
+		}
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.b-case-overview{
+		&__eyebrow{
+			position: static;
+			padding-bottom: 8px;
+		}
+	}
+}

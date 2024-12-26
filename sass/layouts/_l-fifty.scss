@@ -1,0 +1,49 @@
+@use 'tools/mixins/breakpoint';
+
+.l-fifty{
+	display: flex;
+	&__item{
+		width: 50%;
+		padding-right: 8.33%;
+		&:last-child{
+			padding-left: 16px;
+			padding-right: 7%;
+		}
+	}
+}
+
+@include breakpoint.breakpoint(large){
+	.l-fifty{
+		&__item{
+			&:last-child{
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+@include breakpoint.breakpoint(medium){
+	.l-fifty{
+		display: block;
+		&__item{
+			width: 80%;
+			margin: {
+				left: auto;
+				right: auto;
+			}
+			padding-right: 0;
+			&:last-child{
+				margin-top: 40px;
+			}
+		}
+	}
+}
+
+@include breakpoint.breakpoint(small){
+	.l-fifty{
+		&__item{
+			width: auto;
+		}
+	}
+}
